@@ -196,16 +196,59 @@ a {
   width: 40px;
   height: 40px;
   margin-bottom: 4px;
+  overflow: visible;
 }
 
-.hex-icon polygon {
+.hex-outline {
   fill: none;
-  stroke-width: 5;
+  stroke-width: 4;
 }
 
-.hex-icon--blue polygon { stroke: var(--blue-400); }
-.hex-icon--steel polygon { stroke: var(--steel-500); }
-.hex-icon--brick polygon { stroke: var(--brick-500); }
+.hex-glyph {
+  stroke: none;
+}
+
+.hex-glyph-ring {
+  fill: none;
+  stroke-width: 6;
+}
+
+.brick-block {
+  stroke: none;
+}
+
+.hex-icon--blue .hex-outline,
+.hex-icon--blue .hex-glyph,
+.hex-icon--blue .hex-glyph-ring,
+.hex-icon--blue .brick-block {
+  stroke: var(--blue-400);
+}
+.hex-icon--blue .hex-glyph,
+.hex-icon--blue .brick-block {
+  fill: var(--blue-400);
+}
+
+.hex-icon--steel .hex-outline,
+.hex-icon--steel .hex-glyph,
+.hex-icon--steel .hex-glyph-ring,
+.hex-icon--steel .brick-block {
+  stroke: var(--steel-500);
+}
+.hex-icon--steel .hex-glyph,
+.hex-icon--steel .brick-block {
+  fill: var(--steel-500);
+}
+
+.hex-icon--brick .hex-outline,
+.hex-icon--brick .hex-glyph,
+.hex-icon--brick .hex-glyph-ring,
+.hex-icon--brick .brick-block {
+  stroke: var(--brick-500);
+}
+.hex-icon--brick .hex-glyph,
+.hex-icon--brick .brick-block {
+  fill: var(--brick-500);
+}
 
 .division-card--blue { --card-accent: var(--blue-400); }
 .division-card--steel { --card-accent: var(--steel-500); }

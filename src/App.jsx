@@ -13,6 +13,7 @@ const divisions = [
       'Návrh a realizace slaboproudých systémů',
     ],
     accent: 'blue',
+    type: 'bolt',
   },
   {
     id: 'strojirenstvi',
@@ -25,6 +26,7 @@ const divisions = [
       'Zámečnické a svářečské práce',
     ],
     accent: 'steel',
+    type: 'gear',
   },
   {
     id: 'stavebnictvi',
@@ -37,6 +39,7 @@ const divisions = [
       'Stavební dozor a příprava projektů',
     ],
     accent: 'brick',
+    type: 'brick',
   },
 ]
 
@@ -46,10 +49,54 @@ const team = [
   { name: 'Zakladatel 3', role: 'Stavebnictví', initials: 'Z3' },
 ]
 
-function HexIcon({ accent }) {
+function HexIcon({ id, accent, type }) {
+  const clipId = `hexClip-${id}`
+  const patternId = `brickPattern-${id}`
+  const hexPoints = '25,3 75,3 100,50 75,97 25,97 0,50'
+
   return (
     <svg viewBox="0 0 100 100" className={`hex-icon hex-icon--${accent}`} aria-hidden="true">
-      <polygon points="25,3 75,3 100,50 75,97 25,97 0,50" />
+      <defs>
+        <clipPath id={clipId}>
+          <polygon points={hexPoints} />
+        </clipPath>
+        {type === 'brick' && (
+          <pattern id={patternId} width="34" height="18" patternUnits="userSpaceOnUse">
+            <rect x="1" y="1" width="15" height="7" className="brick-block" />
+            <rect x="18" y="1" width="15" height="7" className="brick-block" />
+            <rect x="10" y="10" width="15" height="7" className="brick-block" />
+            <rect x="-7" y="10" width="15" height="7" className="brick-block" />
+            <rect x="27" y="10" width="15" height="7" className="brick-block" />
+          </pattern>
+        )}
+      </defs>
+
+      <polygon points={hexPoints} className="hex-outline" />
+
+      <g clipPath={`url(#${clipId})`}>
+        {type === 'bolt' && (
+          <polygon points="58,10 36,54 50,54 42,90 70,42 55,42 64,10" className="hex-glyph" />
+        )}
+        {type === 'gear' && (
+          <g>
+            <circle cx="50" cy="50" r="19" className="hex-glyph-ring" />
+            {[0, 45, 90, 135, 180, 225, 270, 315].map((deg) => (
+              <rect
+                key={deg}
+                x="46"
+                y="12"
+                width="8"
+                height="13"
+                className="hex-glyph"
+                transform={`rotate(${deg} 50 50)`}
+              />
+            ))}
+          </g>
+        )}
+        {type === 'brick' && (
+          <rect x="0" y="0" width="100" height="100" fill={`url(#${patternId})`} />
+        )}
+      </g>
     </svg>
   )
 }
@@ -85,7 +132,7 @@ function App() {
             <div className="division-grid" id="divize">
               {divisions.map((d) => (
                 <a href={`#${d.id}`} className={`division-card division-card--${d.accent}`} key={d.id}>
-                  <HexIcon accent={d.accent} />
+                  <HexIcon id={`card-${d.id}`} accent={d.accent} type={d.type} />
                   <h3>{d.label}</h3>
                   <p>{d.tagline}</p>
                 </a>
@@ -120,7 +167,7 @@ function App() {
             >
               <div className="container division-detail__inner">
                 <div className="division-detail__visual">
-                  <HexIcon accent={d.accent} />
+                  <HexIcon id={`detail-${d.id}`} accent={d.accent} type={d.type} />
                 </div>
                 <div className="division-detail__text">
                   <p className="eyebrow">{d.label}</p>
