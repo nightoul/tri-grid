@@ -10,6 +10,11 @@
   --paper-100: #eeece5;
   --ink-900: #10151c;
   --ink-600: #45505c;
+  --grid-line: rgba(15, 42, 74, 0.06);
+  --grid-line-dark: rgba(234, 242, 245, 0.07);
+  --texture-light:
+    repeating-linear-gradient(115deg, rgba(15, 42, 74, 0.035) 0px, rgba(15, 42, 74, 0.035) 1px, transparent 1px, transparent 4px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
 
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -32,7 +37,7 @@ html {
 }
 
 body {
-  background: var(--paper-50);
+  background: var(--texture-light), var(--paper-50);
   color: var(--ink-900);
   font-family: var(--font-body);
   line-height: 1.5;
@@ -134,7 +139,10 @@ a {
 
 /* Hero */
 .hero {
-  background: linear-gradient(180deg, var(--navy-950) 0%, var(--navy-800) 100%);
+  background:
+    linear-gradient(var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(180deg, var(--navy-950) 0%, var(--navy-800) 100%);
   color: var(--paper-50);
   padding: 96px 0 80px;
 }
@@ -338,7 +346,7 @@ a {
 /* Team */
 .team {
   padding: 88px 0;
-  background: var(--paper-100);
+  background: var(--texture-light), var(--paper-100);
 }
 
 .team-grid {
@@ -406,7 +414,10 @@ a {
 
 /* Footer */
 .site-footer {
-  background: var(--navy-950);
+  background:
+    linear-gradient(var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
+    var(--navy-950);
   color: #a9b6c4;
   padding: 24px 0;
   font-family: var(--font-mono);
