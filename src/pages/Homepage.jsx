@@ -48,11 +48,11 @@ function Homepage() {
         </div>
       </section>
 
-      <div className="division-overview">
+      <div className="division-overview division-overview--tight">
         <div className="container division-overview__inner">
           <div className="division-overview__text">
             <p className="eyebrow">Proč Tri-Grid</p>
-            <h2>Proč spolupracovat s námi</h2>
+            <h2 className="why-heading">Proč spolupracovat s námi</h2>
             <p>
               Jsme nová firma, ale ne noví v oboru — zakladatelé mají za sebou
               roky praxe každý ve svém řemesle. Spojili jsme se, aby klient
@@ -90,7 +90,6 @@ function Homepage() {
       <section className="about" id="o-nas">
         <div className="container about__inner">
           <p className="eyebrow">O nás</p>
-          <h2>Nová firma, zkušený základ</h2>
           <p>
             Tri-Grid zakládají tři kolegové, kteří se rozhodli spojit své obory pod
             jednu značku. Místo shánění tří různých dodavatelů na elektřinu, stroje

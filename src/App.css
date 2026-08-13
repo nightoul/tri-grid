@@ -557,8 +557,12 @@ a {
 
 /* Division page: overview with media */
 .division-overview {
-  padding: 88px 0;
+  padding: 44px 0 88px;
   border-bottom: 1px solid var(--paper-100);
+}
+
+.division-overview--tight {
+  padding-top: 20px;
 }
 
 .division-overview__inner {
@@ -571,6 +575,11 @@ a {
 .division-overview__text h2 {
   font-size: 1.7rem;
   max-width: 16ch;
+}
+
+.why-heading {
+  max-width: 34ch;
+  white-space: nowrap;
 }
 
 .division-overview__media img {
@@ -875,6 +884,11 @@ a {
 }
 
 @media (max-width: 640px) {
+  .why-heading {
+    white-space: normal;
+    max-width: 16ch;
+  }
+
   .stats-strip__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
