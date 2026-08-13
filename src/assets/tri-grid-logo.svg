@@ -1,0 +1,39 @@
+<svg viewBox="0 0 460 430" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9CCBEA" />
+      <stop offset="45%" stop-color="#4E86B0" />
+      <stop offset="100%" stop-color="#1B3B5C" />
+    </linearGradient>
+    <clipPath id="hexClipRight">
+      <polygon points="320,160 432.6,225 432.6,355 320,420 207.4,355 207.4,225" />
+    </clipPath>
+    <pattern id="brickPattern" width="34" height="18" patternUnits="userSpaceOnUse">
+      <rect x="1" y="1" width="15" height="7" fill="url(#steelGrad)" />
+      <rect x="18" y="1" width="15" height="7" fill="url(#steelGrad)" />
+      <rect x="10" y="10" width="15" height="7" fill="url(#steelGrad)" />
+      <rect x="-7" y="10" width="15" height="7" fill="url(#steelGrad)" />
+      <rect x="27" y="10" width="15" height="7" fill="url(#steelGrad)" />
+    </pattern>
+  </defs>
+
+  <!-- back layer: house (left) hexagon + roofline -->
+  <polygon points="140,160 252.6,225 252.6,355 140,420 27.4,355 27.4,225"
+    fill="none" stroke="url(#steelGrad)" stroke-width="11" />
+  <path d="M 50,255 L 105,175 L 222,230"
+    fill="none" stroke="url(#steelGrad)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- middle layer: brick (right) hexagon -->
+  <polygon points="320,160 432.6,225 432.6,355 320,420 207.4,355 207.4,225"
+    fill="none" stroke="url(#steelGrad)" stroke-width="11" />
+  <rect x="207.4" y="160" width="225.2" height="260" fill="url(#brickPattern)"
+    clip-path="url(#hexClipRight)" opacity="0.92" />
+  <polygon points="320,160 432.6,225 432.6,355 320,420 207.4,355 207.4,225"
+    fill="none" stroke="url(#steelGrad)" stroke-width="11" />
+
+  <!-- front layer: electric (top) hexagon + bolt -->
+  <polygon points="230,10 342.6,75 342.6,205 230,270 117.4,205 117.4,75"
+    fill="none" stroke="url(#steelGrad)" stroke-width="11" />
+  <polygon points="242.8,52 207.6,148.8 230,148.8 217.2,228 262,122.4 238,122.4 252.4,52"
+    fill="url(#steelGrad)" />
+</svg>
