@@ -1,101 +1,69 @@
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import HexIcon from '../components/HexIcon.jsx'
 import ServiceIcon from '../components/ServiceIcon.jsx'
+import elektrotechnika1 from '../assets/images/elektrotechnika1.jpg'
+import elektrotechnikaBg from '../assets/images/Elektrotechnika_bg.jpg'
+import elektrotechnika2 from '../assets/images/elektrotechnika2.jpg'
+import elektrotechnika3 from '../assets/images/elektrotechnika3.jpg'
+import elektrotechnika4 from '../assets/images/elektrotechnika4.jpg'
 
-const services = [
-  {
-    title: 'Elektroinstalace novostaveb a rekonstrukcí',
-    desc: 'Kompletní rozvody od hrubé stavby po finální zapojení — rozvaděče, zásuvkové okruhy i osvětlení.',
-    icon: 'install',
-  },
-  {
-    title: 'Revize a odborné prohlídky',
-    desc: 'Pravidelné i jednorázové revize elektrických instalací podle platných norem, s jasným protokolem.',
-    icon: 'inspect',
-  },
-  {
-    title: 'Návrh a realizace slaboproudých systémů',
-    desc: 'Zabezpečení, kamerové systémy, datové rozvody a příprava na chytrou domácnost.',
-    icon: 'lowvoltage',
-  },
-]
-
-const steps = [
-  {
-    title: 'Poptávka a konzultace',
-    desc: 'Probereme rozsah prací a základní požadavky — osobně na místě nebo na dálku.',
-  },
-  {
-    title: 'Návrh a nacenění',
-    desc: 'Připravíme technický návrh a transparentní cenovou nabídku bez skrytých položek.',
-  },
-  {
-    title: 'Realizace',
-    desc: 'Provedeme instalaci podle domluveného harmonogramu a průběžně vás informujeme.',
-  },
-  {
-    title: 'Revize a předání',
-    desc: 'Zkontrolujeme funkčnost, vystavíme revizní zprávu a předáme kompletní dokumentaci.',
-  },
-]
-
-const gallery = [
-  { seed: 'trigrid-elec-panel', caption: 'Instalace a zapojení rozvaděče' },
-  { seed: 'trigrid-elec-wiring', caption: 'Rozvody v novostavbě' },
-  { seed: 'trigrid-elec-tools', caption: 'Odborná revize a měření' },
-]
+// Ikony a obrázky jsou strukturální (nejsou to texty), takže zůstávají tady,
+// ne v překladovém slovníku. Pořadí musí sedět s polem services/gallery v JSON.
+const serviceIcons = ['install', 'inspect', 'lowvoltage']
+const galleryImages = [elektrotechnika2, elektrotechnika3, elektrotechnika4]
 
 function ElektrotechnikaPage() {
+  const { t } = useTranslation()
+  const { lang } = useParams()
+
+  const services = t('divisionsData.elektrotechnika.services', { returnObjects: true })
+  const steps = t('divisionsData.elektrotechnika.steps', { returnObjects: true })
+  const galleryCaptions = t('divisionsData.elektrotechnika.galleryCaptions', { returnObjects: true })
+
   return (
     <>
-      <section className="division-page-hero division-page-hero--blue">
+      <section className="division-page-hero">
+        {/* Zatím placeholder — nahraď souborem stejného jména
+            (src/assets/images/Elektrotechnika_bg.jpg) za reálnou fotku. */}
+        <div className="division-page-hero__bg" style={{ backgroundImage: `url(${elektrotechnikaBg})` }} />
+        <div className="division-page-hero__overlay division-page-hero__overlay--blue" aria-hidden="true" />
         <div className="container division-page-hero__inner">
-          <Link to="/#divize" className="division-page-back">← Zpět</Link>
+          <Link to={`/${lang}`} className="division-page-back">{t('common.backToDivisions')}</Link>
           <div className="division-page-hero__head">
             <HexIcon id="page-elektrotechnika" accent="blue" type="bolt" />
             <div>
-              <p className="eyebrow">Divize</p>
-              <h1>Elektrotechnika</h1>
+              <p className="eyebrow">{t('common.divisionsEyebrow')}</p>
+              <h1>{t('divisionsData.elektrotechnika.label')}</h1>
             </div>
           </div>
-          <p className="hero__lede">
-            Silnoproudé i slaboproudé rozvody, revize a chytré systémy — pro byty,
-            rodinné domy i komerční objekty, od návrhu po předání.
-          </p>
+          <p className="hero__lede">{t('divisionsData.elektrotechnika.heroLede')}</p>
         </div>
       </section>
 
       <section className="division-overview">
         <div className="container division-overview__inner">
           <div className="division-overview__text">
-            <p className="eyebrow">Co pro vás uděláme</p>
-            <h2>Elektřina, na kterou se dá spolehnout</h2>
-            <p>
-              Zajišťujeme kompletní elektroinstalace a revize pro byty, rodinné domy
-              i komerční prostory — od prvního návrhu až po předání funkčního
-              systému. Pracujeme jak se silnoproudými rozvody, tak se slaboproudými
-              systémy (zabezpečení, datové rozvody, chytrá domácnost), takže na
-              stavbě řešíte elektřinu jen s jedním dodavatelem.
-            </p>
+            <p className="eyebrow">{t('common.whatWeDoEyebrow')}</p>
+            <h2>{t('divisionsData.elektrotechnika.overviewHeading')}</h2>
+            <p>{t('divisionsData.elektrotechnika.overviewText')}</p>
           </div>
           <div className="division-overview__media">
-            <img
-              src="https://picsum.photos/seed/trigrid-elec-main/640/760"
-              alt="Ilustrační fotografie elektromontážních prací"
-              loading="lazy"
-            />
+            {/* Zatím placeholder — nahraď souborem stejného jména
+                (src/assets/images/elektrotechnika1.jpg) za reálnou fotku. */}
+            <img src={elektrotechnika1} alt="" loading="lazy" />
           </div>
         </div>
       </section>
 
       <section className="service-section service-section--blue">
         <div className="container">
-          <p className="eyebrow">Naše služby</p>
-          <h2>Tři pilíře divize Elektrotechnika</h2>
+          <p className="eyebrow">{t('common.ourServicesEyebrow')}</p>
+          <h2>{t('divisionsData.elektrotechnika.servicesHeading')}</h2>
           <div className="service-cards">
-            {services.map((s) => (
+            {services.map((s, i) => (
               <div className="service-card" key={s.title}>
-                <ServiceIcon variant={s.icon} />
+                <ServiceIcon variant={serviceIcons[i]} />
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
               </div>
@@ -106,8 +74,8 @@ function ElektrotechnikaPage() {
 
       <section className="process-section process-section--blue">
         <div className="container">
-          <p className="eyebrow">Jak probíhá spolupráce</p>
-          <h2>Čtyři kroky od poptávky k předání</h2>
+          <p className="eyebrow">{t('common.howWeWorkEyebrow')}</p>
+          <h2>{t('common.howWeWorkHeading')}</h2>
           <div className="process-steps">
             {steps.map((s, i) => (
               <div className="process-step" key={s.title}>
@@ -122,31 +90,24 @@ function ElektrotechnikaPage() {
 
       <section className="gallery-section">
         <div className="container">
-          <p className="eyebrow">Ukázky prací</p>
-          <h2>Elektroinstalace v praxi</h2>
+          <p className="eyebrow">{t('common.workSamplesEyebrow')}</p>
+          <h2>{t('divisionsData.elektrotechnika.galleryHeading')}</h2>
           <div className="gallery-grid">
-            {gallery.map((g) => (
-              <figure className="gallery-item" key={g.seed}>
-                <img
-                  src={`https://picsum.photos/seed/${g.seed}/640/480`}
-                  alt={g.caption}
-                  loading="lazy"
-                />
-                <figcaption>{g.caption}</figcaption>
+            {galleryCaptions.map((caption, i) => (
+              <figure className="gallery-item" key={caption}>
+                <img src={galleryImages[i]} alt={caption} loading="lazy" />
+                <figcaption>{caption}</figcaption>
               </figure>
             ))}
           </div>
-          <p className="gallery-note">
-            Ilustrační fotografie — jakmile budete mít snímky z vlastních realizací,
-            nahradíme je za skutečné.
-          </p>
+          <p className="gallery-note">{t('common.galleryNote')}</p>
         </div>
       </section>
 
       <section className="division-page-body division-page-body--blue">
         <div className="container division-page-cta">
-          <p>Máte poptávku v oboru elektrotechnika?</p>
-          <Link to="/#kontakt" className="division-page-cta__link">Kontaktujte nás →</Link>
+          <p>{t('divisionsData.elektrotechnika.ctaQuestion')}</p>
+          <Link to={`/${lang}#kontakt`} className="division-page-cta__link">{t('common.ctaContact')}</Link>
         </div>
       </section>
     </>

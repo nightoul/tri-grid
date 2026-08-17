@@ -1,0 +1,249 @@
+/* This file is auto-split from the original App.css — see src/App.css for the import order. */
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background:
+    linear-gradient(var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
+    var(--navy-950);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 8px 24px -16px rgba(0, 0, 0, 0.5);
+}
+
+.site-header__strip {
+  display: flex;
+  height: 3px;
+}
+
+.site-header__strip-seg {
+  flex: 1;
+}
+
+.site-header__strip-seg--blue { background: var(--blue-400); }
+.site-header__strip-seg--steel { background: var(--steel-500); }
+.site-header__strip-seg--brick { background: var(--brick-500); }
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 68px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.logo-mark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--paper-50);
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.logo-mark__icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: brightness(1.55) saturate(1.05);
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+
+.nav a {
+  position: relative;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: rgba(246, 245, 241, 0.82);
+  padding-bottom: 4px;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 1.5px;
+  background: var(--blue-400);
+  transition: right 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--paper-50);
+}
+
+.nav a:hover::after {
+  right: 0;
+}
+
+/* Generic dropdown (used by DivisionsDropdown and LanguageSwitcher) */
+.dropdown {
+  position: relative;
+}
+
+.dropdown__toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(246, 245, 241, 0.4);
+  border-radius: 4px;
+  padding: 4px 10px;
+  background: none;
+  color: rgba(246, 245, 241, 0.82);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dropdown__toggle:hover {
+  color: var(--paper-50);
+  border-color: rgba(246, 245, 241, 0.7);
+}
+
+.dropdown__chevron {
+  width: 10px;
+  height: 7px;
+  transition: transform 0.15s ease;
+}
+
+.dropdown__toggle[aria-expanded="true"] .dropdown__chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 30;
+  min-width: 160px;
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  background: var(--navy-900, var(--navy-800));
+  border: 1px solid rgba(246, 245, 241, 0.15);
+  border-radius: 6px;
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.dropdown__menu--left {
+  right: auto;
+  left: 0;
+}
+
+.dropdown__menu.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown__menu li {
+  list-style: none;
+}
+
+.dropdown__menu a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: rgba(246, 245, 241, 0.82);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown__menu a:hover {
+  background: rgba(246, 245, 241, 0.08);
+  color: var(--paper-50);
+}
+
+.dropdown__menu a.is-active {
+  color: var(--blue-400);
+  font-weight: 600;
+}
+
+/* Language row inside the mobile slide-down panel */
+.mobile-nav .mobile-nav__langs {
+  display: flex;
+  gap: 10px;
+  padding: 14px 24px;
+  border-top: 1px solid rgba(246, 245, 241, 0.12);
+}
+
+.mobile-nav .mobile-nav__langs a {
+  border: 1px solid rgba(246, 245, 241, 0.3);
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: rgba(246, 245, 241, 0.82);
+  text-decoration: none;
+}
+
+.mobile-nav .mobile-nav__langs a.is-active {
+  color: var(--blue-400);
+  border-color: var(--blue-400);
+  font-weight: 600;
+}
+
+/* Mobile menu toggle — hidden on desktop */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.menu-toggle__bar {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--paper-50);
+  border-radius: 1px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.is-menu-open .menu-toggle__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.is-menu-open .menu-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.is-menu-open .menu-toggle__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile nav panel — hidden on desktop, shown only via .is-menu-open on small screens */
+.mobile-nav {
+  display: none;
+}
+

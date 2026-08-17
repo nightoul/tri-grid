@@ -1,26 +1,37 @@
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import HexIcon from '../components/HexIcon.jsx'
 import divisions from '../data/divisions.js'
 import logoIcon from '../assets/tri-grid-logo.svg'
+import heroBg from '../assets/images/hero-bg.jpg'
 
 function Homepage() {
+  const { t } = useTranslation()
+  const { lang } = useParams()
+  const whyList = t('home.why.list', { returnObjects: true })
+
   return (
     <>
       <section className="hero" id="top">
+        {/* Zatím placeholder — nahraď souborem stejného jména
+            (src/assets/images/hero-bg.jpg) za reálnou fotku. */}
+        <div className="hero__bg" style={{ backgroundImage: `url(${heroBg})` }} />
+        <div className="hero__overlay" aria-hidden="true" />
         <div className="container hero__inner">
-          <p className="eyebrow">Tri-Grid s.r.o. · Když se řemesla potkají</p>
-          <h1>Tři obory. Jeden partner.</h1>
-          <p className="hero__lede">
-            Tri-Grid s.r.o. spojuje elektrotechniku, strojírenství a stavebnictví
-            pod jednu střechu — od návrhu po realizaci.
-          </p>
+          <p className="eyebrow">{t('home.eyebrow')}</p>
+          <h1>{t('home.title')}</h1>
+          <p className="hero__lede">{t('home.lede')}</p>
 
           <div className="division-grid" id="divize">
             {divisions.map((d) => (
-              <Link to={`/divize/${d.id}`} className={`division-card division-card--${d.accent}`} key={d.id}>
+              <Link
+                to={`/${lang}/divize/${d.id}`}
+                className={`division-card division-card--${d.accent}`}
+                key={d.id}
+              >
                 <HexIcon id={`card-${d.id}`} accent={d.accent} type={d.type} />
-                <h3>{d.label}</h3>
-                <p>{d.tagline}</p>
+                <h3>{t(`divisionsData.${d.id}.label`)}</h3>
+                <p>{t(`divisionsData.${d.id}.tagline`)}</p>
               </Link>
             ))}
           </div>
@@ -34,16 +45,16 @@ function Homepage() {
           </div>
           <div className="stat">
             <span className="stat__value">3</span>
-            <span className="stat__label">zakladatelé s praxí v oboru</span>
+            <span className="stat__label">{t('home.stats.founders')}</span>
           </div>
           <div className="stat">
             <span className="stat__value">1</span>
-            <span className="stat__label">kontakt pro celý projekt</span>
+            <span className="stat__label">{t('home.stats.contact')}</span>
           </div>
           {/* PLACEHOLDER — upřesnit s klientem před spuštěním webu */}
           <div className="stat">
             <span className="stat__value">10 000+</span>
-            <span className="stat__label">zakázek</span>
+            <span className="stat__label">{t('home.stats.orders')}</span>
           </div>
         </div>
       </section>
@@ -51,36 +62,21 @@ function Homepage() {
       <div className="division-overview division-overview--tight">
         <div className="container division-overview__inner">
           <div className="division-overview__text">
-            <p className="eyebrow">Proč Tri-Grid</p>
-            <h2 className="why-heading">Proč spolupracovat s námi</h2>
-            <p>
-              Jsme nová firma, ale ne noví v oboru — zakladatelé mají za sebou
-              roky praxe každý ve svém řemesle. Spojili jsme se, aby klient
-              nemusel koordinovat tři různé dodavatele sám.
-            </p>
+            <p className="eyebrow">{t('home.why.eyebrow')}</p>
+            <h2 className="why-heading">{t('home.why.heading')}</h2>
+            <p>{t('home.why.intro')}</p>
             <ul className="why-list">
-              <li>
-                <strong>Osobní přístup</strong> — každou zakázku řešíme
-                individuálně, přímo s někým z týmu, ne přes vrstvu obchodníků.
-              </li>
-              <li>
-                <strong>Zkušenost napříč obory</strong> — elektro, stroje
-                i stavby máme pokryté lidmi s dlouholetou praxí.
-              </li>
-              <li>
-                <strong>Koordinace bez ztrát</strong> — divize spolu komunikují
-                napřímo, takže se nic neztratí mezi řemesly.
-              </li>
-              <li>
-                <strong>Transparentní nabídky</strong> — jasné nacenění bez
-                skrytých položek.
-              </li>
+              {whyList.map((item) => (
+                <li key={item.title}>
+                  <strong>{item.title}</strong> — {item.desc}
+                </li>
+              ))}
             </ul>
           </div>
           <div className="division-overview__media">
             <img
               src="https://picsum.photos/seed/trigrid-why-us/640/760"
-              alt="Ilustrační fotografie realizace"
+              alt=""
               loading="lazy"
             />
           </div>
@@ -89,24 +85,20 @@ function Homepage() {
 
       <section className="about" id="o-nas">
         <div className="container about__inner">
-          <p className="eyebrow">O nás</p>
-          <p>
-            Tri-Grid zakládají tři kolegové, kteří se rozhodli spojit své obory pod
-            jednu značku. Místo shánění tří různých dodavatelů na elektřinu, stroje
-            a stavbu dostane klient jeden kontakt a koordinovaný tým.
-          </p>
-          <Link to="/o-nas" className="about__more">Zjistit více o nás →</Link>
+          <p className="eyebrow">{t('home.about.eyebrow')}</p>
+          <p>{t('home.about.text')}</p>
+          <Link to={`/${lang}/o-nas`} className="about__more">{t('home.about.learnMore')}</Link>
         </div>
       </section>
 
       <section className="contact" id="kontakt">
         <div className="container contact__inner">
-          <p className="eyebrow">Kontakt</p>
-          <h2>Pojďme probrat váš projekt</h2>
+          <p className="eyebrow">{t('home.contact.eyebrow')}</p>
+          <h2>{t('home.contact.heading')}</h2>
           <div className="contact__details">
             <a href="mailto:info@tri-grid.cz">info@tri-grid.cz</a>
             <a href="tel:+420000000000">+420 000 000 000</a>
-            <span>Česká republika</span>
+            <span>{t('home.contact.country')}</span>
           </div>
         </div>
       </section>

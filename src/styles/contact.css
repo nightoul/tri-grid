@@ -1,0 +1,26 @@
+/* This file is auto-split from the original App.css — see src/App.css for the import order. */
+
+/* Contact */
+.contact {
+  padding: 96px 0;
+  text-align: center;
+}
+
+.contact__inner {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--font-mono);
+  margin-top: 24px;
+}
+
+.contact__details a {
+  text-decoration: none;
+  color: var(--navy-800);
+}
+

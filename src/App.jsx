@@ -1,16 +1,22 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import Homepage from './pages/Homepage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import ElektrotechnikaPage from './pages/ElektrotechnikaPage.jsx'
 import StrojirenstviPage from './pages/StrojirenstviPage.jsx'
 import StavebnictviPage from './pages/StavebnictviPage.jsx'
+import languages from './data/languages.js'
+
+const defaultLang = languages[0].code
 
 function App() {
   return (
     <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Homepage />} />
+      {/* Kořen webu přesměruje na výchozí jazyk (první v seznamu languages.js) */}
+      <Route path="/" element={<Navigate to={`/${defaultLang}`} replace />} />
+
+      <Route path=":lang" element={<Layout />}>
+        <Route index element={<Homepage />} />
         <Route path="o-nas" element={<AboutPage />} />
         <Route path="divize/elektrotechnika" element={<ElektrotechnikaPage />} />
         <Route path="divize/strojirenstvi" element={<StrojirenstviPage />} />
@@ -19,6 +25,9 @@ function App() {
         <Route path="kontakt" element={<ContactPage />} />
         */}
       </Route>
+
+      {/* Neznámá cesta -> zpět na výchozí jazyk */}
+      <Route path="*" element={<Navigate to={`/${defaultLang}`} replace />} />
     </Routes>
   )
 }

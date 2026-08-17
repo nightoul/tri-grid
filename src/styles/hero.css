@@ -1,0 +1,151 @@
+/* This file is auto-split from the original App.css — see src/App.css for the import order. */
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy-950);
+  color: var(--paper-50);
+  padding: 128px 0 80px;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0.25) contrast(1.05);
+  opacity: 0.9;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(180deg, rgba(7, 20, 38, 0.6) 0%, rgba(15, 42, 74, 0.68) 100%);
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .eyebrow {
+  color: var(--blue-400);
+}
+
+.hero h1 {
+  color: var(--paper-50);
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  max-width: 26ch;
+}
+
+.hero__lede {
+  color: #c7d2de;
+  max-width: 52ch;
+  font-size: 1.05rem;
+}
+
+.division-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.division-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 28px 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.division-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-accent, var(--blue-400));
+}
+
+.division-card h3 {
+  color: var(--paper-50);
+  font-size: 1.15rem;
+  margin-bottom: 0;
+}
+
+.division-card p {
+  color: #a9b6c4;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.hex-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 4px;
+  overflow: visible;
+}
+
+.hex-outline {
+  fill: none;
+  stroke-width: 4;
+}
+
+.hex-glyph {
+  stroke: none;
+}
+
+.hex-glyph-ring {
+  fill: none;
+  stroke-width: 6;
+}
+
+.brick-block {
+  stroke: none;
+}
+
+.hex-icon--blue .hex-outline,
+.hex-icon--blue .hex-glyph,
+.hex-icon--blue .hex-glyph-ring,
+.hex-icon--blue .brick-block {
+  stroke: var(--blue-400);
+}
+.hex-icon--blue .hex-glyph,
+.hex-icon--blue .brick-block {
+  fill: var(--blue-400);
+}
+
+.hex-icon--steel .hex-outline,
+.hex-icon--steel .hex-glyph,
+.hex-icon--steel .hex-glyph-ring,
+.hex-icon--steel .brick-block {
+  stroke: var(--steel-500);
+}
+.hex-icon--steel .hex-glyph,
+.hex-icon--steel .brick-block {
+  fill: var(--steel-500);
+}
+
+.hex-icon--brick .hex-outline,
+.hex-icon--brick .hex-glyph,
+.hex-icon--brick .hex-glyph-ring,
+.hex-icon--brick .brick-block {
+  stroke: var(--brick-500);
+}
+.hex-icon--brick .hex-glyph,
+.hex-icon--brick .brick-block {
+  fill: var(--brick-500);
+}
+
+.division-card--blue { --card-accent: var(--blue-400); }
+.division-card--steel { --card-accent: var(--steel-500); }
+.division-card--brick { --card-accent: var(--brick-500); }
+

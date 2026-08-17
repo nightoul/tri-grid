@@ -1,100 +1,67 @@
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import HexIcon from '../components/HexIcon.jsx'
 import ServiceIcon from '../components/ServiceIcon.jsx'
+import stavebnictvi1 from '../assets/images/stavebnictvi1.jpg'
+import stavebnictviBg from '../assets/images/Stavebnictvi_bg.jpg'
+import stavebnictvi2 from '../assets/images/stavebnictvi2.jpg'
+import stavebnictvi3 from '../assets/images/stavebnictvi3.jpg'
+import stavebnictvi4 from '../assets/images/stavebnictvi4.jpg'
 
-const services = [
-  {
-    title: 'Novostavby a rekonstrukce',
-    desc: 'Kompletní realizace staveb od základů po hrubou stavbu, včetně rekonstrukcí stávajících objektů.',
-    icon: 'build',
-  },
-  {
-    title: 'Zednické a dokončovací práce',
-    desc: 'Omítky, obklady, podlahy a další dokončovací práce provedené s důrazem na detail.',
-    icon: 'finish',
-  },
-  {
-    title: 'Stavební dozor a příprava projektů',
-    desc: 'Kontrola kvality a postupu prací, koordinace řemesel a příprava projektové dokumentace.',
-    icon: 'supervise',
-  },
-]
-
-const steps = [
-  {
-    title: 'Poptávka a konzultace',
-    desc: 'Probereme rozsah stavby, představy a orientační rozpočet.',
-  },
-  {
-    title: 'Projekt a nacenění',
-    desc: 'Připravíme nebo zkontrolujeme projektovou dokumentaci a cenovou nabídku.',
-  },
-  {
-    title: 'Realizace',
-    desc: 'Provedeme stavební práce podle harmonogramu, s průběžnou kontrolou kvality.',
-  },
-  {
-    title: 'Předání a dokumentace',
-    desc: 'Předáme dokončené dílo včetně veškeré dokumentace a revizí.',
-  },
-]
-
-const gallery = [
-  { seed: 'trigrid-build-shell', caption: 'Hrubá stavba' },
-  { seed: 'trigrid-build-mason', caption: 'Zednické práce' },
-  { seed: 'trigrid-build-finish', caption: 'Dokončovací práce' },
-]
+const serviceIcons = ['build', 'finish', 'supervise']
+const galleryImages = [stavebnictvi2, stavebnictvi3, stavebnictvi4]
 
 function StavebnictviPage() {
+  const { t } = useTranslation()
+  const { lang } = useParams()
+
+  const services = t('divisionsData.stavebnictvi.services', { returnObjects: true })
+  const steps = t('divisionsData.stavebnictvi.steps', { returnObjects: true })
+  const galleryCaptions = t('divisionsData.stavebnictvi.galleryCaptions', { returnObjects: true })
+
   return (
     <>
-      <section className="division-page-hero division-page-hero--brick">
+      <section className="division-page-hero">
+        {/* Zatím placeholder — nahraď souborem stejného jména
+            (src/assets/images/Stavebnictvi_bg.jpg) za reálnou fotku. */}
+        <div className="division-page-hero__bg" style={{ backgroundImage: `url(${stavebnictviBg})` }} />
+        <div className="division-page-hero__overlay division-page-hero__overlay--brick" aria-hidden="true" />
         <div className="container division-page-hero__inner">
-          <Link to="/#divize" className="division-page-back">← Zpět</Link>
+          <Link to={`/${lang}`} className="division-page-back">{t('common.backToDivisions')}</Link>
           <div className="division-page-hero__head">
             <HexIcon id="page-stavebnictvi" accent="brick" type="brick" />
             <div>
-              <p className="eyebrow">Divize</p>
-              <h1>Stavebnictví</h1>
+              <p className="eyebrow">{t('common.divisionsEyebrow')}</p>
+              <h1>{t('divisionsData.stavebnictvi.label')}</h1>
             </div>
           </div>
-          <p className="hero__lede">
-            Novostavby, rekonstrukce a dokončovací práce s důrazem na kvalitu,
-            harmonogram a jasnou komunikaci od základů po předání klíčů.
-          </p>
+          <p className="hero__lede">{t('divisionsData.stavebnictvi.heroLede')}</p>
         </div>
       </section>
 
       <section className="division-overview">
         <div className="container division-overview__inner">
           <div className="division-overview__text">
-            <p className="eyebrow">Co pro vás uděláme</p>
-            <h2>Od základové desky po předání klíčů</h2>
-            <p>
-              Realizujeme novostavby i rekonstrukce — hrubou stavbu, zednické
-              a dokončovací práce i stavební dozor. Díky propojení se strojírenskou
-              a elektro divizí zvládneme koordinovat i technicky náročnější
-              zakázky bez zbytečných prodlev mezi řemesly.
-            </p>
+            <p className="eyebrow">{t('common.whatWeDoEyebrow')}</p>
+            <h2>{t('divisionsData.stavebnictvi.overviewHeading')}</h2>
+            <p>{t('divisionsData.stavebnictvi.overviewText')}</p>
           </div>
           <div className="division-overview__media">
-            <img
-              src="https://picsum.photos/seed/trigrid-build-main/640/760"
-              alt="Ilustrační fotografie stavebních prací"
-              loading="lazy"
-            />
+            {/* Zatím placeholder — nahraď souborem stejného jména
+                (src/assets/images/stavebnictvi1.jpg) za reálnou fotku. */}
+            <img src={stavebnictvi1} alt="" loading="lazy" />
           </div>
         </div>
       </section>
 
       <section className="service-section service-section--brick">
         <div className="container">
-          <p className="eyebrow">Naše služby</p>
-          <h2>Tři pilíře divize Stavebnictví</h2>
+          <p className="eyebrow">{t('common.ourServicesEyebrow')}</p>
+          <h2>{t('divisionsData.stavebnictvi.servicesHeading')}</h2>
           <div className="service-cards">
-            {services.map((s) => (
+            {services.map((s, i) => (
               <div className="service-card" key={s.title}>
-                <ServiceIcon variant={s.icon} />
+                <ServiceIcon variant={serviceIcons[i]} />
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
               </div>
@@ -105,8 +72,8 @@ function StavebnictviPage() {
 
       <section className="process-section process-section--brick">
         <div className="container">
-          <p className="eyebrow">Jak probíhá spolupráce</p>
-          <h2>Čtyři kroky od poptávky k předání</h2>
+          <p className="eyebrow">{t('common.howWeWorkEyebrow')}</p>
+          <h2>{t('common.howWeWorkHeading')}</h2>
           <div className="process-steps">
             {steps.map((s, i) => (
               <div className="process-step" key={s.title}>
@@ -121,31 +88,24 @@ function StavebnictviPage() {
 
       <section className="gallery-section">
         <div className="container">
-          <p className="eyebrow">Ukázky prací</p>
-          <h2>Stavebnictví v praxi</h2>
+          <p className="eyebrow">{t('common.workSamplesEyebrow')}</p>
+          <h2>{t('divisionsData.stavebnictvi.galleryHeading')}</h2>
           <div className="gallery-grid">
-            {gallery.map((g) => (
-              <figure className="gallery-item" key={g.seed}>
-                <img
-                  src={`https://picsum.photos/seed/${g.seed}/640/480`}
-                  alt={g.caption}
-                  loading="lazy"
-                />
-                <figcaption>{g.caption}</figcaption>
+            {galleryCaptions.map((caption, i) => (
+              <figure className="gallery-item" key={caption}>
+                <img src={galleryImages[i]} alt={caption} loading="lazy" />
+                <figcaption>{caption}</figcaption>
               </figure>
             ))}
           </div>
-          <p className="gallery-note">
-            Ilustrační fotografie — jakmile budete mít snímky z vlastních realizací,
-            nahradíme je za skutečné.
-          </p>
+          <p className="gallery-note">{t('common.galleryNote')}</p>
         </div>
       </section>
 
       <section className="division-page-body division-page-body--brick">
         <div className="container division-page-cta">
-          <p>Máte poptávku v oboru stavebnictví?</p>
-          <Link to="/#kontakt" className="division-page-cta__link">Kontaktujte nás →</Link>
+          <p>{t('divisionsData.stavebnictvi.ctaQuestion')}</p>
+          <Link to={`/${lang}#kontakt`} className="division-page-cta__link">{t('common.ctaContact')}</Link>
         </div>
       </section>
     </>
