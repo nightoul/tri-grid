@@ -27,6 +27,10 @@
 }
 
 @media (max-width: 640px) {
+  .hero__inner > .eyebrow {
+    display: none;
+  }
+
   .why-heading {
     white-space: normal;
     max-width: 16ch;
@@ -81,7 +85,42 @@
   }
 
   .hero {
-    padding: 116px 0 56px;
+    padding: 108px 0 44px;
+  }
+
+  .division-page-hero {
+    padding: 92px 0 40px;
+  }
+
+  .division-page-hero--brick {
+    padding-bottom: 32px;
+  }
+
+  .division-page-hero--brick .hero__lede {
+    font-size: 0.9rem;
+    line-height: 1.42;
+  }
+
+  .division-page-back {
+    margin-bottom: 18px;
+  }
+
+  .division-page-hero__head {
+    margin-bottom: 10px;
+  }
+
+  .division-overview:not(.division-overview--tight) {
+    padding-top: 28px;
+  }
+
+  .hero h1 {
+    margin-bottom: 14px;
+  }
+
+  .division-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 28px;
   }
 
   .division-page-hero__head {
@@ -98,7 +137,30 @@
   }
 
   .division-card {
-    padding: 22px 18px;
+    min-width: 0;
+    min-height: 116px;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 14px 6px;
+    text-align: center;
+  }
+
+  .division-card .hex-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .division-card h3 {
+    width: 100%;
+    margin: 0;
+    font-size: clamp(0.62rem, 2.8vw, 0.78rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  .division-card p {
+    display: none;
   }
 
   .about,

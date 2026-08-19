@@ -21,7 +21,7 @@ function StavebnictviPage() {
 
   return (
     <>
-      <section className="division-page-hero">
+      <section className="division-page-hero division-page-hero--brick">
         {/* Zatím placeholder — nahraď souborem stejného jména
             (src/assets/images/Stavebnictvi_bg.jpg) za reálnou fotku. */}
         <div className="division-page-hero__bg" style={{ backgroundImage: `url(${stavebnictviBg})` }} />
