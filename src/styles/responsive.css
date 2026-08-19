@@ -127,6 +127,10 @@
   .division-card {
     transition: none;
   }
+
+  .circuit-animation__spark {
+    display: none;
+  }
 }
 
 /* XL monitors */

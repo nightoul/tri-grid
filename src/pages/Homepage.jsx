@@ -4,6 +4,7 @@ import HexIcon from '../components/HexIcon.jsx'
 import divisions from '../data/divisions.js'
 import logoIcon from '../assets/tri-grid-logo.svg'
 import heroBg from '../assets/images/hero-bg.jpg'
+import CircuitAnimation from '../components/CircuitAnimation.jsx'
 
 function Homepage() {
   const { t } = useTranslation()
@@ -17,6 +18,7 @@ function Homepage() {
             (src/assets/images/hero-bg.jpg) za reálnou fotku. */}
         <div className="hero__bg" style={{ backgroundImage: `url(${heroBg})` }} />
         <div className="hero__overlay" aria-hidden="true" />
+        <CircuitAnimation />
         <div className="container hero__inner">
           <p className="eyebrow">{t('home.eyebrow')}</p>
           <h1>{t('home.title')}</h1>
