@@ -26,14 +26,13 @@ function ElektrotechnikaPage() {
       <section className="division-page-hero">
         {/* Zatím placeholder — nahraď souborem stejného jména
             (src/assets/images/Elektrotechnika_bg.jpg) za reálnou fotku. */}
-        <div className="division-page-hero__bg" style={{ backgroundImage: `url(${elektrotechnikaBg})` }} />
+        <div className="division-page-hero__bg division-page-hero__bg--blue" style={{ backgroundImage: `url(${elektrotechnikaBg})` }} />
         <div className="division-page-hero__overlay division-page-hero__overlay--blue" aria-hidden="true" />
         <div className="container division-page-hero__inner">
           <Link to={`/${lang}`} className="division-page-back">{t('common.backToDivisions')}</Link>
           <div className="division-page-hero__head">
             <HexIcon id="page-elektrotechnika" accent="blue" type="bolt" />
             <div>
-              <p className="eyebrow">{t('common.divisionsEyebrow')}</p>
               <h1>{t('divisionsData.elektrotechnika.label')}</h1>
             </div>
           </div>

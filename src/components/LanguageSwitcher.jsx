@@ -39,6 +39,7 @@ function LanguageSwitcher() {
         aria-expanded={open}
         onClick={() => setOpen((o) => !o)}
       >
+        <span aria-hidden="true">{current.flag}</span>
         {current.label}
         <svg className="dropdown__chevron" viewBox="0 0 12 8" aria-hidden="true">
           <path
@@ -59,6 +60,7 @@ function LanguageSwitcher() {
               to={`/${l.code}${restOfPath}${location.hash}`}
               className={l.code === lang ? 'is-active' : ''}
             >
+              <span aria-hidden="true">{l.flag}</span>{' '}
               {l.name}
             </Link>
           </li>

@@ -29,9 +29,8 @@ function StavebnictviPage() {
         <div className="container division-page-hero__inner">
           <Link to={`/${lang}`} className="division-page-back">{t('common.backToDivisions')}</Link>
           <div className="division-page-hero__head">
-            <HexIcon id="page-stavebnictvi" accent="brick" type="brick" />
+            <HexIcon id="page-stavebnictvi" accent="brick" type="roof" />
             <div>
-              <p className="eyebrow">{t('common.divisionsEyebrow')}</p>
               <h1>{t('divisionsData.stavebnictvi.label')}</h1>
             </div>
           </div>

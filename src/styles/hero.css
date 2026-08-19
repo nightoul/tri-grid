@@ -6,7 +6,7 @@
   overflow: hidden;
   background: var(--navy-950);
   color: var(--paper-50);
-  padding: 128px 0 80px;
+  padding: 156px 0 80px;
 }
 
 .hero__bg {
@@ -15,8 +15,8 @@
   z-index: 0;
   background-size: cover;
   background-position: center;
-  filter: grayscale(0.25) contrast(1.05);
-  opacity: 0.9;
+  filter: grayscale(0.14) contrast(1) brightness(1.1) saturate(1.04);
+  opacity: 1;
 }
 
 .hero__overlay {
@@ -26,7 +26,7 @@
   background:
     linear-gradient(var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
     linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
-    linear-gradient(180deg, rgba(7, 20, 38, 0.6) 0%, rgba(15, 42, 74, 0.68) 100%);
+    linear-gradient(180deg, rgba(7, 27, 50, 0.48) 0%, rgba(16, 50, 82, 0.6) 100%);
 }
 
 .hero__inner {
@@ -108,6 +108,10 @@
   stroke-width: 6;
 }
 
+.hex-roof {
+  stroke-width: 8;
+}
+
 .brick-block {
   stroke: none;
 }
@@ -127,11 +131,15 @@
 .hex-icon--steel .hex-glyph,
 .hex-icon--steel .hex-glyph-ring,
 .hex-icon--steel .brick-block {
-  stroke: var(--steel-500);
+  stroke: #c3d0da;
 }
 .hex-icon--steel .hex-glyph,
 .hex-icon--steel .brick-block {
-  fill: var(--steel-500);
+  fill: #c3d0da;
+}
+
+.hex-icon--steel {
+  filter: drop-shadow(0 1px 3px rgba(7, 20, 38, 0.9));
 }
 
 .hex-icon--brick .hex-outline,
@@ -148,4 +156,3 @@
 .division-card--blue { --card-accent: var(--blue-400); }
 .division-card--steel { --card-accent: var(--steel-500); }
 .division-card--brick { --card-accent: var(--brick-500); }
-

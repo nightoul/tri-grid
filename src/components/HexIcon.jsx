@@ -1,6 +1,5 @@
 function HexIcon({ id, accent, type }) {
   const clipId = `hexClip-${id}`
-  const patternId = `brickPattern-${id}`
   const hexPoints = '25,3 75,3 100,50 75,97 25,97 0,50'
 
   return (
@@ -9,15 +8,6 @@ function HexIcon({ id, accent, type }) {
         <clipPath id={clipId}>
           <polygon points={hexPoints} />
         </clipPath>
-        {type === 'brick' && (
-          <pattern id={patternId} width="34" height="18" patternUnits="userSpaceOnUse">
-            <rect x="1" y="1" width="15" height="7" className="brick-block" />
-            <rect x="18" y="1" width="15" height="7" className="brick-block" />
-            <rect x="10" y="10" width="15" height="7" className="brick-block" />
-            <rect x="-7" y="10" width="15" height="7" className="brick-block" />
-            <rect x="27" y="10" width="15" height="7" className="brick-block" />
-          </pattern>
-        )}
       </defs>
 
       <polygon points={hexPoints} className="hex-outline" />
@@ -42,8 +32,15 @@ function HexIcon({ id, accent, type }) {
             ))}
           </g>
         )}
-        {type === 'brick' && (
-          <rect x="0" y="0" width="100" height="100" fill={`url(#${patternId})`} />
+        {type === 'roof' && (
+          <g
+            fill="none"
+            strokeLinecap="square"
+            strokeLinejoin="miter"
+          >
+            <path d="M14 62 L49 36 L86 62" className="hex-glyph-ring hex-roof" />
+            <path d="M30 49 V30" className="hex-glyph-ring" />
+          </g>
         )}
       </g>
     </svg>

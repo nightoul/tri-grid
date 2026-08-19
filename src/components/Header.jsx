@@ -73,6 +73,7 @@ function Header() {
               to={`/${l.code}${restOfPath}${location.hash}`}
               className={l.code === lang ? 'is-active' : ''}
             >
+              <span aria-hidden="true">{l.flag}</span>{' '}
               {l.label}
             </Link>
           ))}

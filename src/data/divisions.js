@@ -3,7 +3,7 @@
 const divisions = [
   { id: 'elektrotechnika', accent: 'blue', type: 'bolt' },
   { id: 'strojirenstvi', accent: 'steel', type: 'gear' },
-  { id: 'stavebnictvi', accent: 'brick', type: 'brick' },
+  { id: 'stavebnictvi', accent: 'brick', type: 'roof' },
 ]
 
 export default divisions

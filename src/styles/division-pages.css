@@ -18,6 +18,17 @@
   opacity: 0.9;
 }
 
+.division-page-hero__bg--steel {
+  filter: grayscale(0.08) contrast(0.96) brightness(1.24) saturate(1.08);
+  opacity: 1;
+}
+
+.division-page-hero__bg--blue {
+  background-position: center 35%;
+  filter: grayscale(0.08) contrast(0.96) brightness(1.3) saturate(1.08);
+  opacity: 1;
+}
+
 .division-page-hero__overlay {
   position: absolute;
   inset: 0;
@@ -25,11 +36,10 @@
 }
 
 .division-page-hero__overlay--blue {
-  background-color: rgba(15, 42, 74, 0.68);
   background-image:
     linear-gradient(var(--grid-line-dark) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(7, 20, 38, 0.6) 0%, rgba(15, 42, 74, 0.68) 100%);
+    linear-gradient(180deg, rgba(7, 32, 58, 0.4) 0%, rgba(18, 58, 92, 0.54) 100%);
   background-size: 32px 32px, 32px 32px, cover;
 }
 
@@ -37,7 +47,7 @@
   background-image:
     linear-gradient(var(--grid-line-dark) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(28, 39, 51, 0.6) 0%, rgba(44, 57, 70, 0.68) 100%);
+    linear-gradient(180deg, rgba(24, 52, 72, 0.34) 0%, rgba(48, 78, 98, 0.48) 100%);
   background-size: 32px 32px, 32px 32px, cover;
 }
 
@@ -164,7 +174,7 @@
 
 /* Division page: overview with media */
 .division-overview {
-  padding: 44px 0 88px;
+  padding: 0 0 88px;
   border-bottom: 1px solid var(--paper-100);
 }
 
@@ -182,6 +192,15 @@
 .division-overview__text h2 {
   font-size: 1.7rem;
   max-width: 16ch;
+}
+
+.division-overview:not(.division-overview--tight) .division-overview__text {
+  align-self: start;
+  padding-top: 44px;
+}
+
+.division-overview:not(.division-overview--tight) .division-overview__media {
+  padding-top: 32px;
 }
 
 .why-heading {
@@ -357,6 +376,14 @@
     height: 280px;
   }
 
+  .division-overview:not(.division-overview--tight) .division-overview__text {
+    padding-top: 0;
+  }
+
+  .division-overview:not(.division-overview--tight) .division-overview__media {
+    padding-top: 0;
+  }
+
   .service-cards {
     grid-template-columns: 1fr;
   }
@@ -373,4 +400,3 @@
     grid-template-columns: 1fr;
   }
 }
-

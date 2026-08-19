@@ -32,9 +32,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  min-height: 68px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  min-height: 82px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   flex-wrap: wrap;
 }
 
@@ -51,8 +51,8 @@
 }
 
 .logo-mark__icon {
-  width: 42px;
-  height: 42px;
+  width: 54px;
+  height: 54px;
   object-fit: contain;
   filter: brightness(1.55) saturate(1.05);
   flex-shrink: 0;
@@ -70,6 +70,8 @@
   text-decoration: none;
   font-family: var(--font-mono);
   font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0;
   color: rgba(246, 245, 241, 0.82);
   padding-bottom: 4px;
 }
@@ -109,7 +111,8 @@
   color: rgba(246, 245, 241, 0.82);
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 0;
   cursor: pointer;
 }
 
@@ -246,4 +249,3 @@
 .mobile-nav {
   display: none;
 }
-
