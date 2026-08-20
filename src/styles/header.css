@@ -58,20 +58,12 @@
   flex-shrink: 0;
 }
 
-[data-theme='reverse'] .logo-mark__icon {
-  filter: brightness(0) saturate(100%) invert(7%) sepia(18%) saturate(2260%) hue-rotate(174deg) brightness(91%) contrast(104%);
-}
-
 [data-theme='crimson'] .logo-mark__icon {
   filter: brightness(0) saturate(100%) invert(29%) sepia(91%) saturate(2835%) hue-rotate(345deg) brightness(99%) contrast(89%);
 }
 
 [data-theme='sunrise2'] .logo-mark__icon {
   filter: brightness(0) saturate(100%) invert(81%) sepia(61%) saturate(1000%) hue-rotate(334deg) brightness(104%) contrast(101%);
-}
-
-[data-theme='workshop2'] .logo-mark__icon {
-  filter: brightness(0) saturate(100%) invert(79%) sepia(64%) saturate(948%) hue-rotate(345deg) brightness(101%) contrast(90%);
 }
 
 .nav {
