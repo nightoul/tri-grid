@@ -57,10 +57,6 @@
   filter: brightness(0) saturate(100%) invert(29%) sepia(91%) saturate(2835%) hue-rotate(345deg) brightness(99%) contrast(89%);
 }
 
-[data-theme='sunrise2'] .stat__logo {
-  filter: brightness(0) saturate(100%) invert(81%) sepia(61%) saturate(1000%) hue-rotate(334deg) brightness(104%) contrast(101%);
-}
-
 .stat__value {
   font-family: var(--font-display);
   font-weight: 700;
