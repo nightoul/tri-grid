@@ -15,8 +15,9 @@
   z-index: 0;
   background-size: cover;
   background-position: center;
-  filter: grayscale(0.14) contrast(1) brightness(1.1) saturate(1.04);
+  filter: var(--hero-image-filter);
   opacity: 1;
+  transition: filter 0.3s ease;
 }
 
 .hero__overlay {
@@ -26,7 +27,8 @@
   background:
     linear-gradient(var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
     linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
-    linear-gradient(180deg, rgba(7, 27, 50, 0.48) 0%, rgba(16, 50, 82, 0.6) 100%);
+    linear-gradient(180deg, var(--hero-overlay-start) 0%, var(--hero-overlay-end) 100%);
+  transition: background 0.3s ease;
 }
 
 .hero__inner {
@@ -64,6 +66,40 @@
 
 .circuit-animation__spark-core {
   fill: rgba(232, 248, 255, 0.9);
+}
+
+[data-theme='crimson'] .circuit-animation__traces {
+  stroke: rgba(255, 93, 92, 0.18);
+}
+
+[data-theme='crimson'] .circuit-animation__nodes {
+  fill: rgba(239, 59, 58, 0.26);
+  stroke: rgba(255, 178, 174, 0.34);
+}
+
+[data-theme='crimson'] .circuit-animation__spark-halo {
+  fill: rgba(239, 59, 58, 0.28);
+}
+
+[data-theme='crimson'] .circuit-animation__spark-core {
+  fill: #fff0ed;
+}
+
+[data-theme='meadow'] .circuit-animation__traces {
+  stroke: rgba(242, 201, 76, 0.18);
+}
+
+[data-theme='meadow'] .circuit-animation__nodes {
+  fill: rgba(168, 214, 94, 0.28);
+  stroke: rgba(255, 239, 154, 0.38);
+}
+
+[data-theme='meadow'] .circuit-animation__spark-halo {
+  fill: rgba(242, 201, 76, 0.3);
+}
+
+[data-theme='meadow'] .circuit-animation__spark-core {
+  fill: #fff8c7;
 }
 
 .hero .eyebrow {
@@ -172,6 +208,34 @@
 
 .hex-icon--steel {
   filter: drop-shadow(0 1px 3px rgba(7, 20, 38, 0.9));
+}
+
+[data-theme='sunrise'] .hex-icon--steel .hex-outline,
+[data-theme='sunrise'] .hex-icon--steel .hex-glyph,
+[data-theme='sunrise'] .hex-icon--steel .hex-glyph-ring {
+  stroke: var(--steel-500);
+}
+
+[data-theme='sunrise'] .hex-icon--steel .hex-glyph {
+  fill: var(--steel-500);
+}
+
+[data-theme='sunrise'] .hex-icon--steel {
+  filter: drop-shadow(0 1px 2px rgba(23, 54, 74, 0.45));
+}
+
+[data-theme='meadow'] .hex-icon--steel .hex-outline,
+[data-theme='meadow'] .hex-icon--steel .hex-glyph,
+[data-theme='meadow'] .hex-icon--steel .hex-glyph-ring {
+  stroke: var(--steel-500);
+}
+
+[data-theme='meadow'] .hex-icon--steel .hex-glyph {
+  fill: var(--steel-500);
+}
+
+[data-theme='meadow'] .hex-icon--steel {
+  filter: drop-shadow(0 1px 2px rgba(38, 53, 31, 0.55));
 }
 
 .hex-icon--brick .hex-outline,

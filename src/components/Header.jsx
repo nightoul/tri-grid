@@ -2,13 +2,9 @@ import { useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import logoIcon from '../assets/tri-grid-logo.svg'
-import languages from '../data/languages.js'
 import divisions from '../data/divisions.js'
-import LanguageSwitcher from './LanguageSwitcher.jsx'
+import ThemeSwitcher from './ThemeSwitcher.jsx'
 import DivisionsDropdown from './DivisionsDropdown.jsx'
-
-const langCodes = languages.map((l) => l.code)
-const langPathRegex = new RegExp(`^/(${langCodes.join('|')})`)
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -23,7 +19,6 @@ function Header() {
 
   // Poskládá odkaz s aktuálním jazykem vpředu, např. langPath('/o-nas') -> '/cs/o-nas'
   const langPath = (path = '') => `/${lang}${path}`
-  const restOfPath = location.pathname.replace(langPathRegex, '')
 
   return (
     <header className={`site-header ${menuOpen ? 'is-menu-open' : ''}`}>
@@ -42,7 +37,7 @@ function Header() {
           <DivisionsDropdown />
           <Link to={langPath('/o-nas')}>{t('nav.about')}</Link>
           <Link to={langPath('#kontakt')}>{t('nav.contact')}</Link>
-          <LanguageSwitcher />
+          <ThemeSwitcher />
         </nav>
 
         <button
@@ -66,18 +61,7 @@ function Header() {
         ))}
         <Link to={langPath('/o-nas')}>{t('nav.about')}</Link>
         <Link to={langPath('#kontakt')}>{t('nav.contact')}</Link>
-        <div className="mobile-nav__langs">
-          {languages.map((l) => (
-            <Link
-              key={l.code}
-              to={`/${l.code}${restOfPath}${location.hash}`}
-              className={l.code === lang ? 'is-active' : ''}
-            >
-              <span aria-hidden="true">{l.flag}</span>{' '}
-              {l.label}
-            </Link>
-          ))}
-        </div>
+        <ThemeSwitcher mobile />
       </nav>
     </header>
   )

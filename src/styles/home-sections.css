@@ -53,6 +53,18 @@
   filter: brightness(1.4);
 }
 
+[data-theme='reverse'] .stat__logo {
+  filter: brightness(0) saturate(100%) invert(7%) sepia(18%) saturate(2260%) hue-rotate(174deg) brightness(91%) contrast(104%);
+}
+
+[data-theme='crimson'] .stat__logo {
+  filter: brightness(0) saturate(100%) invert(29%) sepia(91%) saturate(2835%) hue-rotate(345deg) brightness(99%) contrast(89%);
+}
+
+[data-theme='meadow'] .stat__logo {
+  filter: brightness(0) saturate(100%) invert(84%) sepia(68%) saturate(737%) hue-rotate(348deg) brightness(100%) contrast(91%);
+}
+
 .stat__value {
   font-family: var(--font-display);
   font-weight: 700;
@@ -84,4 +96,3 @@
   font-family: var(--font-display);
   color: var(--navy-800);
 }
-
