@@ -69,10 +69,6 @@
   filter: brightness(0) saturate(100%) invert(79%) sepia(64%) saturate(948%) hue-rotate(345deg) brightness(101%) contrast(90%);
 }
 
-[data-theme='meadow'] .stat__logo {
-  filter: brightness(0) saturate(100%) invert(84%) sepia(68%) saturate(737%) hue-rotate(348deg) brightness(100%) contrast(91%);
-}
-
 .stat__value {
   font-family: var(--font-display);
   font-weight: 700;
