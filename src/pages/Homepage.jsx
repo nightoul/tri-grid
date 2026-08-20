@@ -4,6 +4,7 @@ import HexIcon from '../components/HexIcon.jsx'
 import divisions from '../data/divisions.js'
 import logoIcon from '../assets/tri-grid-logo.svg'
 import heroBg from '../assets/images/hero-bg.jpg'
+import whyUsImage from '../assets/images/why-us-handshake.jpg'
 import CircuitAnimation from '../components/CircuitAnimation.jsx'
 
 function Homepage() {
@@ -77,7 +78,7 @@ function Homepage() {
           </div>
           <div className="division-overview__media">
             <img
-              src="https://picsum.photos/seed/trigrid-why-us/640/760"
+              src={whyUsImage}
               alt=""
               loading="lazy"
             />
