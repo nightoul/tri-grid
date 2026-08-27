@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import logoIcon from '../assets/tri-grid-logo.svg'
+import logoIcon from '../assets/tri-grid-logo-outline.svg'
 import divisions from '../data/divisions.js'
 import ThemeSwitcher from './ThemeSwitcher.jsx'
 import DivisionsDropdown from './DivisionsDropdown.jsx'
