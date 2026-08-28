@@ -29,18 +29,18 @@
     fill="url(#triGridPngBlue)"
     clip-path="url(#engineeringInsideRightField)"
   >
-    <rect x="332" y="221" width="16" height="39" />
-    <rect x="332" y="221" width="16" height="39" transform="rotate(45 340 301)" />
-    <rect x="332" y="221" width="16" height="39" transform="rotate(90 340 301)" />
-    <rect x="332" y="221" width="16" height="39" transform="rotate(135 340 301)" />
-    <rect x="332" y="221" width="16" height="39" transform="rotate(180 340 301)" />
-    <rect x="332" y="221" width="16" height="39" transform="rotate(225 340 301)" />
-    <rect x="332" y="221" width="16" height="39" transform="rotate(270 340 301)" />
-    <rect x="332" y="221" width="16" height="39" transform="rotate(315 340 301)" />
+    <rect x="329" y="232" width="16" height="31" transform="rotate(8 337 304)" />
+    <rect x="329" y="232" width="16" height="31" transform="rotate(53 337 304)" />
+    <rect x="329" y="232" width="16" height="31" transform="rotate(98 337 304)" />
+    <rect x="329" y="232" width="16" height="31" transform="rotate(143 337 304)" />
+    <rect x="329" y="232" width="16" height="31" transform="rotate(188 337 304)" />
+    <rect x="329" y="232" width="16" height="31" transform="rotate(233 337 304)" />
+    <rect x="329" y="232" width="16" height="31" transform="rotate(278 337 304)" />
+    <rect x="329" y="232" width="16" height="31" transform="rotate(323 337 304)" />
     <path
       fill-rule="evenodd"
-      d="M386 301 A46 46 0 1 1 294 301 A46 46 0 1 1 386 301
-         M372 301 A32 32 0 1 0 308 301 A32 32 0 1 0 372 301"
+      d="M383 304 A46 46 0 1 1 291 304 A46 46 0 1 1 383 304
+         M369 304 A32 32 0 1 0 305 304 A32 32 0 1 0 369 304"
     />
   </g>
 
