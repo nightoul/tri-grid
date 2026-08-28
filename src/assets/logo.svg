@@ -8,9 +8,9 @@
       x2="460"
       y2="0"
     >
-      <stop offset="0%" stop-color="#0A5788" />
-      <stop offset="52%" stop-color="#197EAD" />
-      <stop offset="100%" stop-color="#35A2C9" />
+      <stop offset="0%" stop-color="#183F61" />
+      <stop offset="52%" stop-color="#36759A" />
+      <stop offset="100%" stop-color="#5998B8" />
     </linearGradient>
     <clipPath id="cutDarkGreenAtLeft">
       <rect x="148" y="0" width="312" height="430" />
@@ -28,7 +28,7 @@
     data-symbol="engineering-cog"
     fill="none"
     stroke="url(#triGridPngBlue)"
-    stroke-width="7"
+    stroke-width="8"
     stroke-linejoin="miter"
     clip-path="url(#engineeringInsideRightField)"
   >
@@ -40,14 +40,14 @@
 
   <g
     fill="none"
-    stroke-width="12"
+    stroke-width="18"
     stroke-linecap="butt"
     stroke-linejoin="miter"
   >
     <!-- Upper-middle field: clockwise from the top apex. -->
     <path data-segment="UM-c" d="M136 176 V76 L230 11 L324 76" stroke="url(#triGridPngBlue)" />
     <path data-segment="UM-a" d="M230 11 L324 76 V88" stroke="url(#triGridPngBlue)" />
-    <polygon data-segment="UM-b" points="318,76 330,76 330,164.2 318,155.8" fill="url(#triGridPngBlue)" stroke="none" />
+    <polygon data-segment="UM-b" points="318,76 330,76 330,164.2 318,155.8" fill="url(#triGridPngBlue)" stroke="url(#triGridPngBlue)" stroke-width="6" />
     <path data-segment="UM-d" d="M136 76 V176" stroke="url(#triGridPngBlue)" />
 
     <!-- Middle field: clockwise from its upper-left slope. -->
@@ -57,22 +57,22 @@
     <path data-segment="M-d" d="M324 290 L230 355.9" stroke="url(#triGridPngBlue)" />
     <path data-segment="M-chimney" d="M68 307.8 V281.4" stroke="url(#triGridPngBlue)" />
     <path data-segment="M-roof-left" d="M28 335.4 L115 275.3 L125 282.3" stroke="url(#triGridPngBlue)" />
-    <polygon data-segment="M-e" points="118.4,270.4 225.2,345.2 214.8,352.6 111.6,280.2" fill="url(#triGridPngBlue)" stroke="none" />
+    <polygon data-segment="M-e" points="118.4,270.4 225.2,345.2 214.8,352.6 111.6,280.2" fill="url(#triGridPngBlue)" stroke="url(#triGridPngBlue)" stroke-width="6" />
     <path data-segment="M-f" d="M136 290 V176" stroke="url(#triGridPngBlue)" clip-path="url(#cutDarkBlueAboveBlue)" />
 
     <!-- Lower-left field, including its exposed hidden-side stub. -->
     <path data-segment="L-a" d="M124 167.6 L118 164 L28 216 V346" stroke="url(#triGridPngBlue)" />
-    <polygon data-segment="L-x" points="114.9,169.1 121.1,158.9 127.1,162.5 127.1,176.4" fill="url(#triGridPngBlue)" stroke="none" />
+    <polygon data-segment="L-x" points="114.9,169.1 121.1,158.9 127.1,162.5 127.1,176.4" fill="url(#triGridPngBlue)" stroke="url(#triGridPngBlue)" stroke-width="6" />
     <path data-segment="L-b" d="M28 216 V346 L140 419" stroke="url(#triGridPngBlue)" />
     <path data-segment="L-c" d="M28 346 L140 419 L230 355.9" stroke="url(#triGridPngBlue)" />
     <path data-segment="L-d" d="M140 419 L230 355.9" stroke="url(#triGridPngBlue)" />
 
     <!-- Lower-right field, including its exposed hidden-side stub. -->
     <path data-segment="R-a" d="M336 167.6 L342 164 L432 216 V346" stroke="url(#triGridPngBlue)" />
-    <polygon data-segment="R-x" points="345.1,169.1 338.9,158.9 332.9,162.5 332.9,176.4" fill="url(#triGridPngBlue)" stroke="none" />
+    <polygon data-segment="R-x" points="345.1,169.1 338.9,158.9 332.9,162.5 332.9,176.4" fill="url(#triGridPngBlue)" stroke="url(#triGridPngBlue)" stroke-width="6" />
     <path data-segment="R-b" d="M432 216 V346 L320 419" stroke="url(#triGridPngBlue)" />
     <path data-segment="R-c" d="M432 346 L320 419 L313.5 414.4" stroke="url(#triGridPngBlue)" />
-    <polygon data-segment="R-d" points="323.4,414.1 245.2,359.2 234.8,366.6 316.6,423.9" fill="url(#triGridPngBlue)" stroke="none" />
+    <polygon data-segment="R-d" points="323.4,414.1 245.2,359.2 234.8,366.6 316.6,423.9" fill="url(#triGridPngBlue)" stroke="url(#triGridPngBlue)" stroke-width="6" />
   </g>
 
   <!-- Electrical symbol inside the middle field. -->
