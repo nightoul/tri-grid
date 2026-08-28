@@ -7,7 +7,7 @@
     "closeMenu": "Close menu"
   },
   "footer": {
-    "divisions": "Electrical · Machinery · Construction"
+    "divisions": "Electrical · Metal Fabrication · Construction"
   },
   "common": {
     "backToDivisions": "← Back",
@@ -112,7 +112,7 @@
       "ctaQuestion": "Have an electrical project in mind?"
     },
     "strojirenstvi": {
-      "label": "Machinery",
+      "label": "Metal Fabrication",
       "tagline": "Design, fabrication, installation",
       "heroLede": "Design, fabrication, installation, and servicing of custom machinery and process equipment — from a single part to a complete line.",
       "overviewHeading": "Machinery that keeps pace with your operation",

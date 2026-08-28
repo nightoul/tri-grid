@@ -28,6 +28,7 @@
 .site-header__strip-seg--brick { background: var(--brick-500); }
 
 .site-header__inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,6 +37,29 @@
   padding-top: 13px;
   padding-bottom: 13px;
   flex-wrap: wrap;
+}
+
+.site-header__divisions {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateX(-50%);
+  color: var(--blue-400);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (max-width: 1180px) {
+  .site-header__divisions {
+    display: none;
+  }
 }
 
 .logo-mark {

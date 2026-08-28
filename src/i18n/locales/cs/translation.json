@@ -7,7 +7,7 @@
     "closeMenu": "Zavřít menu"
   },
   "footer": {
-    "divisions": "Elektrotechnika · Strojírenství · Stavebnictví"
+    "divisions": "Elektrotechnika · Kovovýroba · Stavebnictví"
   },
   "common": {
     "backToDivisions": "← Zpět",
@@ -112,7 +112,7 @@
       "ctaQuestion": "Máte poptávku v oboru elektrotechnika?"
     },
     "strojirenstvi": {
-      "label": "Strojírenství",
+      "label": "Kovovýroba",
       "tagline": "Konstrukce, výroba, montáž",
       "heroLede": "Konstrukce, výroba, montáž a servis strojních a technologických celků na míru — od jednotlivého dílu po kompletní linku.",
       "overviewHeading": "Strojírenství, které drží krok s provozem",

@@ -21,7 +21,6 @@ function Homepage() {
         <div className="hero__overlay" aria-hidden="true" />
         <CircuitAnimation />
         <div className="container hero__inner">
-          <p className="eyebrow">{t('home.eyebrow')}</p>
           <h1>{t('home.title')}</h1>
           <p className="hero__lede">{t('home.lede')}</p>
 
