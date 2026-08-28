@@ -3,7 +3,7 @@ import { Link, useLocation, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import logoIcon from '../assets/logo.svg'
 import divisions from '../data/divisions.js'
-import ThemeSwitcher from './ThemeSwitcher.jsx'
+import LanguageSwitcher from './LanguageSwitcher.jsx'
 import DivisionsDropdown from './DivisionsDropdown.jsx'
 
 function Header() {
@@ -45,7 +45,7 @@ function Header() {
           <DivisionsDropdown />
           <Link to={langPath('/o-nas')}>{t('nav.about')}</Link>
           <Link to={langPath('#kontakt')}>{t('nav.contact')}</Link>
-          <ThemeSwitcher />
+          <LanguageSwitcher />
         </nav>
 
         <button
@@ -69,7 +69,7 @@ function Header() {
         ))}
         <Link to={langPath('/o-nas')}>{t('nav.about')}</Link>
         <Link to={langPath('#kontakt')}>{t('nav.contact')}</Link>
-        <ThemeSwitcher mobile />
+        <LanguageSwitcher mobile />
       </nav>
     </header>
   )

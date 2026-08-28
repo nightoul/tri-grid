@@ -5,7 +5,7 @@ import languages from '../data/languages.js'
 const langCodes = languages.map((l) => l.code)
 const langPathRegex = new RegExp(`^/(${langCodes.join('|')})`)
 
-function LanguageSwitcher() {
+function LanguageSwitcher({ mobile = false }) {
   const [open, setOpen] = useState(false)
   const wrapperRef = useRef(null)
   const location = useLocation()
@@ -29,6 +29,23 @@ function LanguageSwitcher() {
     document.addEventListener('mousedown', onClickOutside)
     return () => document.removeEventListener('mousedown', onClickOutside)
   }, [])
+
+  if (mobile) {
+    return (
+      <div className="mobile-nav__langs" aria-label="Language">
+        {languages.map((l) => (
+          <Link
+            key={l.code}
+            to={`/${l.code}${restOfPath}${location.hash}`}
+            className={l.code === lang ? 'is-active' : ''}
+          >
+            <span aria-hidden="true">{l.flag}</span>{' '}
+            {l.label}
+          </Link>
+        ))}
+      </div>
+    )
+  }
 
   return (
     <div className="dropdown" ref={wrapperRef}>
