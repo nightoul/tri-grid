@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import logoIcon from '../assets/logo-web.svg'
+import logoFullWeb from '../assets/logo-full-web.svg'
 import divisions from '../data/divisions.js'
 import LanguageSwitcher from './LanguageSwitcher.jsx'
 import DivisionsDropdown from './DivisionsDropdown.jsx'
@@ -29,17 +29,8 @@ function Header() {
       </div>
       <div className="container site-header__inner">
         <Link to={langPath()} className="logo-mark">
-          <img src={logoIcon} alt="Tri-Grid s.r.o." className="logo-mark__icon" />
-          <span>Tri-Grid s.r.o.</span>
+          <img src={logoFullWeb} alt="Tri-Grid s.r.o. — Elektrotechnika, Kovovýroba, Stavebnictví" className="logo-mark__image" />
         </Link>
-
-        <div className="site-header__divisions" aria-hidden="true">
-          <span>{t('divisionsData.elektrotechnika.label')}</span>
-          <span>·</span>
-          <span>{t('divisionsData.strojirenstvi.label')}</span>
-          <span>·</span>
-          <span>{t('divisionsData.stavebnictvi.label')}</span>
-        </div>
 
         <nav className="nav">
           <DivisionsDropdown />

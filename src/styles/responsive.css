@@ -48,6 +48,13 @@
 
   .site-header__inner {
     justify-content: space-between;
+    min-height: 82px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .logo-mark {
+    width: min(220px, calc(100% - 60px));
   }
 
   .nav {

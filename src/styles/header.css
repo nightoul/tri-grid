@@ -32,65 +32,44 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  min-height: 82px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  flex-wrap: wrap;
-}
-
-.site-header__divisions {
-  position: absolute;
-  left: 50%;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  transform: translateX(-50%);
-  color: var(--blue-400);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-@media (max-width: 1180px) {
-  .site-header__divisions {
-    display: none;
-  }
+  gap: 24px;
+  min-height: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .logo-mark {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--paper-50);
-  font-size: 1.2rem;
-  letter-spacing: 0.01em;
+  display: block;
+  width: 300px;
+  flex: 0 1 auto;
   text-decoration: none;
 }
 
-.logo-mark__icon {
-  width: 54px;
-  height: 54px;
-  object-fit: contain;
-  filter: brightness(1.55) saturate(1.05);
-  flex-shrink: 0;
+.logo-mark__image {
+  width: 100%;
+  height: auto;
+  filter: brightness(1.14) saturate(1.08);
 }
 
-[data-theme='crimson'] .logo-mark__icon {
+[data-theme='crimson'] .logo-mark__image {
   filter: brightness(0) saturate(100%) invert(29%) sepia(91%) saturate(2835%) hue-rotate(345deg) brightness(99%) contrast(89%);
 }
 
 .nav {
   display: flex;
+  align-items: center;
   gap: 28px;
-  flex-wrap: wrap;
-  row-gap: 6px;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 900px) {
+  .logo-mark {
+    width: 260px;
+  }
+
+  .nav {
+    gap: 18px;
+  }
 }
 
 .nav a {
