@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import logoIcon from '../assets/logo.svg'
+import logoIcon from '../assets/logo-web.svg'
 import divisions from '../data/divisions.js'
 import LanguageSwitcher from './LanguageSwitcher.jsx'
 import DivisionsDropdown from './DivisionsDropdown.jsx'
