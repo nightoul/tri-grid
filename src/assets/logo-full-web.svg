@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1680 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDescription">
+<svg viewBox="0 0 1760 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDescription">
   <title id="logoTitle">Tri-Grid s.r.o.</title>
   <desc id="logoDescription">Horizontal Tri-Grid logo with the divisions Elektrotechnika, Kovovýroba and Stavebnictví</desc>
   <defs>
@@ -14,7 +14,7 @@
       <stop offset="50%" stop-color="#4585A2" />
       <stop offset="100%" stop-color="#5998B8" />
     </linearGradient>
-    <linearGradient id="wordmarkBlue" gradientUnits="userSpaceOnUse" x1="530" y1="0" x2="1625" y2="0">
+    <linearGradient id="wordmarkBlue" gradientUnits="userSpaceOnUse" x1="530" y1="0" x2="1745" y2="0">
       <stop offset="0%" stop-color="#356D89" />
       <stop offset="50%" stop-color="#4585A2" />
       <stop offset="100%" stop-color="#5998B8" />
@@ -113,20 +113,20 @@
       x="530"
       y="286"
       font-family="Arial, Helvetica, sans-serif"
-      font-size="186"
+      font-size="200.88"
       font-weight="700"
-      letter-spacing="6"
-      textLength="1080"
+      letter-spacing="12"
+      textLength="1200"
       lengthAdjust="spacing"
     >Tri-Grid s.r.o.</text>
     <text
       x="545"
       y="374"
       font-family="Arial Narrow, Roboto Condensed, Arial, sans-serif"
-      font-size="54"
+      font-size="58.32"
       font-weight="700"
-      letter-spacing="4.5"
-      textLength="1080"
+      letter-spacing="7.5"
+      textLength="1200"
       lengthAdjust="spacing"
     >ELEKTROTECHNIKA • KOVOVÝROBA • STAVEBNICTVÍ</text>
   </g>
