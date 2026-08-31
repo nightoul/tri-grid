@@ -38,7 +38,7 @@ function KovovyrobaPage() {
         </div>
       </section>
 
-      <section className="division-overview">
+      <section className="division-overview division-overview--steel">
         <div className="container division-overview__inner">
           <div className="division-overview__text">
             <p className="eyebrow">{t('common.whatWeDoEyebrow')}</p>
@@ -85,7 +85,7 @@ function KovovyrobaPage() {
         </div>
       </section>
 
-      <section className="gallery-section">
+      <section className="gallery-section gallery-section--steel">
         <div className="container">
           <p className="eyebrow">{t('common.workSamplesEyebrow')}</p>
           <h2>{t('divisionsData.kovovyroba.galleryHeading')}</h2>
