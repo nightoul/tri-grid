@@ -25,7 +25,7 @@
 
 .site-header__strip-seg--blue { background: var(--blue-400); }
 .site-header__strip-seg--steel { background: var(--steel-500); }
-.site-header__strip-seg--brick { background: var(--brick-500); }
+.site-header__strip-seg--brick { background: var(--construction-highlight); }
 
 .site-header__inner {
   position: relative;

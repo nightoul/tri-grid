@@ -9,6 +9,7 @@
   --blue-400: #4fa8e8;
   --steel-500: #6b7a8f;
   --brick-500: #a85832;
+  --construction-highlight: var(--brick-500);
   --paper-50: #f6f5f1;
   --header-bg: #e3e9ef;
   --paper-100: #eeece5;

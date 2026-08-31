@@ -412,4 +412,16 @@
 
 .division-card--blue { --card-accent: var(--blue-400); }
 .division-card--steel { --card-accent: var(--steel-500); }
-.division-card--brick { --card-accent: var(--brick-500); }
+.division-card--brick { --card-accent: var(--construction-highlight); }
+
+.division-card--brick .hex-outline,
+.division-card--brick .hex-glyph,
+.division-card--brick .hex-glyph-ring,
+.division-card--brick .brick-block {
+  stroke: var(--construction-highlight);
+}
+
+.division-card--brick .hex-glyph,
+.division-card--brick .brick-block {
+  fill: var(--construction-highlight);
+}

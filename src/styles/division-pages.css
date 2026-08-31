@@ -30,6 +30,11 @@
   opacity: 1;
 }
 
+.division-page-hero--brick .division-page-hero__bg {
+  filter: grayscale(0.18) contrast(1.02) brightness(1.18);
+  opacity: 0.95;
+}
+
 .division-page-hero__overlay {
   position: absolute;
   inset: 0;
@@ -65,6 +70,18 @@
     linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px),
     linear-gradient(180deg, rgba(44, 27, 18, 0.6) 0%, rgba(69, 43, 28, 0.68) 100%);
   background-size: 32px 32px, 32px 32px, cover;
+}
+
+.division-page-hero--brick .hex-outline,
+.division-page-hero--brick .hex-glyph,
+.division-page-hero--brick .hex-glyph-ring,
+.division-page-hero--brick .brick-block {
+  stroke: var(--construction-highlight);
+}
+
+.division-page-hero--brick .hex-glyph,
+.division-page-hero--brick .brick-block {
+  fill: var(--construction-highlight);
 }
 
 .division-page-hero__overlay--neutral {
