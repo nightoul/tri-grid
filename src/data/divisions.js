@@ -2,7 +2,7 @@
 // divisionsData.<id> — tady zůstává jen strukturální/vizuální informace.
 const divisions = [
   { id: 'elektrotechnika', accent: 'blue', type: 'bolt' },
-  { id: 'strojirenstvi', accent: 'steel', type: 'gear' },
+  { id: 'kovovyroba', accent: 'steel', type: 'gear' },
   { id: 'stavebnictvi', accent: 'brick', type: 'roof' },
 ]
 

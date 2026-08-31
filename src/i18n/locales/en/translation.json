@@ -111,13 +111,13 @@
       ],
       "ctaQuestion": "Have an electrical project in mind?"
     },
-    "strojirenstvi": {
-      "label": "Metal Joinery",
+    "kovovyroba": {
+      "label": "Metal Fabrication",
       "tagline": "Design, fabrication, installation",
       "heroLede": "Design, fabrication, installation, and servicing of custom machinery and process equipment — from a single part to a complete line.",
-      "overviewHeading": "Machinery that keeps pace with your operation",
+      "overviewHeading": "Metal fabrication that keeps pace with your operation",
       "overviewText": "We design, build, and install custom machinery and process equipment — from individual parts to complete production lines. That includes regular servicing and maintenance, so you can rely on smooth operation long after handover, not just on delivery day.",
-      "servicesHeading": "The three pillars of the Machinery division",
+      "servicesHeading": "The three pillars of the Metal Fabrication division",
       "services": [
         {
           "title": "Machine design and fabrication",
@@ -150,13 +150,13 @@
           "desc": "We test the equipment, train the operators, and hand over documentation."
         }
       ],
-      "galleryHeading": "Machinery work in practice",
+      "galleryHeading": "Metal fabrication in practice",
       "galleryCaptions": [
         "Fabricating machine parts",
         "Assembling a process line",
         "Custom welding work"
       ],
-      "ctaQuestion": "Have a machinery project in mind?"
+      "ctaQuestion": "Have a metal fabrication project in mind?"
     },
     "stavebnictvi": {
       "label": "Construction",
