@@ -260,6 +260,16 @@
   stroke-width: 8;
 }
 
+.hex-gear {
+  fill: none;
+  stroke-linejoin: miter;
+}
+
+.hex-gear__outline,
+.hex-gear__hub {
+  stroke-width: 8;
+}
+
 .brick-block {
   stroke: none;
 }
