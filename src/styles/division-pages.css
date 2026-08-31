@@ -35,6 +35,10 @@
   opacity: 0.95;
 }
 
+.division-page-hero .hero__lede {
+  max-width: 60ch;
+}
+
 .division-page-hero__overlay {
   position: absolute;
   inset: 0;
