@@ -10,9 +10,9 @@
       x2="460"
       y2="0"
     >
-      <stop offset="0%" stop-color="#356D89" />
-      <stop offset="50%" stop-color="#4585A2" />
-      <stop offset="100%" stop-color="#5998B8" />
+      <stop offset="0%" stop-color="#176B94" />
+      <stop offset="50%" stop-color="#2386B1" />
+      <stop offset="100%" stop-color="#39A3CC" />
     </linearGradient>
     <clipPath id="cutDarkGreenAtLeft">
       <rect x="151" y="0" width="309" height="430" />
