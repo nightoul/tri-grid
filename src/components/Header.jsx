@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import logoFullWeb from '../assets/logo-full.svg'
+import logoFullCz from '../assets/logo-full-cz.svg'
+import logoFullEn from '../assets/logo-full-en.svg'
 import divisions from '../data/divisions.js'
 import LanguageSwitcher from './LanguageSwitcher.jsx'
 import DivisionsDropdown from './DivisionsDropdown.jsx'
@@ -11,6 +12,10 @@ function Header() {
   const location = useLocation()
   const { lang } = useParams()
   const { t } = useTranslation()
+  const logoFullWeb = lang === 'en' ? logoFullEn : logoFullCz
+  const logoAlt = lang === 'en'
+    ? 'Tri-Grid s.r.o. — Electrical, Metalworking, Construction'
+    : 'Tri-Grid s.r.o. — Elektrotechnika, Kovovýroba, Stavebnictví'
 
   // Zavřít menu při každé navigaci (klik na odkaz, tlačítko zpět v prohlížeči...)
   useEffect(() => {
@@ -29,7 +34,7 @@ function Header() {
       </div>
       <div className="container site-header__inner">
         <Link to={langPath()} className="logo-mark">
-          <img src={logoFullWeb} alt="Tri-Grid s.r.o. — Elektrotechnika, Kovovýroba, Stavebnictví" className="logo-mark__image" />
+          <img src={logoFullWeb} alt={logoAlt} className="logo-mark__image" />
         </Link>
 
         <nav className="nav">

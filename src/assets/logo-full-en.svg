@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1790 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDescription">
   <title id="logoTitle">Tri-Grid s.r.o.</title>
-  <desc id="logoDescription">Horizontal Tri-Grid logo with the divisions Elektrotechnika, Kovovýroba and Stavebnictví</desc>
+  <desc id="logoDescription">Horizontal Tri-Grid logo with the divisions Electrical, Metalworking and Construction</desc>
   <defs>
     <linearGradient
       id="triGridPngBlue"
@@ -10,14 +10,14 @@
       x2="460"
       y2="0"
     >
-      <stop offset="0%" stop-color="#356D89" />
-      <stop offset="50%" stop-color="#4585A2" />
-      <stop offset="100%" stop-color="#5998B8" />
+      <stop offset="0%" stop-color="#176B94" />
+      <stop offset="50%" stop-color="#2386B1" />
+      <stop offset="100%" stop-color="#39A3CC" />
     </linearGradient>
     <linearGradient id="wordmarkBlue" gradientUnits="userSpaceOnUse" x1="560" y1="0" x2="1775" y2="0">
-      <stop offset="0%" stop-color="#356D89" />
-      <stop offset="50%" stop-color="#4585A2" />
-      <stop offset="100%" stop-color="#5998B8" />
+      <stop offset="0%" stop-color="#176B94" />
+      <stop offset="50%" stop-color="#2386B1" />
+      <stop offset="100%" stop-color="#39A3CC" />
     </linearGradient>
     <clipPath id="cutDarkGreenAtLeft">
       <rect x="151" y="0" width="309" height="430" />
@@ -129,6 +129,6 @@
       letter-spacing="7.5"
       textLength="1200"
       lengthAdjust="spacing"
-    >ELEKTROTECHNIKA • KOVOVÝROBA • STAVEBNICTVÍ</text>
+    >ELECTRICAL • METALWORKING • CONSTRUCTION</text>
   </g>
 </svg>
