@@ -126,21 +126,81 @@
 }
 
 .division-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  padding: 28px 24px;
+  min-height: 184px;
+  padding: 30px 72px 30px 28px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.division-card::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--card-accent, var(--blue-400));
+  box-shadow: 0 0 22px color-mix(in srgb, var(--card-accent, var(--blue-400)) 55%, transparent);
+}
+
+.division-card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  right: -72px;
+  bottom: -96px;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--card-accent, var(--blue-400)) 23%, transparent), transparent 68%);
+  opacity: 0.65;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .division-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   border-color: var(--card-accent, var(--blue-400));
+}
+
+.division-card:hover::after {
+  opacity: 1;
+  transform: scale(1.16);
+}
+
+.division-card:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--card-accent, var(--blue-400)) 75%, white);
+  outline-offset: 4px;
+}
+
+.division-card__arrow {
+  position: absolute;
+  right: 24px;
+  bottom: 26px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid color-mix(in srgb, var(--card-accent, var(--blue-400)) 62%, transparent);
+  border-radius: 50%;
+  color: var(--paper-50);
+  font-size: 1.05rem;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.division-card:hover .division-card__arrow {
+  transform: translateX(3px);
+  background: color-mix(in srgb, var(--card-accent, var(--blue-400)) 28%, transparent);
 }
 
 [data-theme='industrial'] .division-card {
@@ -225,7 +285,7 @@
 
 .division-card h3 {
   color: var(--paper-50);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   margin-bottom: 0;
 }
 
@@ -240,6 +300,17 @@
   height: 40px;
   margin-bottom: 4px;
   overflow: visible;
+}
+
+.division-card .hex-icon {
+  box-sizing: content-box;
+  width: 42px;
+  height: 42px;
+  padding: 9px;
+  margin: 0 0 6px -9px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--card-accent, var(--blue-400)) 12%, rgba(7, 20, 38, 0.48));
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.25));
 }
 
 .hex-outline {

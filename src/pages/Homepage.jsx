@@ -34,6 +34,7 @@ function Homepage() {
                 <HexIcon id={`card-${d.id}`} accent={d.accent} type={d.type} />
                 <h3>{t(`divisionsData.${d.id}.label`)}</h3>
                 <p>{t(`divisionsData.${d.id}.tagline`)}</p>
+                <span className="division-card__arrow" aria-hidden="true">→</span>
               </Link>
             ))}
           </div>

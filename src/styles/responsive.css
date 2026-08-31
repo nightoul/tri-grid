@@ -153,9 +153,20 @@
     text-align: center;
   }
 
+  .division-card::before {
+    height: 3px;
+  }
+
+  .division-card::after,
+  .division-card__arrow {
+    display: none;
+  }
+
   .division-card .hex-icon {
     width: 34px;
     height: 34px;
+    padding: 5px;
+    margin: 0;
   }
 
   .division-card h3 {
