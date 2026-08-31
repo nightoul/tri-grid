@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1520 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDescription">
+<svg viewBox="0 0 1790 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDescription">
   <title id="logoTitle">Tri-Grid s.r.o.</title>
   <desc id="logoDescription">Horizontal Tri-Grid logo with the divisions Elektrotechnika, Kovovýroba and Stavebnictví</desc>
   <defs>
@@ -14,7 +14,7 @@
       <stop offset="50%" stop-color="#4585A2" />
       <stop offset="100%" stop-color="#5998B8" />
     </linearGradient>
-    <linearGradient id="wordmarkBlue" gradientUnits="userSpaceOnUse" x1="530" y1="0" x2="1460" y2="0">
+    <linearGradient id="wordmarkBlue" gradientUnits="userSpaceOnUse" x1="560" y1="0" x2="1775" y2="0">
       <stop offset="0%" stop-color="#356D89" />
       <stop offset="50%" stop-color="#4585A2" />
       <stop offset="100%" stop-color="#5998B8" />
@@ -43,6 +43,7 @@
   </defs>
 
   <g transform="translate(24 45)">
+  <g transform="translate(230 0) scale(1.15 1) translate(-230 0)">
 
   <!-- Outline cog, partially covered by the middle field. -->
   <g
@@ -105,29 +106,29 @@
   />
 
   </g>
+  </g>
 
   <!-- Editable master with live text. Convert text to paths in a separate
        print-production copy after the type and spacing are approved. -->
   <g fill="url(#wordmarkBlue)" text-anchor="start">
     <text
-      x="530"
-      y="274"
+      x="560"
+      y="286"
       font-family="Arial, Helvetica, sans-serif"
-      font-size="142"
       font-weight="700"
-      letter-spacing="1"
-      textLength="930"
-      lengthAdjust="spacingAndGlyphs"
-    >Tri-Grid s.r.o.</text>
+      letter-spacing="12"
+      textLength="1200"
+      lengthAdjust="spacing"
+    ><tspan font-size="180">Tri-Grid</tspan><tspan font-size="150"> s.r.o.</tspan></text>
     <text
-      x="545"
-      y="352"
+      x="575"
+      y="374"
       font-family="Arial Narrow, Roboto Condensed, Arial, sans-serif"
-      font-size="34"
-      font-weight="700"
-      letter-spacing="3.5"
-      textLength="930"
-      lengthAdjust="spacingAndGlyphs"
+      font-size="65"
+      font-weight="500"
+      letter-spacing="7.5"
+      textLength="1200"
+      lengthAdjust="spacing"
     >ELEKTROTECHNIKA • KOVOVÝROBA • STAVEBNICTVÍ</text>
   </g>
 </svg>
