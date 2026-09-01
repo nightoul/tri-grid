@@ -7,7 +7,7 @@
     "closeMenu": "Close menu"
   },
   "footer": {
-    "divisions": "Electrical · Metal Joinery · Construction"
+    "divisions": "Electrical · Metalworking · Construction"
   },
   "common": {
     "backToDivisions": "← Back",
@@ -23,7 +23,7 @@
   "home": {
     "eyebrow": "Tri-Grid s.r.o. · Where trades meet",
     "title": "Three trades. One partner.",
-    "lede": "Tri-Grid s.r.o. brings electrical, metal joinery, and construction work together under one roof — from design to delivery.",
+    "lede": "Tri-Grid s.r.o. brings electrical, metalworking, and construction work together under one roof — from design to delivery.",
     "stats": {
       "founders": "founders with hands-on industry experience",
       "contact": "point of contact for the whole project",
@@ -112,12 +112,12 @@
       "ctaQuestion": "Have an electrical project in mind?"
     },
     "kovovyroba": {
-      "label": "Metal Fabrication",
+      "label": "Metalworking",
       "tagline": "Design, fabrication, installation",
       "heroLede": "Design, fabrication, installation, and servicing of custom machinery and process equipment — from a single part to a complete line.",
-      "overviewHeading": "Metal fabrication that keeps pace with your operation",
+      "overviewHeading": "Metalworking that keeps pace with your operation",
       "overviewText": "We design, build, and install custom machinery and process equipment — from individual parts to complete production lines. That includes regular servicing and maintenance, so you can rely on smooth operation long after handover, not just on delivery day.",
-      "servicesHeading": "The three pillars of the Metal Fabrication division",
+      "servicesHeading": "The three pillars of the Metalworking division",
       "services": [
         {
           "title": "Machine design and fabrication",
@@ -150,13 +150,13 @@
           "desc": "We test the equipment, train the operators, and hand over documentation."
         }
       ],
-      "galleryHeading": "Metal fabrication in practice",
+      "galleryHeading": "Metalworking in practice",
       "galleryCaptions": [
         "Fabricating machine parts",
         "Assembling a process line",
         "Custom welding work"
       ],
-      "ctaQuestion": "Have a metal fabrication project in mind?"
+      "ctaQuestion": "Have a metalworking project in mind?"
     },
     "stavebnictvi": {
       "label": "Construction",
