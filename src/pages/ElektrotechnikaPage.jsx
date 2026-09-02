@@ -97,7 +97,6 @@ function ElektrotechnikaPage() {
               </figure>
             ))}
           </div>
-          <p className="gallery-note">{t('common.galleryNote')}</p>
         </div>
       </section>
 

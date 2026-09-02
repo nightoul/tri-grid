@@ -17,8 +17,7 @@
     "ourServicesEyebrow": "Our services",
     "howWeWorkEyebrow": "How we work together",
     "howWeWorkHeading": "Four steps from inquiry to handover",
-    "workSamplesEyebrow": "Work samples",
-    "galleryNote": "Placeholder photos — once you have photos from your own projects, we'll swap these for the real thing."
+    "workSamplesEyebrow": "Work samples"
   },
   "home": {
     "eyebrow": "Tri-Grid s.r.o. · Where trades meet",
@@ -60,7 +59,26 @@
     "contact": {
       "eyebrow": "Contact",
       "heading": "Let's talk about your project",
-      "country": "Czech Republic"
+      "lede": "Tell us briefly what you need. We'll review your request and get back to you with the best next step.",
+      "emailLabel": "Email",
+      "areaLabel": "Service area",
+      "country": "Czech Republic",
+      "reassurance": "One point of contact for electrical, metalworking, and construction.",
+      "emailSubject": "New website inquiry",
+      "form": {
+        "heading": "No-obligation inquiry",
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "division": "Area of interest",
+        "divisionOptions": {
+          "general": "Multiple trades / not sure yet"
+        },
+        "message": "How can we help?",
+        "messagePlaceholder": "For example, the type of work, project location, and expected timeframe…",
+        "submit": "Prepare email →",
+        "note": "Submitting opens your email app with a prepared message."
+      }
     }
   },
   "divisionsData": {

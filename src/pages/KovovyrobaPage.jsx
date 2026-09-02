@@ -97,7 +97,6 @@ function KovovyrobaPage() {
               </figure>
             ))}
           </div>
-          <p className="gallery-note">{t('common.galleryNote')}</p>
         </div>
       </section>
 

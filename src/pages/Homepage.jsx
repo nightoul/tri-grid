@@ -12,6 +12,22 @@ function Homepage() {
   const { lang } = useParams()
   const whyList = t('home.why.list', { returnObjects: true })
 
+  function handleInquirySubmit(event) {
+    event.preventDefault()
+    const data = new FormData(event.currentTarget)
+    const subject = `${t('home.contact.emailSubject')} — ${data.get('division')}`
+    const body = [
+      `${t('home.contact.form.name')}: ${data.get('name')}`,
+      `${t('home.contact.form.email')}: ${data.get('email')}`,
+      `${t('home.contact.form.phone')}: ${data.get('phone') || '—'}`,
+      `${t('home.contact.form.division')}: ${data.get('division')}`,
+      '',
+      data.get('message'),
+    ].join('\n')
+
+    window.location.href = `mailto:info@tri-grid.cz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
+
   return (
     <>
       <section className="hero" id="top">
@@ -86,23 +102,64 @@ function Homepage() {
         </div>
       </div>
 
-      <section className="about" id="o-nas">
-        <div className="container about__inner">
-          <p className="eyebrow">{t('home.about.eyebrow')}</p>
-          <p>{t('home.about.text')}</p>
-          <Link to={`/${lang}/o-nas`} className="about__more">{t('home.about.learnMore')}</Link>
-        </div>
-      </section>
-
       <section className="contact" id="kontakt">
         <div className="container contact__inner">
-          <p className="eyebrow">{t('home.contact.eyebrow')}</p>
-          <h2>{t('home.contact.heading')}</h2>
-          <div className="contact__details">
-            <a href="mailto:info@tri-grid.cz">info@tri-grid.cz</a>
-            <a href="tel:+420000000000">+420 000 000 000</a>
-            <span>{t('home.contact.country')}</span>
+          <div className="contact__intro">
+            <p className="eyebrow">{t('home.contact.eyebrow')}</p>
+            <h2>{t('home.contact.heading')}</h2>
+            <p className="contact__lede">{t('home.contact.lede')}</p>
+
+            <div className="contact__details">
+              <a className="contact__detail" href="mailto:info@tri-grid.cz">
+                <span className="contact__detail-label">{t('home.contact.emailLabel')}</span>
+                <strong>info@tri-grid.cz</strong>
+              </a>
+              <div className="contact__detail">
+                <span className="contact__detail-label">{t('home.contact.areaLabel')}</span>
+                <strong>{t('home.contact.country')}</strong>
+              </div>
+            </div>
+
+            <p className="contact__reassurance">
+              <span aria-hidden="true">✓</span>
+              {t('home.contact.reassurance')}
+            </p>
           </div>
+
+          <form className="contact-form" onSubmit={handleInquirySubmit}>
+            <h3>{t('home.contact.form.heading')}</h3>
+            <div className="contact-form__row">
+              <label>
+                {t('home.contact.form.name')}
+                <input name="name" type="text" autoComplete="name" required />
+              </label>
+              <label>
+                {t('home.contact.form.email')}
+                <input name="email" type="email" autoComplete="email" required />
+              </label>
+            </div>
+            <div className="contact-form__row">
+              <label>
+                {t('home.contact.form.phone')}
+                <input name="phone" type="tel" autoComplete="tel" />
+              </label>
+              <label>
+                {t('home.contact.form.division')}
+                <select name="division" defaultValue={t('home.contact.form.divisionOptions.general')}>
+                  <option>{t('home.contact.form.divisionOptions.general')}</option>
+                  <option>{t('divisionsData.elektrotechnika.label')}</option>
+                  <option>{t('divisionsData.kovovyroba.label')}</option>
+                  <option>{t('divisionsData.stavebnictvi.label')}</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              {t('home.contact.form.message')}
+              <textarea name="message" rows="5" placeholder={t('home.contact.form.messagePlaceholder')} required />
+            </label>
+            <button className="contact-form__submit" type="submit">{t('home.contact.form.submit')}</button>
+            <p className="contact-form__note">{t('home.contact.form.note')}</p>
+          </form>
         </div>
       </section>
     </>

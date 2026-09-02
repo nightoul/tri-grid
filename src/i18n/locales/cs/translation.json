@@ -17,8 +17,7 @@
     "ourServicesEyebrow": "Naše služby",
     "howWeWorkEyebrow": "Jak probíhá spolupráce",
     "howWeWorkHeading": "Čtyři kroky od poptávky k předání",
-    "workSamplesEyebrow": "Ukázky prací",
-    "galleryNote": "Ilustrační fotografie — jakmile budete mít snímky z vlastních realizací, nahradíme je za skutečné."
+    "workSamplesEyebrow": "Ukázky prací"
   },
   "home": {
     "eyebrow": "Tri-Grid s.r.o. · Když se řemesla potkají",
@@ -60,7 +59,26 @@
     "contact": {
       "eyebrow": "Kontakt",
       "heading": "Pojďme probrat váš projekt",
-      "country": "Česká republika"
+      "lede": "Popište nám stručně, co potřebujete. Podíváme se na zadání a ozveme se vám s návrhem dalšího postupu.",
+      "emailLabel": "E-mail",
+      "areaLabel": "Působnost",
+      "country": "Česká republika",
+      "reassurance": "Jeden kontakt pro elektrotechniku, kovovýrobu i stavebnictví.",
+      "emailSubject": "Nová poptávka z webu",
+      "form": {
+        "heading": "Nezávazná poptávka",
+        "name": "Jméno a příjmení",
+        "email": "E-mail",
+        "phone": "Telefon (nepovinné)",
+        "division": "Oblast poptávky",
+        "divisionOptions": {
+          "general": "Více oborů / nejsem si jistý"
+        },
+        "message": "S čím vám můžeme pomoci?",
+        "messagePlaceholder": "Například typ zakázky, místo realizace a předpokládaný termín…",
+        "submit": "Připravit e-mail →",
+        "note": "Po odeslání se otevře váš e-mailový program s připravenou zprávou."
+      }
     }
   },
   "divisionsData": {
