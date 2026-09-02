@@ -4,12 +4,12 @@ import HexIcon from '../components/HexIcon.jsx'
 import ServiceIcon from '../components/ServiceIcon.jsx'
 import stavebnictvi1 from '../assets/images/stavebnictvi1.jpg'
 import stavebnictviBg from '../assets/images/Stavebnictvi_bg.jpg'
-import stavebnictvi2 from '../assets/images/stavebnictvi2.jpg'
-import stavebnictvi3 from '../assets/images/stavebnictvi3.jpg'
-import stavebnictvi4 from '../assets/images/stavebnictvi4.jpg'
+import hrubaStavba from '../assets/images/stavebnictvi-hruba-stavba.jpg'
+import zednickePrace from '../assets/images/stavebnictvi-zednicke-prace.jpg'
+import dokoncovaciPrace from '../assets/images/stavebnictvi-dokoncovaci-prace.jpg'
 
 const serviceIcons = ['build', 'finish', 'supervise']
-const galleryImages = [stavebnictvi2, stavebnictvi3, stavebnictvi4]
+const galleryImages = [hrubaStavba, zednickePrace, dokoncovaciPrace]
 
 function StavebnictviPage() {
   const { t } = useTranslation()
@@ -20,7 +20,7 @@ function StavebnictviPage() {
   const galleryCaptions = t('divisionsData.stavebnictvi.galleryCaptions', { returnObjects: true })
 
   return (
-    <>
+    <div className="division-page division-page--bright-canvas">
       <section className="division-page-hero division-page-hero--brick">
         <div className="division-page-hero__bg" style={{ backgroundImage: `url(${stavebnictviBg})` }} />
         <div className="division-page-hero__overlay division-page-hero__overlay--brick" aria-hidden="true" />
@@ -105,7 +105,7 @@ function StavebnictviPage() {
           <Link to={`/${lang}#kontakt`} className="division-page-cta__link">{t('common.ctaContact')}</Link>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

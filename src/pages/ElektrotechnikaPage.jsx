@@ -2,16 +2,16 @@ import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import HexIcon from '../components/HexIcon.jsx'
 import ServiceIcon from '../components/ServiceIcon.jsx'
-import elektrotechnika1 from '../assets/images/elektrotechnika1.jpg'
+import smartHome from '../assets/images/elektrotechnika-smart-home.jpg'
 import elektrotechnikaBg from '../assets/images/Elektrotechnika_bg.jpg'
-import elektrotechnika2 from '../assets/images/elektrotechnika2.jpg'
-import elektrotechnika3 from '../assets/images/elektrotechnika3.jpg'
-import elektrotechnika4 from '../assets/images/elektrotechnika4.jpg'
+import rozvadec from '../assets/images/elektrotechnika-rozvadec.jpg'
+import rozvodyNovostavba from '../assets/images/elektrotechnika-rozvody-novostavba.jpg'
+import revizeMereni from '../assets/images/elektrotechnika-revize-mereni.jpg'
 
 // Ikony a obrázky jsou strukturální (nejsou to texty), takže zůstávají tady,
 // ne v překladovém slovníku. Pořadí musí sedět s polem services/gallery v JSON.
 const serviceIcons = ['install', 'inspect', 'lowvoltage']
-const galleryImages = [elektrotechnika2, elektrotechnika3, elektrotechnika4]
+const galleryImages = [rozvadec, rozvodyNovostavba, revizeMereni]
 
 function ElektrotechnikaPage() {
   const { t } = useTranslation()
@@ -22,7 +22,7 @@ function ElektrotechnikaPage() {
   const galleryCaptions = t('divisionsData.elektrotechnika.galleryCaptions', { returnObjects: true })
 
   return (
-    <>
+    <div className="division-page division-page--bright-canvas">
       <section className="division-page-hero">
         {/* Zatím placeholder — nahraď souborem stejného jména
             (src/assets/images/Elektrotechnika_bg.jpg) za reálnou fotku. */}
@@ -48,9 +48,7 @@ function ElektrotechnikaPage() {
             <p>{t('divisionsData.elektrotechnika.overviewText')}</p>
           </div>
           <div className="division-overview__media">
-            {/* Zatím placeholder — nahraď souborem stejného jména
-                (src/assets/images/elektrotechnika1.jpg) za reálnou fotku. */}
-            <img src={elektrotechnika1} alt="" loading="lazy" />
+            <img src={smartHome} alt="" loading="lazy" />
           </div>
         </div>
       </section>
@@ -109,7 +107,7 @@ function ElektrotechnikaPage() {
           <Link to={`/${lang}#kontakt`} className="division-page-cta__link">{t('common.ctaContact')}</Link>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

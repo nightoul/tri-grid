@@ -6,10 +6,10 @@ import kovovyroba1 from '../assets/images/kovovyroba1.jpg'
 import kovovyrobaBg from '../assets/images/Kovovyroba_bg.jpg'
 import kovovyroba2 from '../assets/images/kovovyroba2.jpg'
 import kovovyroba3 from '../assets/images/kovovyroba3.jpg'
-import kovovyroba4 from '../assets/images/kovovyroba4.jpg'
+import svarovaniNaMiru from '../assets/images/kovovyroba-svarovani-na-miru.jpg'
 
 const serviceIcons = ['design', 'wrench', 'weld']
-const galleryImages = [kovovyroba2, kovovyroba3, kovovyroba4]
+const galleryImages = [kovovyroba2, kovovyroba3, svarovaniNaMiru]
 
 function KovovyrobaPage() {
   const { t } = useTranslation()
@@ -20,7 +20,7 @@ function KovovyrobaPage() {
   const galleryCaptions = t('divisionsData.kovovyroba.galleryCaptions', { returnObjects: true })
 
   return (
-    <>
+    <div className="division-page division-page--bright-canvas">
       <section className="division-page-hero">
         {/* Zatím placeholder — nahraď souborem stejného jména
             (src/assets/images/Kovovyroba_bg.jpg) za reálnou fotku. */}
@@ -107,7 +107,7 @@ function KovovyrobaPage() {
           <Link to={`/${lang}#kontakt`} className="division-page-cta__link">{t('common.ctaContact')}</Link>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 
