@@ -177,14 +177,10 @@
 
 .division-card h3 {
   color: #fff;
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: calc(clamp(1.1rem, 2vw, 1.5rem) - 3px);
   line-height: 1.25;
   margin: 12px 0 8px;
   overflow-wrap: anywhere;
-}
-
-.division-card--blue h3 {
-  color: red;
 }
 
 .division-card p {
