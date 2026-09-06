@@ -1,4 +1,4 @@
-function HexIcon({ id, accent, type }) {
+function HexIcon({ id, accent, type, standalone = false }) {
   const clipId = `hexClip-${id}`
   const hexPoints = '25,3 75,3 100,50 75,97 25,97 0,50'
 
@@ -34,6 +34,7 @@ function HexIcon({ id, accent, type }) {
           >
             <path d="M14 62 L49 36 L86 62" className="hex-glyph-ring hex-roof" />
             <path d="M30 49 V30" className="hex-glyph-ring" />
+            {standalone && <path d="M24 62 V86 H76 V62" className="hex-glyph-ring" />}
           </g>
         )}
       </g>
