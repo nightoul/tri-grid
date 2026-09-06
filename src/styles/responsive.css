@@ -289,7 +289,7 @@
   .division-card {
     min-height: 225px;
     padding: 5px 5px 20px;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   .division-card .hex-icon {
