@@ -14,7 +14,7 @@
   inset: 0;
   z-index: 0;
   background-size: cover;
-  background-position: center calc(50% + 390px);
+  background-position: center calc(50% + 380px);
   filter: var(--hero-image-filter);
   opacity: 1;
   transition: filter 0.3s ease;
@@ -153,6 +153,16 @@
   transition: transform 0.4s ease;
 }
 
+.division-card--blue::before,
+.division-card--brick::before {
+  transform: scale(1.15);
+}
+
+.division-card.division-card--blue:hover::before,
+.division-card.division-card--brick:hover::before {
+  transform: scale(1.19);
+}
+
 .division-card::after {
   content: '';
   position: absolute;
@@ -163,7 +173,7 @@
 
 .division-card:hover {
   transform: translateY(-4px);
-  border-color: #80c9e4;
+  border-color: var(--card-hover-color, var(--card-accent));
 }
 
 .division-card:hover::before {
@@ -176,7 +186,7 @@
 }
 
 .division-card h3 {
-  color: #fff;
+  color: var(--paper-50);
   font-size: calc(clamp(1.1rem, 2vw, 1.5rem) - 3px);
   line-height: 1.25;
   margin: 12px 0 8px;
@@ -184,7 +194,7 @@
 }
 
 .division-card p {
-  color: #e0e5eb;
+  color: #e3e7ea;
   margin: 0 0 20px;
   max-width: 24ch;
   font-size: 1rem;
@@ -218,6 +228,7 @@
 }
 
 .division-card .hex-icon {
+  transform: translateY(-5px);
   width: 56px;
   height: 56px;
   margin: 0 0 0 -10px;
@@ -225,17 +236,45 @@
   filter: drop-shadow(0 3px 8px #0008);
 }
 
-.division-card .hex-outline {
-  display: none;
+.division-card:where(:not(.division-card--steel, .division-card--brick)) .hex-icon .hex-outline {
+  stroke: var(--paper-50);
 }
 
-.division-card .hex-icon .hex-glyph-ring {
-  stroke: #fff;
+.division-card:where(:not(.division-card--steel, .division-card--brick)) .hex-icon .hex-glyph-ring {
+  stroke: var(--paper-50);
 }
 
 .division-card .hex-icon .hex-glyph {
-  fill: #fff;
+  fill: var(--paper-50);
   stroke: none;
+}
+
+.division-card--blue .hex-icon .hex-outline {
+  stroke: var(--blue-400);
+}
+
+.division-card--blue .hex-icon .hex-glyph {
+  fill: var(--blue-400);
+  stroke: var(--blue-400);
+}
+
+.division-card .hex-icon .hex-outline {
+  stroke-width: 5;
+}
+
+.division-card .hex-icon .hex-glyph {
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.division-card .hex-icon .hex-glyph-ring {
+  stroke-width: 7;
+}
+
+.division-card .hex-icon .hex-roof,
+.division-card .hex-icon .hex-gear__outline,
+.division-card .hex-icon .hex-gear__hub {
+  stroke-width: 10;
 }
 
 .hex-outline {
@@ -336,7 +375,10 @@
 }
 
 .division-card--blue { --card-accent: var(--blue-400); }
-.division-card--steel { --card-accent: var(--steel-500); }
+.division-card--steel {
+  --card-accent: var(--steel-500);
+  --card-hover-color: color-mix(in srgb, var(--steel-500) 50%, white);
+}
 .division-card--brick { --card-accent: var(--construction-highlight); }
 
 .division-card--brick .hex-outline,
