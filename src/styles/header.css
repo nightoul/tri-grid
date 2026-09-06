@@ -21,11 +21,39 @@
 
 .site-header__strip-seg {
   flex: 1;
+  background: var(--strip-color);
 }
 
-.site-header__strip-seg--blue { background: var(--blue-400); }
-.site-header__strip-seg--steel { background: var(--steel-500); }
-.site-header__strip-seg--brick { background: var(--construction-highlight); }
+.site-header__strip-seg--blue { --strip-color: var(--blue-400); }
+.site-header__strip-seg--steel { --strip-color: var(--steel-500); }
+.site-header__strip-seg--brick { --strip-color: var(--construction-highlight); }
+
+.site-header__strip-seg--blue:not(.is-active) {
+  background: #6393B8;
+  box-shadow: none;
+}
+
+.site-header__strip-seg.is-active {
+  position: relative;
+  z-index: 1;
+  background: color-mix(in srgb, var(--strip-color) 65%, white);
+}
+
+.site-header__strip-seg--blue.is-active {
+  background: var(--blue-400);
+}
+
+.site-header__strip-seg--steel.is-active {
+  background: color-mix(in srgb, var(--strip-color) 50%, white);
+}
+
+.site-header__strip-seg--brick:not(.is-active) {
+  background: color-mix(in srgb, var(--strip-color) 65%, white);
+}
+
+.site-header__strip-seg--brick.is-active {
+  background: var(--strip-color);
+}
 
 .site-header__inner {
   position: relative;

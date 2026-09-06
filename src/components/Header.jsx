@@ -28,9 +28,12 @@ function Header() {
   return (
     <header className={`site-header ${menuOpen ? 'is-menu-open' : ''}`}>
       <div className="site-header__strip" aria-hidden="true">
-        <span className="site-header__strip-seg site-header__strip-seg--blue" />
-        <span className="site-header__strip-seg site-header__strip-seg--steel" />
-        <span className="site-header__strip-seg site-header__strip-seg--brick" />
+        {divisions.map((division) => (
+          <span
+            key={division.id}
+            className={`site-header__strip-seg site-header__strip-seg--${division.accent}${location.pathname.replace(/\/$/, '') === langPath(`/divize/${division.id}`) ? ' is-active' : ''}`}
+          />
+        ))}
       </div>
       <div className="container site-header__inner">
         <Link to={langPath()} className="logo-mark">
