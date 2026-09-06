@@ -288,7 +288,7 @@
 
   .division-card {
     min-height: 225px;
-    padding: 5px 10px 20px;
+    padding: 5px 5px 20px;
     border-radius: 10px;
   }
 
@@ -324,7 +324,7 @@
   }
 
   .division-card {
-    padding-inline: 5px;
+    padding-inline: 2.5px;
   }
 
   .division-card h3 {
