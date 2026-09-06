@@ -7,10 +7,11 @@
   left: 0;
   right: 0;
   z-index: 50;
-  background:
-    linear-gradient(var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
-    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
-    var(--navy-950);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--navy-950) 92%, white),
+    var(--navy-950)
+  );
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 8px 24px -16px rgba(0, 0, 0, 0.5);
 }
 
