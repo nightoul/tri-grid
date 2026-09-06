@@ -40,7 +40,13 @@ function Homepage() {
         <div className="hero__overlay" aria-hidden="true" />
         <CircuitAnimation />
         <div className="container hero__inner">
-          <h1>{t('home.title')}</h1>
+          <h1>
+            {t('home.title').split('. ').map((line, index, lines) => (
+              <span className="hero__title-line" key={index}>
+                {line}{index < lines.length - 1 ? '. ' : ''}
+              </span>
+            ))}
+          </h1>
           <p className="hero__lede">{t('home.lede')}</p>
 
           <div className="division-grid" id="divize">
