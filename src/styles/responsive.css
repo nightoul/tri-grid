@@ -322,6 +322,14 @@
   .container {
     padding-inline: 8px;
   }
+
+  .division-card {
+    padding-inline: 5px;
+  }
+
+  .division-card h3 {
+    font-size: calc(clamp(0.875rem, 2.8vw, 1rem) + 3px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
