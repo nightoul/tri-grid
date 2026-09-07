@@ -9,8 +9,13 @@ import DivisionsDropdown from './DivisionsDropdown.jsx'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(() => window.scrollY > 24)
   const location = useLocation()
   const { lang } = useParams()
+  const isHomepage = location.pathname.replace(/\/$/, '') === `/${lang}`
+  const isDivisionPage = divisions.some(
+    ({ id }) => location.pathname.replace(/\/$/, '') === `/${lang}/divize/${id}`
+  )
   const { t } = useTranslation()
   const logoFullWeb = lang === 'en' ? logoFullEn : logoFullCz
   const logoAlt = lang === 'en'
@@ -22,11 +27,18 @@ function Header() {
     setMenuOpen(false)
   }, [location])
 
+  useEffect(() => {
+    const updateScroll = () => setScrolled(window.scrollY > 24)
+    updateScroll()
+    window.addEventListener('scroll', updateScroll, { passive: true })
+    return () => window.removeEventListener('scroll', updateScroll)
+  }, [])
+
   // Poskládá odkaz s aktuálním jazykem vpředu, např. langPath('/o-nas') -> '/cs/o-nas'
   const langPath = (path = '') => `/${lang}${path}`
 
   return (
-    <header className={`site-header ${menuOpen ? 'is-menu-open' : ''}`}>
+    <header className={`site-header ${(isHomepage || isDivisionPage) && !scrolled && !menuOpen ? 'site-header--transparent' : ''} ${menuOpen ? 'is-menu-open' : ''}`}>
       <div className="site-header__strip" aria-hidden="true">
         {divisions.map((division) => (
           <span

@@ -25,6 +25,7 @@
   inset: 0;
   z-index: 1;
   background:
+    linear-gradient(180deg, rgba(3, 12, 24, 0.55), transparent 160px),
     linear-gradient(var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
     linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
     linear-gradient(180deg, var(--hero-overlay-start) 0%, var(--hero-overlay-end) 100%);
