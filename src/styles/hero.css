@@ -154,14 +154,28 @@
   transition: transform 0.4s ease;
 }
 
-.division-card--blue::before,
+.division-card--blue::before {
+  transform: translateY(5%) scale(1.909359375);
+}
+
 .division-card--brick::before {
   transform: scale(1.15);
 }
 
-.division-card.division-card--blue:hover::before,
+.division-card.division-card--blue:hover::before {
+  transform: translateY(5%) scale(1.975771875);
+}
+
 .division-card.division-card--brick:hover::before {
   transform: scale(1.19);
+}
+
+.division-card--steel::before {
+  transform: scale(1.05);
+}
+
+.division-card.division-card--steel:hover::before {
+  transform: scale(1.092);
 }
 
 .division-card::after {
@@ -260,7 +274,17 @@
 }
 
 .division-card .hex-icon .hex-outline {
+  display: none;
   stroke-width: 5;
+}
+
+.division-card--brick .hex-icon .hex-outline {
+  display: inline;
+  stroke-width: 7;
+}
+
+.division-card.division-card--brick .hex-icon .hex-glyph-ring {
+  stroke-width: 9;
 }
 
 .division-card .hex-icon .hex-glyph {

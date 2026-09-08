@@ -1,16 +1,24 @@
-function HexIcon({ id, accent, type }) {
+function HexIcon({ id, accent, type, lowerOutlineOnly = false }) {
   const clipId = `hexClip-${id}`
   const hexPoints = '25,3 75,3 100,50 75,97 25,97 0,50'
 
   return (
-    <svg viewBox="0 0 100 100" className={`hex-icon hex-icon--${accent}`} aria-hidden="true">
+    <svg viewBox={lowerOutlineOnly ? '0 19 100 100' : '0 0 100 100'} className={`hex-icon hex-icon--${accent}`} aria-hidden="true">
       <defs>
         <clipPath id={clipId}>
           <polygon points={hexPoints} />
         </clipPath>
       </defs>
 
-      <polygon points={hexPoints} className="hex-outline" />
+      {lowerOutlineOnly ? (
+        <path
+          d="M49 36 L91.1 66.73 L75 97 H25 L8.54 66.06 Z"
+          className="hex-outline"
+          strokeLinejoin="miter"
+        />
+      ) : (
+        <polygon points={hexPoints} className="hex-outline" />
+      )}
 
       <g clipPath={`url(#${clipId})`}>
         {type === 'bolt' && (
@@ -32,8 +40,8 @@ function HexIcon({ id, accent, type }) {
             strokeLinecap="square"
             strokeLinejoin="miter"
           >
-            <path d="M14 62 L49 36 L86 62" className="hex-glyph-ring hex-roof" />
-            <path d="M30 49 V30" className="hex-glyph-ring" />
+            {!lowerOutlineOnly && <path d="M14 62 L49 36 L86 62" className="hex-glyph-ring hex-roof" />}
+            <path d={lowerOutlineOnly ? 'M30 45 V30' : 'M30 49 V30'} className="hex-glyph-ring" />
           </g>
         )}
       </g>
