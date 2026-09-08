@@ -1,9 +1,13 @@
-function HexIcon({ id, accent, type, lowerOutlineOnly = false }) {
+function HexIcon({ id, accent, type, lowerOutlineOnly = false, alignBaseline = false }) {
   const clipId = `hexClip-${id}`
   const hexPoints = '25,3 75,3 100,50 75,97 25,97 0,50'
+  // Align visible tile bottoms, including stroke widths and the house's 1.08 vertical scale.
+  const viewBoxY = alignBaseline
+    ? (type === 'roof' ? 17.398148 : type === 'gear' ? -4.852747 : 0)
+    : (lowerOutlineOnly ? 19 : 0)
 
   return (
-    <svg viewBox={lowerOutlineOnly ? '0 19 100 100' : '0 0 100 100'} className={`hex-icon hex-icon--${accent}`} aria-hidden="true">
+    <svg viewBox={`0 ${viewBoxY} 100 100`} className={`hex-icon hex-icon--${accent}`} aria-hidden="true">
       <defs>
         <clipPath id={clipId}>
           <polygon points={hexPoints} />

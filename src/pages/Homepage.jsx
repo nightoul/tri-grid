@@ -57,7 +57,7 @@ function Homepage() {
                 key={d.id}
                 style={{ '--tile-image': `url(${tileImages[d.id]})` }}
               >
-                <HexIcon id={`card-${d.id}`} accent={d.accent} type={d.type} lowerOutlineOnly={d.type === 'roof'} />
+                <HexIcon id={`card-${d.id}`} accent={d.accent} type={d.type} lowerOutlineOnly={d.type === 'roof'} alignBaseline />
                 <h3>{t(`divisionsData.${d.id}.label`)}</h3>
                 <p>{t(`divisionsData.${d.id}.tagline`)}</p>
                 <span className="division-card__link">{t('home.tileMore')} <span className="division-card__arrow" aria-hidden="true">→</span></span>
