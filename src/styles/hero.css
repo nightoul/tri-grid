@@ -415,10 +415,10 @@
 .division-card--brick .hex-glyph,
 .division-card--brick .hex-glyph-ring,
 .division-card--brick .brick-block {
-  stroke: var(--construction-highlight);
+  stroke: #a85832;
 }
 
 .division-card--brick .hex-glyph,
 .division-card--brick .brick-block {
-  fill: var(--construction-highlight);
+  fill: #a85832;
 }

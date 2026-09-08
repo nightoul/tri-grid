@@ -29,12 +29,13 @@
   transform: scale(1.91008125);
   background-position: center min(0px, calc(35% + 87px));
   background-repeat: no-repeat;
-  filter: grayscale(0.08) contrast(0.96) brightness(0.9) saturate(1.08);
+  filter: grayscale(0.08) contrast(0.96) brightness(0.82) saturate(1.08);
   opacity: 1;
 }
 
 .division-page-hero--brick .division-page-hero__bg {
-  filter: grayscale(0.18) contrast(1.02) brightness(1.18);
+  transform: scale(1.059725);
+  filter: grayscale(0.18) contrast(1.02) brightness(1.05);
   opacity: 0.95;
 }
 
@@ -83,12 +84,12 @@
 .division-page-hero--brick .hex-glyph,
 .division-page-hero--brick .hex-glyph-ring,
 .division-page-hero--brick .brick-block {
-  stroke: var(--construction-highlight);
+  stroke: #d47532;
 }
 
 .division-page-hero--brick .hex-glyph,
 .division-page-hero--brick .brick-block {
-  fill: var(--construction-highlight);
+  fill: #d47532;
 }
 
 .division-page-hero__overlay--neutral {
