@@ -26,10 +26,21 @@
   z-index: 1;
   background:
     linear-gradient(180deg, rgba(3, 12, 24, 0.55), transparent 160px),
-    linear-gradient(var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
-    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
     linear-gradient(180deg, var(--hero-overlay-start) 0%, var(--hero-overlay-end) 100%);
   transition: background 0.3s ease;
+}
+
+.hero__overlay::after,
+.division-page-hero__overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px;
+  -webkit-mask-image: radial-gradient(ellipse max(600px, 75vw) 400px at top left, transparent 45%, #000 100%);
+  mask-image: radial-gradient(ellipse max(600px, 75vw) 400px at top left, transparent 45%, #000 100%);
 }
 
 .hero__inner {

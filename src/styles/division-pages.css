@@ -51,20 +51,16 @@
 
 .division-page-hero__overlay--blue {
   background-image:
-    linear-gradient(var(--grid-line-dark) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px),
     linear-gradient(180deg, rgba(7, 32, 58, 0.4) 0%, rgba(18, 58, 92, 0.54) 100%);
-  background-size: 32px 32px, 32px 32px, cover;
+  background-size: cover;
 }
 
 .division-page-hero__overlay--steel {
   background-image:
-    linear-gradient(var(--grid-line-dark) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px),
     radial-gradient(circle at 82% 16%, rgba(255, 205, 112, 0.2), transparent 36%),
     linear-gradient(90deg, rgba(7, 32, 58, 0.56) 0%, rgba(10, 43, 71, 0.4) 48%, rgba(15, 63, 94, 0.08) 100%),
     linear-gradient(180deg, rgba(15, 63, 94, 0.2) 0%, rgba(22, 72, 105, 0.34) 100%);
-  background-size: 32px 32px, 32px 32px, cover, cover, cover;
+  background-size: cover, cover, cover;
 }
 
 .division-page-hero__overlay--steel + .division-page-hero__inner h1,
@@ -74,10 +70,8 @@
 
 .division-page-hero__overlay--brick {
   background-image:
-    linear-gradient(var(--grid-line-dark) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px),
     linear-gradient(180deg, rgba(44, 27, 18, 0.6) 0%, rgba(69, 43, 28, 0.68) 100%);
-  background-size: 32px 32px, 32px 32px, cover;
+  background-size: cover;
 }
 
 .division-page-hero--brick .hex-outline,
@@ -94,10 +88,8 @@
 
 .division-page-hero__overlay--neutral {
   background-image:
-    linear-gradient(var(--grid-line-dark) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px),
     linear-gradient(180deg, rgba(7, 20, 38, 0.6) 0%, rgba(15, 42, 74, 0.68) 100%);
-  background-size: 32px 32px, 32px 32px, cover;
+  background-size: cover;
 }
 
 .division-page-hero__inner {
