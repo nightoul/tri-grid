@@ -155,7 +155,8 @@
 }
 
 .division-card--blue::before {
-  transform: translateY(5%) scale(1.909359375);
+  transform: translateY(5%) scale(1.9475465625);
+  filter: brightness(0.7);
 }
 
 .division-card--brick::before {
@@ -163,7 +164,7 @@
 }
 
 .division-card.division-card--blue:hover::before {
-  transform: translateY(5%) scale(1.975771875);
+  transform: translateY(5%) scale(2.0152873125);
 }
 
 .division-card.division-card--brick:hover::before {
