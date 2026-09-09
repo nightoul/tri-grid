@@ -36,16 +36,6 @@ function DivisionsDropdown() {
         onClick={() => setOpen((o) => !o)}
       >
         {t('nav.divisions')}
-        <svg className="dropdown__chevron" viewBox="0 0 12 8" aria-hidden="true">
-          <path
-            d="M1 1l5 5 5-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
       </button>
 
       <ul className={`dropdown__menu dropdown__menu--left ${open ? 'is-open' : ''}`} role="listbox">

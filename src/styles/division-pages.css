@@ -97,6 +97,12 @@
   z-index: 2;
 }
 
+.division-page-hero__inner::before {
+  content: '';
+  display: block;
+  height: calc(1.23rem + 32px);
+}
+
 .division-page-back {
   display: inline-block;
   font-family: var(--font-mono);

@@ -25,7 +25,6 @@ function StavebnictviPage() {
         <div className="division-page-hero__bg" style={{ backgroundImage: `url(${stavebnictviBg})` }} />
         <div className="division-page-hero__overlay division-page-hero__overlay--brick" aria-hidden="true" />
         <div className="container division-page-hero__inner">
-          <Link to={`/${lang}`} className="division-page-back">{t('common.backToDivisions')}</Link>
           <div className="division-page-hero__head">
             <HexIcon id="page-stavebnictvi" accent="brick" type="roof" />
             <div>

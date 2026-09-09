@@ -11,7 +11,6 @@ function AboutPage() {
       <section className="division-page-hero">
         <div className="division-page-hero__overlay division-page-hero__overlay--neutral" aria-hidden="true" />
         <div className="container division-page-hero__inner">
-          <Link to={`/${lang}`} className="division-page-back">{t('common.backToDivisions')}</Link>
           <div className="division-page-hero__head">
             <div>
               <p className="eyebrow">{t('aboutPage.hero.eyebrow')}</p>

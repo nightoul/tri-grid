@@ -27,7 +27,6 @@ function KovovyrobaPage() {
         <div className="division-page-hero__bg division-page-hero__bg--steel" style={{ backgroundImage: `url(${kovovyrobaBg})` }} />
         <div className="division-page-hero__overlay division-page-hero__overlay--steel" aria-hidden="true" />
         <div className="container division-page-hero__inner">
-          <Link to={`/${lang}`} className="division-page-back">{t('common.backToDivisions')}</Link>
           <div className="division-page-hero__head">
             <HexIcon id="page-kovovyroba" accent="steel" type="gear" />
             <div>
