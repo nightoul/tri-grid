@@ -9,6 +9,7 @@ import constructionTile from '../assets/images/Stavebnictvi_bg.jpg'
 import heroBg from '../assets/images/hero-bg.jpg'
 import whyUsImage from '../assets/images/why-us-handshake.jpg'
 import CircuitAnimation from '../components/CircuitAnimation.jsx'
+import WarpGrid from '../components/WarpGrid.jsx'
 
 const tileImages = { elektrotechnika: electricalTile, kovovyroba: metalworkTile, stavebnictvi: constructionTile }
 
@@ -38,6 +39,7 @@ function Homepage() {
       <section className="hero" id="top">
         <div className="hero__bg" style={{ backgroundImage: `url(${heroBg})` }} />
         <div className="hero__overlay" aria-hidden="true" />
+        <WarpGrid />
         <CircuitAnimation />
         <div className="container hero__inner">
           <h1>
