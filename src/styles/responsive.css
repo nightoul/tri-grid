@@ -88,7 +88,7 @@
 
   .mobile-nav a {
     text-decoration: none;
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: 0.95rem;
     color: rgba(246, 245, 241, 0.85);
     padding: 14px 24px;

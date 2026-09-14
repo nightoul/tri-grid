@@ -39,7 +39,7 @@ function LanguageSwitcher({ mobile = false }) {
             to={`/${l.code}${restOfPath}${location.hash}`}
             className={l.code === lang ? 'is-active' : ''}
           >
-            <span aria-hidden="true">{l.flag}</span>{' '}
+            <img className="language-flag" src={l.flag} width="24" height="16" alt="" />{' '}
             {l.label}
           </Link>
         ))}
@@ -56,7 +56,7 @@ function LanguageSwitcher({ mobile = false }) {
         aria-expanded={open}
         onClick={() => setOpen((o) => !o)}
       >
-        <span aria-hidden="true">{current.flag}</span>
+        <img className="language-flag" src={current.flag} width="24" height="16" alt="" />
         {current.label}
       </button>
 
@@ -67,7 +67,7 @@ function LanguageSwitcher({ mobile = false }) {
               to={`/${l.code}${restOfPath}${location.hash}`}
               className={l.code === lang ? 'is-active' : ''}
             >
-              <span aria-hidden="true">{l.flag}</span>{' '}
+              <img className="language-flag" src={l.flag} width="24" height="16" alt="" />{' '}
               {l.name}
             </Link>
           </li>

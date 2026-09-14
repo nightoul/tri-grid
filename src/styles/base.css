@@ -53,7 +53,7 @@ a {
 }
 
 .eyebrow {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;

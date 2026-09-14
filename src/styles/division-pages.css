@@ -105,7 +105,7 @@
 
 .division-page-back {
   display: inline-block;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.82rem;
   color: rgba(246, 245, 241, 0.75);
   text-decoration: none;
@@ -156,7 +156,7 @@
 }
 
 .division-page-body__services li {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--ink-600);
   padding-left: 20px;
@@ -192,7 +192,7 @@
 }
 
 .division-page-cta__link {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-weight: 600;
   color: var(--navy-800);
   text-decoration: none;
@@ -382,7 +382,7 @@
 
 .process-step__num {
   display: block;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.8rem;
   color: var(--accent, var(--blue-400));
 }
@@ -442,7 +442,7 @@
 
 .gallery-item figcaption {
   margin-top: 10px;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.82rem;
   color: var(--ink-600);
 }

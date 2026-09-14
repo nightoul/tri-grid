@@ -1,6 +1,6 @@
 /* This file is auto-split from the original App.css — see src/App.css for the import order. */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   --navy-950: #071426;
@@ -26,7 +26,6 @@
 
   --font-display: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
 }
 
 :root[data-theme='sunrise'] {

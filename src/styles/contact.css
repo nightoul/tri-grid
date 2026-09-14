@@ -51,7 +51,7 @@ a.contact__detail:hover {
 }
 
 .contact__detail-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -93,7 +93,7 @@ a.contact__detail:hover {
   flex-direction: column;
   gap: 7px;
   margin-bottom: 16px;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.76rem;
   color: var(--navy-800);
 }
@@ -129,7 +129,7 @@ a.contact__detail:hover {
   border: 0;
   background: var(--navy-800);
   color: var(--paper-50);
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-weight: 600;
   cursor: pointer;
 }
