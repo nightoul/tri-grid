@@ -2,10 +2,9 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import Homepage from './pages/Homepage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
-import ElektrotechnikaPage from './pages/ElektrotechnikaPage.jsx'
-import KovovyrobaPage from './pages/KovovyrobaPage.jsx'
-import StavebnictviPage from './pages/StavebnictviPage.jsx'
+import DivisionPage from './pages/DivisionPage.jsx'
 import languages from './data/languages.js'
+import divisions from './data/divisions.js'
 
 const defaultLang = languages[0].code
 
@@ -18,9 +17,9 @@ function App() {
       <Route path=":lang" element={<Layout />}>
         <Route index element={<Homepage />} />
         <Route path="o-nas" element={<AboutPage />} />
-        <Route path="divize/elektrotechnika" element={<ElektrotechnikaPage />} />
-        <Route path="divize/kovovyroba" element={<KovovyrobaPage />} />
-        <Route path="divize/stavebnictvi" element={<StavebnictviPage />} />
+        {divisions.map((d) => (
+          <Route key={d.id} path={`divize/${d.id}`} element={<DivisionPage division={d} />} />
+        ))}
         {/* Další stránky se přidávají sem, např.:
         <Route path="kontakt" element={<ContactPage />} />
         */}

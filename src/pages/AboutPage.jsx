@@ -1,8 +1,10 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import usePageTitle from '../hooks/usePageTitle.js'
 
 function AboutPage() {
   const { t } = useTranslation()
+  usePageTitle(t('nav.about'))
   const { lang } = useParams()
   const values = t('aboutPage.values', { returnObjects: true })
 

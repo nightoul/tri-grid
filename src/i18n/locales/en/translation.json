@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "siteName": "Tri-Grid s.r.o.",
+    "title": "Tri-Grid s.r.o. — Electrical, Metalworking, Construction",
+    "description": "Tri-Grid s.r.o. brings electrical, metalworking, and construction work together under one roof — from design to delivery."
+  },
   "nav": {
     "divisions": "Divisions",
     "about": "About",

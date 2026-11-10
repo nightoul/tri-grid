@@ -12,7 +12,8 @@ const THEME_STORAGE_KEY = 'tri-grid-theme'
 function Layout() {
   const { lang } = useParams()
   const location = useLocation()
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const description = t('meta.description')
 
   // Keep the selected/default theme applied even though its picker is hidden.
   useEffect(() => {
@@ -28,6 +29,17 @@ function Layout() {
       i18n.changeLanguage(lang)
     }
   }, [lang, i18n])
+
+  // <html lang> a meta popisky sledují aktuální jazyk (výchozí hodnoty
+  // jsou v index.html pro vyhledávače, které nespouští JavaScript).
+  useEffect(() => {
+    if (!SUPPORTED_LANGS.includes(lang)) return
+    document.documentElement.lang = lang
+    document.querySelectorAll('meta[name="description"], meta[property="og:description"]')
+      .forEach((el) => el.setAttribute('content', description))
+    document.querySelector('meta[property="og:locale"]')
+      ?.setAttribute('content', lang === 'cs' ? 'cs_CZ' : 'en_GB')
+  }, [lang, description])
 
   useEffect(() => {
     if (location.hash) {

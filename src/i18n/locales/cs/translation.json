@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "siteName": "Tri-Grid s.r.o.",
+    "title": "Tri-Grid s.r.o. — Elektrotechnika, kovovýroba, stavebnictví",
+    "description": "Tri-Grid s.r.o. spojuje elektrotechniku, kovovýrobu a stavebnictví pod jednu střechu — od návrhu po realizaci."
+  },
   "nav": {
     "divisions": "Divize",
     "about": "O nás",
