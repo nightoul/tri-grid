@@ -75,7 +75,6 @@ function DivisionPage({ division }) {
                   <div className="service-card__head">
                     <LineIcon name={serviceIcons[i]} className="service-card__line-icon" />
                     <h3>{s.title}</h3>
-                    <span className="service-card__arrow" aria-hidden="true">→</span>
                   </div>
                   <p>{s.desc}</p>
                 </div>
