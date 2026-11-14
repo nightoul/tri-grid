@@ -28,36 +28,6 @@ function ServiceIcon({ variant }) {
         </g>
       )}
 
-      {variant === 'design' && (
-        <g>
-          <circle cx="24" cy="24" r="7.5" fill="none" strokeWidth="3.2" className="service-card__icon-glyph service-card__icon-glyph--stroke" />
-          {[0, 45, 90, 135, 180, 225, 270, 315].map((deg) => (
-            <rect
-              key={deg}
-              x="22"
-              y="8"
-              width="4"
-              height="6"
-              className="service-card__icon-glyph"
-              transform={`rotate(${deg} 24 24)`}
-            />
-          ))}
-        </g>
-      )}
-
-      {variant === 'wrench' && (
-        <g className="service-card__icon-glyph service-card__icon-glyph--stroke" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" fill="none">
-          <path d="M31 14 a5.5 5.5 0 1 0 3 3 L18 33 l-3 3 -4-4 3-3 z" />
-        </g>
-      )}
-
-      {variant === 'weld' && (
-        <path
-          d="M24 9 L27 20 L37 18 L28.5 25 L34 34 L24 28 L14 34 L19.5 25 L11 18 L21 20 Z"
-          className="service-card__icon-glyph"
-        />
-      )}
-
       {variant === 'build' && (
         <g>
           <polygon points="16,16 32,16 24,32" className="service-card__icon-glyph" />

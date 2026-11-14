@@ -138,49 +138,75 @@
     "kovovyroba": {
       "label": "Metalworking",
       "tagline": "Design, fabrication, installation",
-      "heroLede": "Design, fabrication, installation, and servicing of custom machinery and process equipment — from a single part to a complete line.",
-      "overviewHeading": "Metalworking that keeps pace with your operation",
-      "overviewText": "We design, build, and install custom machinery and process equipment — from individual parts to complete production lines. That includes regular servicing and maintenance, so you can rely on smooth operation long after handover, not just on delivery day.",
+      "heroLede": "We take on custom metalwork with a focus on stainless steel and steel structures, railings, staircases, and architectural features. We also grind, satin-finish, and polish stainless steel, brass, copper, aluminium, and other metals.",
+      "overviewHeading": "Metalwork with an eye for detail",
+      "overviewText": "We specialise in fabricating and installing metal structures for construction, architecture, and interiors. We make stainless steel railings, staircases, handrails, canopies, frames, and bespoke metal features. Our services also include precise metal surface finishing, from fine grinding all the way to a mirror polish.",
       "servicesHeading": "The three pillars of the Metalworking division",
       "services": [
         {
-          "title": "Machine design and fabrication",
-          "desc": "Design and fabrication of custom machine parts and assemblies — from prototype to small-batch production."
+          "title": "Structural and architectural metalwork",
+          "desc": "Fabrication and installation of stainless steel and steel railings, staircases, handrails, canopies, gates, fencing, substructures, and bespoke metal features for interiors and exteriors."
         },
         {
-          "title": "Installation and servicing of process equipment",
-          "desc": "Installation, commissioning, and regular servicing of production and process lines."
+          "title": "Metal grinding and polishing",
+          "desc": "Professional grinding, brushing, satin finishing, and polishing of stainless steel, brass, copper, aluminium, and other metals. Finishes from matte to high gloss and mirror polish."
         },
         {
-          "title": "Locksmith and welding work",
-          "desc": "Welding, machining, and locksmith work to drawings or on site as needed."
+          "title": "Custom fabrication and welding",
+          "desc": "One-off and small-batch production to technical drawings or your own brief. TIG and MIG/MAG welding, assembly of structures, and final finishing of products."
         }
       ],
       "steps": [
         {
           "title": "Inquiry and consultation",
-          "desc": "We go over the technical brief, drawings, or the equipment's intended purpose."
+          "desc": "We go over your requirements, technical brief, dimensions, materials, and the finish you want."
         },
         {
           "title": "Design and quote",
-          "desc": "We prepare a design and a transparent price quote."
+          "desc": "We propose a suitable technical solution, production method, and surface finish, and prepare a price quote."
         },
         {
           "title": "Fabrication and installation",
-          "desc": "We handle fabrication, machining, welding, and on-site installation."
+          "desc": "We handle fabrication, welding, grinding, polishing, and professional installation of the metal elements."
         },
         {
-          "title": "Testing and handover",
-          "desc": "We test the equipment, train the operators, and hand over documentation."
+          "title": "Inspection and handover",
+          "desc": "We carry out a quality check and final touches, then hand over the finished work."
         }
       ],
-      "galleryHeading": "Metalworking in practice",
-      "galleryCaptions": [
-        "Fabricating machine parts",
-        "Assembling a process line",
-        "Custom welding work"
+      "galleryHeading": "Metalwork up close",
+      "ctaQuestion": "Looking for a reliable partner for metal structures, stainless steel railings, or professional metal surface finishing?",
+      "heroSubtitle": "Custom metalwork, structural steelwork, and professional metal surface finishing.",
+      "gallery": [
+        {
+          "title": "Stainless steel railings and staircases",
+          "desc": "Fabrication and installation of stainless steel railings, handrails, and staircase structures with a focus on precision, safety, and appearance."
+        },
+        {
+          "title": "Glass railings and canopies",
+          "desc": "Stainless steel structures combined with glass for balconies, terraces, and modern architecture."
+        },
+        {
+          "title": "Stainless steel grinding and polishing",
+          "desc": "Precise finishing of stainless steel surfaces: evening out the grain, cleaning up welds, and reaching the required level of shine."
+        },
+        {
+          "title": "Custom stainless steel products",
+          "desc": "Fabrication of bespoke stainless steel elements, brackets, frames, technical parts, and structures to your individual requirements."
+        },
+        {
+          "title": "Interior metal structures",
+          "desc": "Stainless steel railings, handrails, and architectural features for residential, office, and commercial spaces."
+        },
+        {
+          "title": "Finishing of designer metals",
+          "desc": "Grinding, satin finishing, and polishing of brass, copper, aluminium, and other metals for interior and architectural use."
+        }
       ],
-      "ctaQuestion": "Have a metalworking project in mind?"
+      "ctaEyebrow": "Have a project? Let's make it happen.",
+      "ctaHeading": "Quality metalwork starts with the details.",
+      "ctaText": "Get in touch. We'll be glad to go through your technical requirements with you and put together a tailored solution.",
+      "ctaButton": "Request a free quote"
     },
     "stavebnictvi": {
       "label": "Construction",

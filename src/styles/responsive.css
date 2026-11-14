@@ -117,10 +117,6 @@
     line-height: 1.42;
   }
 
-  .division-page-back {
-    margin-bottom: 18px;
-  }
-
   .division-page-hero__inner::before {
     height: calc(1.23rem + 18px);
   }

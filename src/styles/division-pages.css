@@ -19,9 +19,9 @@
 }
 
 .division-page-hero__bg--steel {
-  transform: translateY(6px) scale(1.15);
+  transform: scale(1.04);
   background-position: center 42%;
-  filter: grayscale(0) contrast(0.92) brightness(1.48) saturate(1.22);
+  filter: contrast(1.02) brightness(0.92) saturate(1.05);
   opacity: 1;
 }
 
@@ -103,18 +103,7 @@
   height: calc(1.23rem + 32px);
 }
 
-.division-page-back {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  color: rgba(246, 245, 241, 0.75);
-  text-decoration: none;
-  margin-bottom: 32px;
-}
 
-.division-page-back:hover {
-  color: var(--paper-50);
-}
 
 .division-page-hero__head {
   display: flex;
@@ -139,39 +128,10 @@
   padding: 72px 0 96px;
 }
 
-.division-page-body__inner {
-  max-width: 680px;
-}
 
-.division-page-body__desc {
-  font-size: 1.05rem;
-}
 
-.division-page-body__services {
-  list-style: none;
-  padding: 0;
-  margin: 24px 0 48px;
-  display: grid;
-  gap: 10px;
-}
 
-.division-page-body__services li {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--ink-600);
-  padding-left: 20px;
-  position: relative;
-}
 
-.division-page-body__services li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 8px;
-  height: 8px;
-  background: var(--body-accent, var(--blue-400));
-}
 
 .division-page-body--blue { --body-accent: var(--blue-400); }
 .division-page-body--steel { --body-accent: var(--steel-500); }
@@ -201,6 +161,61 @@
 
 .division-page-cta__link:hover {
   color: var(--body-accent, var(--blue-400));
+}
+
+/* Rozšířené CTA (nadpis + odstavce + tlačítko), když ho divize má v JSON */
+.division-page-cta--rich {
+  align-items: flex-end;
+  gap: 32px;
+}
+
+.division-page-cta__text {
+  max-width: 62ch;
+}
+
+.division-page-cta__text h2 {
+  margin: 0 0 16px;
+}
+
+.division-page-cta__text p:not(.eyebrow) {
+  margin: 0 0 10px;
+}
+
+.division-page-cta__text p:last-child {
+  margin-bottom: 0;
+}
+
+.division-page-cta__button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 22px;
+  background: var(--navy-800);
+  color: var(--paper-50);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.division-page-cta__button:hover {
+  background: var(--body-accent, var(--blue-400));
+  color: var(--paper-50);
+}
+
+/* Hero: podtitulek mezi nadpisem a úvodním odstavcem */
+.division-page-hero__subtitle {
+  color: var(--paper-50);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.15rem;
+  max-width: 60ch;
+  margin: 0 0 12px;
+}
+
+.division-page-hero__overlay--steel + .division-page-hero__inner .division-page-hero__subtitle {
+  text-shadow: 0 2px 14px rgba(7, 20, 38, 0.46);
 }
 
 /* Division page: overview with media */
@@ -397,6 +412,216 @@
   margin: 0;
 }
 
+/* ------------------------------------------------------------------
+   Moderní vzhled (zatím Kovovýroba): přehled, karty služeb s fotkou,
+   kroky spolupráce s ikonami. Zapíná se daty v src/data/divisions.js.
+   ------------------------------------------------------------------ */
+
+/* Přehled: nadpis na jeden řádek, text a fotka zarovnané nahoře */
+.division-overview--steel {
+  padding: 28px 0 44px;
+}
+
+.division-overview--steel .division-overview__inner {
+  grid-template-columns: 1fr 0.95fr;
+  gap: 48px;
+}
+
+/* dvojitá třída kvůli přebití .division-overview:not(--tight) výše */
+.division-overview--steel.division-overview .division-overview__text,
+.division-overview--steel.division-overview .division-overview__media {
+  align-self: start;
+  padding-top: 0;
+}
+
+.division-overview--steel .division-overview__text h2 {
+  margin-bottom: 12px;
+}
+
+.division-overview--steel .division-overview__text p:last-child {
+  margin-bottom: 0;
+}
+
+.division-overview--steel .division-overview__media img {
+  height: 230px;
+  border-radius: 12px;
+}
+
+/* Užší rytmus sekcí: menší odsazení nahoře/dole i pod nadpisy */
+.service-section--steel {
+  padding: 28px 0 48px;
+}
+
+.process-section--steel {
+  padding: 44px 0 52px;
+}
+
+/* .division-page navíc kvůli obecným pravidlům galerie, která jsou níž v souboru */
+.division-page .gallery-section--steel {
+  padding: 48px 0 56px;
+}
+
+.division-page .gallery-section--steel h2 {
+  margin-bottom: 24px;
+}
+
+.division-overview--steel .eyebrow,
+.service-section--steel .eyebrow,
+.process-section--steel .eyebrow,
+.gallery-section--steel .eyebrow {
+  margin-bottom: 6px;
+}
+
+.division-overview--steel .division-overview__text h2,
+.service-section--steel h2,
+.process-section--steel h2 {
+  max-width: none;
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+}
+
+.service-section--steel h2 {
+  margin-bottom: 18px;
+}
+
+.process-section--steel h2 {
+  margin-bottom: 24px;
+}
+
+/* Závěrečné CTA: bez prázdného pruhu a dělicí linky nad textem */
+.division-page-body--steel {
+  padding: 44px 0 56px;
+}
+
+.division-page-body--steel .division-page-cta--rich {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.division-page-body--steel .division-page-cta__text .eyebrow {
+  margin-bottom: 6px;
+}
+
+.division-page-body--steel .division-page-cta__text h2 {
+  margin-bottom: 12px;
+}
+
+/* Karty služeb s fotkou nahoře */
+.service-section--steel .service-cards {
+  gap: 18px;
+}
+
+.service-card--media {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.service-section--steel .service-card--media {
+  border: 0;
+  box-shadow: 0 10px 30px rgba(15, 42, 74, 0.1);
+}
+
+.service-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.service-card__body {
+  padding: 14px 20px 18px;
+}
+
+.service-card__head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.service-card__line-icon {
+  width: 26px;
+  height: 26px;
+  margin-top: 1px;
+  color: var(--accent, var(--blue-400));
+}
+
+.service-card--media h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.service-card__arrow {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.1;
+  color: var(--accent, var(--blue-400));
+}
+
+.service-card--media p {
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+/* Kroky spolupráce: ikona v kroužku, číslo a linka k dalšímu kroku */
+.process-steps--icons {
+  gap: 0;
+}
+
+.process-steps--icons .process-step {
+  border-top: 0;
+  padding: 0 24px 0 0;
+}
+
+.process-step__marker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.process-steps--icons .process-step h3 {
+  margin-bottom: 4px;
+}
+
+.process-step__icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid color-mix(in srgb, var(--accent, var(--blue-400)) 45%, transparent);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--accent, var(--blue-400));
+}
+
+.process-step__icon .line-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.process-steps--icons .process-step__num {
+  display: inline;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.process-step__line {
+  flex: 1;
+  height: 1.5px;
+  background: color-mix(in srgb, var(--accent, var(--blue-400)) 40%, transparent);
+}
+
+.process-steps--icons .process-step:last-child .process-step__line {
+  visibility: hidden;
+}
+
 /* Division page: gallery */
 .gallery-section {
   padding: 88px 0;
@@ -447,12 +672,19 @@
   color: var(--ink-600);
 }
 
-.gallery-note {
-  margin: 32px 0 0;
-  font-size: 0.82rem;
-  color: var(--ink-600);
-  font-style: italic;
+.gallery-item__title {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy-800);
 }
+
+.gallery-item__desc {
+  display: block;
+  line-height: 1.5;
+}
+
 
 /* Division page: responsive */
 @media (max-width: 860px) {
@@ -487,5 +719,42 @@
 
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Moderní vzhled na tabletu a mobilu */
+  .division-overview--steel .division-overview__inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .division-overview--steel .division-overview__media img {
+    height: 240px;
+  }
+
+  .service-card__image {
+    aspect-ratio: auto;
+    height: 200px;
+  }
+
+  .process-steps--icons {
+    row-gap: 32px;
+  }
+
+  .process-steps--icons .process-step:nth-child(2n) .process-step__line {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 520px) {
+  .process-steps--icons {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps--icons .process-step {
+    padding-right: 0;
+  }
+
+  .process-steps--icons .process-step__line {
+    display: none;
   }
 }

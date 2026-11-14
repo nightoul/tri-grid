@@ -138,49 +138,75 @@
     "kovovyroba": {
       "label": "Kovovýroba",
       "tagline": "Konstrukce, výroba, montáž",
-      "heroLede": "Konstrukce, výroba, montáž a servis strojních a technologických celků na míru — od jednotlivého dílu po kompletní linku.",
-      "overviewHeading": "Kovovýroba, která drží krok s provozem",
-      "overviewText": "Navrhujeme, vyrábíme a montujeme strojní a technologické celky na míru — od jednotlivých dílů po kompletní výrobní linky. Součástí je i běžný servis a údržba, takže se na fungující provoz můžete spolehnout dlouhodobě, ne jen v den předání.",
+      "heroLede": "Realizujeme zakázkovou kovovýrobu se zaměřením na nerezové a ocelové konstrukce, zábradlí, schodiště a architektonické prvky. Zajišťujeme také broušení, satinování a leštění nerezu, mosazi, mědi, hliníku a dalších kovů.",
+      "overviewHeading": "Kovovýroba s důrazem na detail",
+      "overviewText": "Specializujeme se na výrobu a montáž kovových konstrukcí pro stavebnictví, architekturu a interiéry. Vyrábíme nerezová zábradlí, schodiště, madla, přístřešky, rámy a atypické kovové prvky. Součástí našich služeb jsou precizní povrchové úpravy kovů od jemného broušení až po zrcadlový lesk.",
       "servicesHeading": "Tři pilíře divize Kovovýroba",
       "services": [
         {
-          "title": "Strojírenská konstrukce a výroba",
-          "desc": "Návrh a výroba strojních dílů a sestav na míru — od prototypu po malosériovou výrobu."
+          "title": "Stavební a architektonická kovovýroba",
+          "desc": "Výroba a montáž nerezových a ocelových zábradlí, schodišť, madel, přístřešků, bran, oplocení, podkonstrukcí a atypických kovových prvků pro interiéry i exteriéry."
         },
         {
-          "title": "Montáž a servis technologických celků",
-          "desc": "Instalace, uvedení do provozu a pravidelný servis výrobních a technologických linek."
+          "title": "Broušení a leštění kovů",
+          "desc": "Profesionální broušení, kartáčování, satinování a leštění nerezu, mosazi, mědi, hliníku a dalších kovů. Povrchové úpravy od matného provedení až po vysoký a zrcadlový lesk."
         },
         {
-          "title": "Zámečnické a svářečské práce",
-          "desc": "Svařování, obrábění a zámečnické práce podle výkresové dokumentace i přímo na místě."
+          "title": "Zakázková výroba a svařování",
+          "desc": "Kusová a malosériová výroba podle technické dokumentace nebo individuálního zadání. Svařování metodami TIG a MIG/MAG, kompletace konstrukcí a finální opracování výrobků."
         }
       ],
       "steps": [
         {
           "title": "Poptávka a konzultace",
-          "desc": "Probereme technické zadání, výkresy nebo požadovaný účel zařízení."
+          "desc": "Probereme vaše požadavky, technické zadání, rozměry, materiály a požadované provedení."
         },
         {
           "title": "Návrh a nacenění",
-          "desc": "Připravíme konstrukční návrh a transparentní cenovou nabídku."
+          "desc": "Navrhneme vhodné technické řešení, způsob výroby a povrchovou úpravu. Připravíme cenovou nabídku."
         },
         {
           "title": "Výroba a montáž",
-          "desc": "Zajistíme výrobu, obrábění, svařování a instalaci přímo na místě."
+          "desc": "Zajistíme výrobu, svařování, broušení, leštění a odbornou montáž kovových prvků."
         },
         {
-          "title": "Zkoušky a předání",
-          "desc": "Otestujeme funkčnost celku, zaškolíme obsluhu a předáme dokumentaci."
+          "title": "Kontrola a předání",
+          "desc": "Provedeme kontrolu kvality, finální úpravy a předáme hotové dílo."
         }
       ],
-      "galleryHeading": "Kovovýroba v praxi",
-      "galleryCaptions": [
-        "Výroba strojních dílů",
-        "Montáž technologického celku",
-        "Svářečské práce na míru"
+      "galleryHeading": "Kovovýroba v detailu",
+      "ctaQuestion": "Hledáte spolehlivého partnera pro výrobu kovových konstrukcí, nerezových zábradlí nebo profesionální povrchové úpravy kovů?",
+      "heroSubtitle": "Zakázková kovovýroba, stavební kovové konstrukce a profesionální povrchové úpravy kovů.",
+      "gallery": [
+        {
+          "title": "Nerezová zábradlí a schodiště",
+          "desc": "Výroba a montáž nerezových zábradlí, madel a schodišťových konstrukcí s důrazem na přesnost, bezpečnost a estetické provedení."
+        },
+        {
+          "title": "Skleněná zábradlí a zastřešení",
+          "desc": "Nerezové konstrukce v kombinaci se sklem pro balkony, terasy a moderní architekturu."
+        },
+        {
+          "title": "Broušení a leštění nerezu",
+          "desc": "Precizní opracování nerezových povrchů, sjednocení struktury, začištění svarů a dosažení požadovaného stupně lesku."
+        },
+        {
+          "title": "Zakázkové nerezové výrobky",
+          "desc": "Výroba atypických nerezových prvků, držáků, rámů, technických dílů a konstrukcí podle individuálních požadavků."
+        },
+        {
+          "title": "Interiérové kovové konstrukce",
+          "desc": "Nerezová zábradlí, madla a architektonické prvky pro obytné, administrativní a komerční prostory."
+        },
+        {
+          "title": "Povrchové úpravy designových kovů",
+          "desc": "Broušení, satinování a leštění mosazi, mědi, hliníku a dalších kovů pro interiérové a architektonické aplikace."
+        }
       ],
-      "ctaQuestion": "Máte poptávku v oboru kovovýroby?"
+      "ctaEyebrow": "Máte projekt? Pojďme ho realizovat.",
+      "ctaHeading": "Kvalitní kovovýroba začíná u detailu.",
+      "ctaText": "Kontaktujte nás. Rádi s vámi projdeme technické požadavky a připravíme individuální řešení.",
+      "ctaButton": "Nezávazně poptat zakázku"
     },
     "stavebnictvi": {
       "label": "Stavebnictví",
