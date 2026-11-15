@@ -25,8 +25,17 @@ import dokoncovaciPrace from '../assets/images/stavebnictvi-dokoncovaci-prace.jp
 // Texty (label, tagline, služby...) žijí v překladových slovnících pod klíčem
 // divisionsData.<id> — tady zůstává jen strukturální/vizuální informace.
 // Pořadí serviceIcons/serviceImages a galleryImages musí sedět s poli
-// services a gallery (nebo galleryCaptions) v JSON. Nová divize = nový záznam tady + texty v JSON;
-// stránka i trasa /divize/<id> se vytvoří automaticky.
+// services a gallery (galleryCaptions / galleryAlts) v JSON. Nová divize =
+// nový záznam tady + texty v JSON; stránka i trasa /divize/<id> se vytvoří
+// automaticky.
+//
+// Moderní vzhled (jako Kovovýroba a Elektrotechnika):
+//   modern: true      — užší rozestupy, hero s modrou linkou a tlačítkem
+//   serviceImages     — karty služeb s fotkou nahoře
+//   stepIcons         — kroky spolupráce s ikonami v kroužku
+//   serviceIcons      — názvy ikon z LineIcon.jsx (bez modern: ServiceIcon.jsx)
+// Volitelné texty v JSON: heroSubtitle, heroCta, stepsHeading, ctaHeading,
+// ctaEyebrow, ctaText, ctaButton; služba může mít místo "desc" seznam "items".
 const divisions = [
   {
     id: 'elektrotechnika',
@@ -34,7 +43,11 @@ const divisions = [
     type: 'bolt',
     heroImage: elektrotechnikaBg,
     overviewImage: smartHome,
-    serviceIcons: ['install', 'inspect', 'lowvoltage'],
+    modern: true,
+    serviceIcons: ['bolt', 'clipboard', 'network'],
+    // Zatím testovací fotky z galerie — nahradit reálnými.
+    serviceImages: [rozvodyNovostavba, revizeMereni, rozvadec],
+    stepIcons: ['chat', 'document', 'gear', 'check'],
     galleryImages: [rozvadec, rozvodyNovostavba, revizeMereni],
     brightCanvas: true,
   },
@@ -44,8 +57,7 @@ const divisions = [
     type: 'gear',
     heroImage: kovovyrobaBg,
     overviewImage: kovoPrehled,
-    // Moderní vzhled (karty s fotkou + kroky s ikonami): stačí vyplnit
-    // serviceImages a stepIcons. Ikony jsou pak z LineIcon.jsx.
+    modern: true,
     serviceIcons: ['layers', 'sparkles', 'cube'],
     serviceImages: [kovoSluzbaArchitektonicka, kovoSluzbaLesteni, kovoSluzbaZakazkova],
     stepIcons: ['chat', 'document', 'gear', 'check'],

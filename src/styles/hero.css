@@ -30,19 +30,6 @@
   transition: background 0.3s ease;
 }
 
-.hero__overlay::after,
-.division-page-hero__overlay::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px,
-    linear-gradient(90deg, var(--grid-line-dark) 1px, transparent 1px) 0 0 / 32px 32px;
-  -webkit-mask-image: linear-gradient(to bottom right, transparent 0%, transparent 25%, rgba(0, 0, 0, 0.08) 40%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.85) 65%, #000 80%);
-  mask-image: linear-gradient(to bottom right, transparent 0%, transparent 25%, rgba(0, 0, 0, 0.08) 40%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.85) 65%, #000 80%);
-}
-
 .hero__inner {
   position: relative;
   z-index: 3;

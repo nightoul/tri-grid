@@ -11,7 +11,7 @@ function DivisionPage({ division }) {
   const { t, i18n } = useTranslation()
   const { lang } = useParams()
   const {
-    id, accent, type, heroImage, overviewImage, serviceIcons, serviceImages, stepIcons, galleryImages, brightCanvas,
+    id, accent, type, heroImage, overviewImage, serviceIcons, serviceImages, stepIcons, galleryImages, brightCanvas, modern,
   } = division
   const key = (name) => `divisionsData.${id}.${name}`
   // Volitelný text: když klíč v JSON chybí, sekce se prostě nevykreslí.
@@ -19,14 +19,22 @@ function DivisionPage({ division }) {
 
   const services = t(key('services'), { returnObjects: true })
   const steps = t(key('steps'), { returnObjects: true })
-  // Galerie: buď "gallery" s nadpisem a popisem u každé fotky,
-  // nebo starší "galleryCaptions" jen s krátkým popiskem.
-  const gallery = i18n.exists(key('gallery'))
-    ? t(key('gallery'), { returnObjects: true })
-    : t(key('galleryCaptions'), { returnObjects: true }).map((caption) => ({ title: caption }))
+  // Galerie, tři varianty textů v JSON:
+  //  - "gallery": nadpis + popis u každé fotky,
+  //  - "galleryCaptions": jen krátký popisek,
+  //  - "galleryAlts": bez popisků na webu, názvy jen jako alt text fotek.
+  let gallery
+  if (i18n.exists(key('gallery'))) {
+    gallery = t(key('gallery'), { returnObjects: true })
+  } else if (i18n.exists(key('galleryAlts'))) {
+    gallery = t(key('galleryAlts'), { returnObjects: true }).map((alt) => ({ title: alt, hideCaption: true }))
+  } else {
+    gallery = t(key('galleryCaptions'), { returnObjects: true }).map((caption) => ({ title: caption }))
+  }
 
   const heroSubtitle = optional('heroSubtitle')
   const heroCta = optional('heroCta')
+  const stepsHeading = optional('stepsHeading') ?? t('common.howWeWorkHeading')
   const ctaHeading = optional('ctaHeading')
   const ctaEyebrow = optional('ctaEyebrow')
   const ctaText = optional('ctaText')
@@ -35,7 +43,7 @@ function DivisionPage({ division }) {
   usePageTitle(t(key('label')))
 
   return (
-    <div className={`division-page${brightCanvas ? ' division-page--bright-canvas' : ''}`}>
+    <div className={`division-page${brightCanvas ? ' division-page--bright-canvas' : ''}${modern ? ' division-page--modern' : ''}`}>
       <section className={`division-page-hero division-page-hero--${accent}`}>
         <div className={`division-page-hero__bg division-page-hero__bg--${accent}`} style={{ backgroundImage: `url(${heroImage})` }} />
         <div className={`division-page-hero__overlay division-page-hero__overlay--${accent}`} aria-hidden="true" />
@@ -83,7 +91,12 @@ function DivisionPage({ division }) {
                     <LineIcon name={serviceIcons[i]} className="service-card__line-icon" />
                     <h3>{s.title}</h3>
                   </div>
-                  <p>{s.desc}</p>
+                  {s.desc && <p>{s.desc}</p>}
+                  {s.items && (
+                    <ul className="service-card__list">
+                      {s.items.map((item) => <li key={item}>{item}</li>)}
+                    </ul>
+                  )}
                 </div>
               </div>
             ) : (
@@ -100,7 +113,7 @@ function DivisionPage({ division }) {
       <section className={`process-section process-section--${accent}`}>
         <div className="container">
           <p className="eyebrow">{t('common.howWeWorkEyebrow')}</p>
-          <h2>{t('common.howWeWorkHeading')}</h2>
+          <h2>{stepsHeading}</h2>
           <div className={`process-steps${stepIcons ? ' process-steps--icons' : ''}`}>
             {steps.map((s, i) => (
               <div className="process-step" key={s.title}>
@@ -132,14 +145,16 @@ function DivisionPage({ division }) {
               <figure className="gallery-item" key={item.title}>
                 {/* Když je fotek míň než položek, použijí se znovu od začátku. */}
                 <img src={galleryImages[i % galleryImages.length]} alt={item.title} loading="lazy" />
-                <figcaption>
-                  {item.desc ? (
-                    <>
-                      <strong className="gallery-item__title">{item.title}</strong>
-                      <span className="gallery-item__desc">{item.desc}</span>
-                    </>
-                  ) : item.title}
-                </figcaption>
+                {!item.hideCaption && (
+                  <figcaption>
+                    {item.desc ? (
+                      <>
+                        <strong className="gallery-item__title">{item.title}</strong>
+                        <span className="gallery-item__desc">{item.desc}</span>
+                      </>
+                    ) : item.title}
+                  </figcaption>
+                )}
               </figure>
             ))}
           </div>

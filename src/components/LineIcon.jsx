@@ -24,6 +24,27 @@ const paths = {
       <path d="M3.5 7.25 L12 12 L20.5 7.25 M12 12 V21.5" />
     </>
   ),
+  // blesk — elektroinstalace
+  bolt: (
+    <path d="M13.5 2.5 L5 13.5 H11.5 L10.5 21.5 L19 10.5 H12.5 Z" />
+  ),
+  // deska s fajfkou — revize a odborné prohlídky
+  clipboard: (
+    <>
+      <path d="M8.5 4.5 H6 V21.5 H18 V4.5 H15.5" />
+      <path d="M9 3 H15 V6 H9 Z" />
+      <path d="M9 13.5 L11.2 15.7 L15.5 11.2" />
+    </>
+  ),
+  // signál / síť — slaboproudé systémy
+  network: (
+    <>
+      <path d="M2.5 9 A13.5 13.5 0 0 1 21.5 9" />
+      <path d="M5.5 12.5 A9 9 0 0 1 18.5 12.5" />
+      <path d="M8.5 16 A4.5 4.5 0 0 1 15.5 16" />
+      <path d="M12 19.5 H12.01" strokeWidth="2.6" />
+    </>
+  ),
   // bublina — poptávka a konzultace
   chat: (
     <>

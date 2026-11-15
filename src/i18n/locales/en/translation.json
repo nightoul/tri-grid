@@ -91,49 +91,61 @@
     "elektrotechnika": {
       "label": "Electrical",
       "tagline": "Power, wiring, inspections",
-      "heroLede": "High- and low-voltage wiring, inspections, and smart systems — for apartments, houses, and commercial buildings, from design to handover.",
-      "overviewHeading": "Electrical work you can rely on",
-      "overviewText": "We handle complete electrical installations and inspections for apartments, houses, and commercial spaces — from initial design to a fully working system. We cover both high-voltage wiring and low-voltage systems (security, data wiring, smart home), so you only need one contractor for electrical work on site.",
+      "heroSubtitle": "Electrical installations. Inspections and servicing. Low-voltage systems.",
+      "heroLede": "We carry out complete electrical installation work for commercial and industrial buildings. We install power and low-voltage systems, and provide inspections, servicing, and a long service life for electrical equipment.",
+      "heroCta": "Request a quote",
+      "overviewHeading": "Reliable electrical installations for modern operations",
+      "overviewText": "We handle the design, installation, and servicing of electrical systems — from power and low-voltage wiring through inspections to modern low-voltage systems. We offer complete solutions for new builds, renovations, and building upgrades, with a focus on safety, reliability, and long service life.",
       "servicesHeading": "The three pillars of the Electrical division",
       "services": [
         {
-          "title": "Electrical installation for new builds and renovations",
-          "desc": "Complete wiring from shell construction to final connections — panels, socket circuits, and lighting."
+          "title": "Complete electrical installations",
+          "desc": "Power and low-voltage wiring, switchboards, electrical connections, power supply and process circuits. Installation, renovation, and upgrades."
         },
         {
-          "title": "Inspections and certified reviews",
-          "desc": "Regular and one-off inspections of electrical installations under current standards, with a clear report."
+          "title": "Inspections, servicing, and maintenance",
+          "desc": "Initial and periodic inspections of electrical installations, equipment, appliances, connections, and switchboards up to 1,000 V AC and 1,500 V DC. Servicing, diagnostics, and regular maintenance."
         },
         {
-          "title": "Design and installation of low-voltage systems",
-          "desc": "Security, camera systems, data wiring, and smart-home readiness."
+          "title": "Low-voltage systems",
+          "items": [
+            "Door phone installation.",
+            "Intruder and fire alarm systems (EZS, EPS).",
+            "CCTV systems.",
+            "Structured cabling (data and internet systems)."
+          ]
         }
       ],
+      "stepsHeading": "Four steps from inquiry to completion",
       "steps": [
         {
           "title": "Inquiry and consultation",
-          "desc": "We go over the scope of work and basic requirements — on site or remotely."
+          "desc": "We go over your requirements, the scope of work, technical parameters, and site conditions."
         },
         {
           "title": "Design and quote",
-          "desc": "We prepare a technical design and a transparent price quote with no hidden items."
+          "desc": "We prepare a technical solution, equipment that meets your requirements, and a tailored price quote."
         },
         {
-          "title": "Installation",
-          "desc": "We carry out the installation on the agreed schedule and keep you informed along the way."
+          "title": "Installation and commissioning",
+          "desc": "We handle the assembly, installation, and commissioning of the electrical installation and low-voltage systems."
         },
         {
           "title": "Inspection and handover",
-          "desc": "We check everything works, issue an inspection report, and hand over full documentation."
+          "desc": "We carry out the initial inspection, hand over the inspection reports, and provide any follow-up servicing and maintenance."
         }
       ],
-      "galleryHeading": "Electrical work in practice",
-      "galleryCaptions": [
-        "Panel installation and wiring",
-        "Wiring in a new build",
-        "Professional inspection and testing"
+      "galleryHeading": "Electrical work up close",
+      "galleryAlts": [
+        "Low-voltage switchboard",
+        "Residential distribution board",
+        "Loxone control unit in a switchboard",
+        "Data and server rack",
+        "Video door phone"
       ],
-      "ctaQuestion": "Have an electrical project in mind?"
+      "ctaHeading": "Have a project?",
+      "ctaQuestion": "We'll find a suitable, reliable technical solution for your electrical installation.",
+      "ctaButton": "Contact us"
     },
     "kovovyroba": {
       "label": "Metalworking",

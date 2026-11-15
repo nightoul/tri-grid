@@ -91,49 +91,61 @@
     "elektrotechnika": {
       "label": "Elektrotechnika",
       "tagline": "Proud, rozvody, revize",
-      "heroLede": "Silnoproudé i slaboproudé rozvody, revize a chytré systémy — pro byty, rodinné domy i komerční objekty, od návrhu po předání.",
-      "overviewHeading": "Elektřina, na kterou se dá spolehnout",
-      "overviewText": "Zajišťujeme kompletní elektroinstalace a revize pro byty, rodinné domy i komerční prostory — od prvního návrhu až po předání funkčního systému. Pracujeme jak se silnoproudými rozvody, tak se slaboproudými systémy (zabezpečení, datové rozvody, chytrá domácnost), takže na stavbě řešíte elektřinu jen s jedním dodavatelem.",
-      "servicesHeading": "Tři pilíře divize Elektrotechnika",
+      "heroSubtitle": "Elektroinstalace. Revize a servis. Slaboproudé systémy.",
+      "heroLede": "Realizujeme komplexní elektroinstalační práce pro komerční a průmyslové objekty. Zajišťujeme montáže silnoproudých a slaboproudých systémů, revize, servis a dlouhou životnost elektrických zařízení.",
+      "heroCta": "Nezávazná poptávka",
+      "overviewHeading": "Spolehlivé elektroinstalace pro moderní provoz",
+      "overviewText": "Zajišťujeme projekt, realizaci i servis elektroinstalací od silnoproudých a slaboproudých rozvodů přes revize až po moderní slaboproudé systémy. Nabízíme komplexní řešení pro novostavby, rekonstrukce a modernizace objektů s důrazem na bezpečnost, spolehlivost a dlouhou životnost.",
+      "servicesHeading": "Tři pilíře divize Elektro",
       "services": [
         {
-          "title": "Elektroinstalace novostaveb a rekonstrukcí",
-          "desc": "Kompletní rozvody od hrubé stavby po finální zapojení — rozvaděče, zásuvkové okruhy i osvětlení."
+          "title": "Kompletní elektroinstalace",
+          "desc": "Silnoproudé a slaboproudé rozvody, rozvaděče, elektrické přípojky, napájecí a technologické okruhy. Instalace, rekonstrukce a modernizace."
         },
         {
-          "title": "Revize a odborné prohlídky",
-          "desc": "Pravidelné i jednorázové revize elektrických instalací podle platných norem, s jasným protokolem."
+          "title": "Revize, servis a údržba",
+          "desc": "Výchozí a pravidelné revize elektroinstalací, zařízení, spotřebičů, přípojek a rozvaděčů do 1 000 V AC a 1 500 V DC. Servis, diagnostika a pravidelná údržba."
         },
         {
-          "title": "Návrh a realizace slaboproudých systémů",
-          "desc": "Zabezpečení, kamerové systémy, datové rozvody a příprava na chytrou domácnost."
+          "title": "Slaboproudé systémy",
+          "items": [
+            "Instalace domovních telefonů.",
+            "Montáže zabezpečovacích a protipožárních systémů (EZS, EPS).",
+            "Kamerové systémy.",
+            "Strukturovaná kabeláž (datové a internetové systémy)."
+          ]
         }
       ],
+      "stepsHeading": "Čtyři kroky od poptávky k realizaci",
       "steps": [
         {
           "title": "Poptávka a konzultace",
-          "desc": "Probereme rozsah prací a základní požadavky — osobně na místě nebo na dálku."
+          "desc": "Probereme vaše požadavky, rozsah prací, technické parametry a podmínky realizace."
         },
         {
-          "title": "Návrh a nacenění",
-          "desc": "Připravíme technický návrh a transparentní cenovou nabídku bez skrytých položek."
+          "title": "Návrh a nabídka",
+          "desc": "Připravíme technické řešení, zařízení odpovídající požadavkům a cenovou nabídku na míru."
         },
         {
-          "title": "Realizace",
-          "desc": "Provedeme instalaci podle domluveného harmonogramu a průběžně vás informujeme."
+          "title": "Realizace a uvedení do provozu",
+          "desc": "Zajistíme montáž, instalaci a oživení elektroinstalace a slaboproudých systémů."
         },
         {
           "title": "Revize a předání",
-          "desc": "Zkontrolujeme funkčnost, vystavíme revizní zprávu a předáme kompletní dokumentaci."
+          "desc": "Provedeme výchozí revizi, předáme revizní zprávy a zajistíme případný následný servis a údržbu."
         }
       ],
-      "galleryHeading": "Elektroinstalace v praxi",
-      "galleryCaptions": [
-        "Instalace a zapojení rozvaděče",
-        "Rozvody v novostavbě",
-        "Odborná revize a měření"
+      "galleryHeading": "Elektroinstalace v detailu",
+      "galleryAlts": [
+        "Nízkonapěťový rozvaděč",
+        "Domovní elektrický rozvaděč",
+        "Řídicí jednotka Loxone v rozvaděči",
+        "Datový a serverový rozvaděč",
+        "Domovní videotelefon"
       ],
-      "ctaQuestion": "Máte poptávku v oboru elektrotechnika?"
+      "ctaHeading": "Máte projekt?",
+      "ctaQuestion": "Najdeme pro vás vhodné technické a spolehlivé řešení v oblasti elektroinstalací.",
+      "ctaButton": "Kontaktujte nás"
     },
     "kovovyroba": {
       "label": "Kovovýroba",
