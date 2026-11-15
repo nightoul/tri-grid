@@ -45,6 +45,13 @@ const paths = {
       <path d="M12 2.5 L13.6 5 L16.6 4.1 L17.1 7.1 L20 8.1 L18.7 10.9 L20.6 13.3 L17.9 14.8 L18 17.9 L15 17.7 L13.4 20.3 L12 19.5 L10.6 20.3 L9 17.7 L6 17.9 L6.1 14.8 L3.4 13.3 L5.3 10.9 L4 8.1 L6.9 7.1 L7.4 4.1 L10.4 5 Z" />
     </>
   ),
+  // papírová vlaštovka — tlačítko poptávky
+  send: (
+    <>
+      <path d="M21 3 L3 10.5 L10 13.5 L13.5 21 Z" />
+      <path d="M21 3 L10 13.5" />
+    </>
+  ),
   // fajfka v kruhu — kontrola a předání
   check: (
     <>

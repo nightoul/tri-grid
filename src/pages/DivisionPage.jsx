@@ -26,6 +26,7 @@ function DivisionPage({ division }) {
     : t(key('galleryCaptions'), { returnObjects: true }).map((caption) => ({ title: caption }))
 
   const heroSubtitle = optional('heroSubtitle')
+  const heroCta = optional('heroCta')
   const ctaHeading = optional('ctaHeading')
   const ctaEyebrow = optional('ctaEyebrow')
   const ctaText = optional('ctaText')
@@ -41,12 +42,18 @@ function DivisionPage({ division }) {
         <div className="container division-page-hero__inner">
           <div className="division-page-hero__head">
             <HexIcon id={`page-${id}`} accent={accent} type={type} />
-            <div>
+            <div className="division-page-hero__title">
               <h1>{t(key('label'))}</h1>
             </div>
           </div>
           {heroSubtitle && <p className="division-page-hero__subtitle">{heroSubtitle}</p>}
           <p className="hero__lede">{t(key('heroLede'))}</p>
+          {heroCta && (
+            <Link to={`/${lang}#kontakt`} className="division-page-hero__cta">
+              <LineIcon name="send" />
+              {heroCta}
+            </Link>
+          )}
         </div>
       </section>
 

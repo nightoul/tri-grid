@@ -55,12 +55,11 @@
   background-size: cover;
 }
 
+/* Tmavá levá strana pod textem, doprava se fotka postupně odkrývá */
 .division-page-hero__overlay--steel {
   background-image:
-    radial-gradient(circle at 82% 16%, rgba(255, 205, 112, 0.2), transparent 36%),
-    linear-gradient(90deg, rgba(7, 32, 58, 0.56) 0%, rgba(10, 43, 71, 0.4) 48%, rgba(15, 63, 94, 0.08) 100%),
-    linear-gradient(180deg, rgba(15, 63, 94, 0.2) 0%, rgba(22, 72, 105, 0.34) 100%);
-  background-size: cover, cover, cover;
+    linear-gradient(90deg, rgba(7, 20, 38, 0.9) 0%, rgba(7, 20, 38, 0.78) 34%, rgba(7, 20, 38, 0.3) 62%, rgba(7, 20, 38, 0.05) 100%),
+    linear-gradient(180deg, rgba(7, 20, 38, 0.25) 0%, rgba(7, 20, 38, 0) 40%);
 }
 
 .division-page-hero__overlay--steel + .division-page-hero__inner h1,
@@ -103,8 +102,6 @@
   height: calc(1.23rem + 32px);
 }
 
-
-
 .division-page-hero__head {
   display: flex;
   align-items: center;
@@ -127,11 +124,6 @@
 .division-page-body {
   padding: 72px 0 96px;
 }
-
-
-
-
-
 
 .division-page-body--blue { --body-accent: var(--blue-400); }
 .division-page-body--steel { --body-accent: var(--steel-500); }
@@ -206,16 +198,74 @@
 
 /* Hero: podtitulek mezi nadpisem a úvodním odstavcem */
 .division-page-hero__subtitle {
-  color: var(--paper-50);
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 1.15rem;
+  color: var(--blue-400);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
   max-width: 60ch;
   margin: 0 0 12px;
 }
 
-.division-page-hero__overlay--steel + .division-page-hero__inner .division-page-hero__subtitle {
-  text-shadow: 0 2px 14px rgba(7, 20, 38, 0.46);
+/* Hero Kovovýroby podle mockupu: menší mezera pod logem, modrá linka
+   za ikonou, tlačítko poptávky */
+
+/* Poloviční mezera mezi logem v hlavičce a ikonou s nadpisem (~42 px místo ~85 px).
+   Dvojitá třída kvůli přebití pravidel v responsive.css. */
+.division-page-hero.division-page-hero--steel {
+  padding-top: 135px;
+}
+
+.division-page-hero--steel .division-page-hero__inner::before {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .division-page-hero.division-page-hero--steel {
+    padding-top: 118px;
+  }
+}
+
+.division-page-hero--steel .division-page-hero__head {
+  gap: 20px;
+}
+
+.division-page-hero--steel .division-page-hero__title {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-left: 2px solid var(--blue-400);
+}
+
+.division-page-hero--steel .hero__lede {
+  margin-bottom: 0;
+}
+
+.division-page-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 6px;
+  background: var(--blue-400);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(7, 20, 38, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.division-page-hero__cta:hover {
+  background: color-mix(in srgb, var(--blue-400) 82%, #fff);
+  transform: translateY(-1px);
+}
+
+.division-page-hero__cta .line-icon {
+  width: 18px;
+  height: 18px;
 }
 
 /* Division page: overview with media */
@@ -489,7 +539,7 @@
 
 /* Závěrečné CTA: bez prázdného pruhu a dělicí linky nad textem */
 .division-page-body--steel {
-  padding: 44px 0 56px;
+  padding: 28px 0 56px;
 }
 
 .division-page-body--steel .division-page-cta--rich {
@@ -677,7 +727,6 @@
   display: block;
   line-height: 1.5;
 }
-
 
 /* Division page: responsive */
 @media (max-width: 860px) {
