@@ -12,40 +12,63 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+  /* fotka přichází z DivisionPage.jsx jako proměnná --hero-img */
+  background-image: var(--hero-img);
   background-size: cover;
   background-position: center;
   filter: grayscale(0.25) contrast(1.05);
   opacity: 0.9;
 }
 
-/* Fotka zábradlí bez přiblížení, horní okraj fotky = horní okraj stránky,
-   posunutá o 200 px doprava. Volný pruh vlevo vyplní tmavá barva — leží pod
-   tmavou částí overlaye, takže splyne. */
+/* Kovovýroba: fotka zábradlí přichycená vpravo nahoře, vlevo tmavá výplň.
+   Fotka je samostatná vrstva (::before), aby šel její levý okraj plynule
+   zprůhlednit. Nastavení:
+   --photo-ratio  poměr stran fotky (šířka / výška) — při výměně fotky upravit
+   --photo-w      čistá část fotky = 65 % šířky okna (oddálení o 35 %);
+                  fotka ale nikdy není nižší než hero
+   --fade-w       o kolik fotka sahá dál doleva a plynule (S-křivka) mizne
+                  do tmavé výplně; čistá fotka končí na hranici --photo-w */
 .division-page-hero__bg--steel {
+  --photo-ratio: 1.6862; /* 892 / 529 px */
+  --photo-w: 65vw;
+  --fade-w: 240px;
+  background-image: none;
   background-color: #071426;
-  background-repeat: no-repeat;
-  background-position: calc(50% + 200px) top;
   filter: contrast(1.04) brightness(1.08) saturate(1.05);
   opacity: 1;
 }
 
-/* Okraj, kde fotka začíná (200 px), rozmazat do tmavé výplně — žádná ostrá hrana */
-.division-page-hero__bg--steel::after {
+.division-page-hero__bg--steel::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #071426 0, #071426 200px, rgba(7, 20, 38, 0.6) 280px, rgba(7, 20, 38, 0) 420px);
-  pointer-events: none;
+  top: 0;
+  right: 0;
+  height: calc(max(100%, var(--photo-w) / var(--photo-ratio)) + var(--fade-w) / var(--photo-ratio));
+  aspect-ratio: var(--photo-ratio);
+  background: var(--hero-img) center / cover no-repeat;
+  --fade: linear-gradient(90deg,
+    transparent 0,
+    rgba(0, 0, 0, 0.03) calc(var(--fade-w) * 0.125),
+    rgba(0, 0, 0, 0.1) calc(var(--fade-w) * 0.25),
+    rgba(0, 0, 0, 0.22) calc(var(--fade-w) * 0.375),
+    rgba(0, 0, 0, 0.38) calc(var(--fade-w) * 0.5),
+    rgba(0, 0, 0, 0.56) calc(var(--fade-w) * 0.625),
+    rgba(0, 0, 0, 0.73) calc(var(--fade-w) * 0.75),
+    rgba(0, 0, 0, 0.88) calc(var(--fade-w) * 0.875),
+    #000 var(--fade-w));
+  -webkit-mask-image: var(--fade);
+  mask-image: var(--fade);
 }
 
-/* Na mobilu by 200 px byla víc než polovina šířky — tam fotka zůstává na středu */
+/* Na mobilu jde text přes celou šířku — fotka vyplní celé hero, na středu */
 @media (max-width: 640px) {
-  .division-page-hero__bg--steel {
+  .division-page-hero__bg--steel::before {
+    inset: 0;
+    height: auto;
+    aspect-ratio: auto;
     background-position: center top;
-  }
-
-  .division-page-hero__bg--steel::after {
-    display: none;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 }
 
@@ -274,6 +297,14 @@
   font-size: clamp(1.05rem, 1.6vw, 1.25rem);
   max-width: 60ch;
   margin: 0 0 12px;
+  /* zalomení řádku "\n" v textu z JSON se zobrazí (jen na větších obrazovkách) */
+  white-space: pre-line;
+}
+
+@media (max-width: 640px) {
+  .division-page-hero__subtitle {
+    white-space: normal;
+  }
 }
 
 /* Moderní hero (divize s "modern: true"): menší mezera pod logem,

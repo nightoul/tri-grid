@@ -45,7 +45,7 @@ function DivisionPage({ division }) {
   return (
     <div className={`division-page${brightCanvas ? ' division-page--bright-canvas' : ''}${modern ? ' division-page--modern' : ''}`}>
       <section className={`division-page-hero division-page-hero--${accent}`}>
-        <div className={`division-page-hero__bg division-page-hero__bg--${accent}`} style={{ backgroundImage: `url(${heroImage})` }} />
+        <div className={`division-page-hero__bg division-page-hero__bg--${accent}`} style={{ '--hero-img': `url(${heroImage})` }} />
         <div className={`division-page-hero__overlay division-page-hero__overlay--${accent}`} aria-hidden="true" />
         <div className="container division-page-hero__inner">
           <div className="division-page-hero__head">
