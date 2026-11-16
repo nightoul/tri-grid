@@ -21,8 +21,7 @@
 }
 
 @media (max-width: 640px) {
-  .why-heading {
-    white-space: normal;
+  .division-overview__text .why-heading {
     max-width: 16ch;
   }
 
@@ -87,15 +86,6 @@
 
   .division-page-hero {
     padding: 122px 0 40px;
-  }
-
-  .division-page-hero--brick {
-    padding-bottom: 32px;
-  }
-
-  .division-page-hero--brick .hero__lede {
-    font-size: 0.9rem;
-    line-height: 1.42;
   }
 
   .division-page-hero__inner::before {

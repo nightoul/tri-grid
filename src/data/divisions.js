@@ -34,11 +34,10 @@ import dokoncovaciPrace from '../assets/images/stavebnictvi-dokoncovaci-prace.jp
 // nový záznam tady + texty v JSON; stránka i trasa /divize/<id> se vytvoří
 // automaticky.
 //
-// Moderní vzhled (jako Kovovýroba a Elektrotechnika):
-//   modern: true      — užší rozestupy, hero s modrou linkou a tlačítkem
+// Všechny divize mají stejné rozvržení. Volitelně:
 //   serviceImages     — karty služeb s fotkou nahoře
 //   stepIcons         — kroky spolupráce s ikonami v kroužku
-//   serviceIcons      — názvy ikon z LineIcon.jsx (bez modern: ServiceIcon.jsx)
+//   serviceIcons      — názvy ikon z LineIcon.jsx (bez serviceImages: ServiceIcon.jsx)
 // Volitelné texty v JSON: heroSubtitle, heroCta, stepsHeading.
 // Služba může mít místo "desc" seznam "items".
 const divisions = [
@@ -48,7 +47,6 @@ const divisions = [
     type: 'bolt',
     heroImage: elektrotechnikaBg,
     overviewImage: elektroPrehled,
-    modern: true,
     serviceIcons: ['bolt', 'clipboard', 'network'],
     serviceImages: [elektroSluzbaKabely, elektroSluzbaRevize, elektroSluzbaKamery],
     stepIcons: ['chat', 'document', 'gear', 'check'],
@@ -60,7 +58,6 @@ const divisions = [
       elektroGalerieDatovy, // Datový a serverový rozvaděč
       elektroGalerieTelefon, // Domovní videotelefon
     ],
-    brightCanvas: true,
   },
   {
     id: 'kovovyroba',
@@ -68,7 +65,6 @@ const divisions = [
     type: 'gear',
     heroImage: kovovyrobaBg,
     overviewImage: kovoPrehled,
-    modern: true,
     serviceIcons: ['layers', 'sparkles', 'cube'],
     serviceImages: [kovoSluzbaArchitektonicka, kovoSluzbaLesteni, kovoSluzbaZakazkova],
     stepIcons: ['chat', 'document', 'gear', 'check'],
@@ -89,6 +85,7 @@ const divisions = [
     heroImage: stavebnictviBg,
     overviewImage: stavebnictvi1,
     serviceIcons: ['build', 'finish', 'supervise'],
+    stepIcons: ['chat', 'document', 'gear', 'check'],
     galleryImages: [hrubaStavba, zednickePrace, dokoncovaciPrace],
   },
 ]

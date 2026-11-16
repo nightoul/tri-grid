@@ -12,7 +12,7 @@ function DivisionPage({ division }) {
   const { t, i18n } = useTranslation()
   const { lang } = useParams()
   const {
-    id, accent, type, heroImage, overviewImage, serviceIcons, serviceImages, stepIcons, galleryImages, brightCanvas, modern,
+    id, accent, type, heroImage, overviewImage, serviceIcons, serviceImages, stepIcons, galleryImages,
   } = division
   const key = (name) => `divisionsData.${id}.${name}`
   // Volitelný text: když klíč v JSON chybí, sekce se prostě nevykreslí.
@@ -47,7 +47,7 @@ function DivisionPage({ division }) {
   }))
 
   return (
-    <div className={`division-page${brightCanvas ? ' division-page--bright-canvas' : ''}${modern ? ' division-page--modern' : ''}`}>
+    <div className="division-page">
       <section className={`division-page-hero division-page-hero--${accent}`}>
         <div className={`division-page-hero__bg division-page-hero__bg--${accent}`} style={{ '--hero-img': `url(${heroImage})` }} />
         <div className={`division-page-hero__overlay division-page-hero__overlay--${accent}`} aria-hidden="true" />
@@ -141,26 +141,11 @@ function DivisionPage({ division }) {
       </section>
 
       <section className={`gallery-section gallery-section--${accent}`}>
-        {modern ? (
-          <GalleryCarousel
-            eyebrow={t('common.workSamplesEyebrow')}
-            heading={t(key('galleryHeading'))}
-            items={galleryItems}
-          />
-        ) : (
-          <div className="container">
-            <p className="eyebrow">{t('common.workSamplesEyebrow')}</p>
-            <h2>{t(key('galleryHeading'))}</h2>
-            <div className="gallery-grid">
-              {galleryItems.map((item) => (
-                <figure className="gallery-item" key={item.title}>
-                  <img src={item.image} alt={item.title} loading="lazy" />
-                  {!item.hideCaption && <figcaption>{item.title}</figcaption>}
-                </figure>
-              ))}
-            </div>
-          </div>
-        )}
+        <GalleryCarousel
+          eyebrow={t('common.workSamplesEyebrow')}
+          heading={t(key('galleryHeading'))}
+          items={galleryItems}
+        />
       </section>
 
       <section className={`division-cta division-cta--${accent}`}>

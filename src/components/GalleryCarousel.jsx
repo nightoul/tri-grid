@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import GalleryLightbox from './GalleryLightbox.jsx'
 
-// Posuvná galerie (carousel) pro "moderní" divizní stránky.
+// Posuvná galerie (carousel) "Ukázky prací" na stránkách divizí.
 // Pás fotek používá nativní scroll se scroll-snap, takže funguje swipe na
 // mobilu i trackpad. Navíc šipky, tažení myší a ukazatel průběhu.
 // Kliknutím na fotku se otevře zvětšená (GalleryLightbox).

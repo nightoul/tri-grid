@@ -33,14 +33,14 @@
    zprůhlednit. Nastavení (proměnné jsou na .division-page-hero--steel,
    aby je viděl i modrý overlay):
    --photo-ratio  poměr stran fotky (šířka / výška) — při výměně fotky upravit
-   --photo-w      čistá část fotky = 42,65 % šířky okna (65 % a pak 4× o 10 % menší)
+   --photo-w      čistá část fotky = 38,39 % šířky okna (65 % a pak 5× o 10 % menší)
    --fade-w       o kolik fotka sahá dál doleva a plynule (S-křivka) mizne
                   do tmavé výplně; čistá fotka končí na hranici --photo-w
    --fade-h       spodní okraj fotky stejně plynule mizne (uplatní se, jen když
                   je fotka nižší než hero; jinak je přechod pod okrajem hero) */
 .division-page-hero--steel {
   --photo-ratio: 1.6862; /* 892 / 529 px */
-  --photo-w: 42.65vw;
+  --photo-w: 38.39vw;
   --fade-w: 240px;
   --fade-h: 140px;
   /* kde začíná čistá (nezatmavená) fotka — sem končí modrý overlay */
@@ -125,14 +125,8 @@
   z-index: 1;
 }
 
-.division-page-hero__overlay--blue {
-  background-image:
-    linear-gradient(180deg, rgba(7, 32, 58, 0.4) 0%, rgba(18, 58, 92, 0.54) 100%);
-  background-size: cover;
-}
-
-/* Tmavá levá strana pod textem, doprava se fotka postupně odkrývá */
-.division-page--modern .division-page-hero__overlay {
+/* Divize: tmavá levá strana pod textem, doprava se fotka postupně odkrývá */
+.division-page .division-page-hero__overlay {
   background-image:
     linear-gradient(90deg, rgba(7, 20, 38, 0.9) 0%, rgba(7, 20, 38, 0.78) 34%, rgba(7, 20, 38, 0.3) 62%, rgba(7, 20, 38, 0.05) 100%),
     linear-gradient(180deg, rgba(7, 20, 38, 0.25) 0%, rgba(7, 20, 38, 0) 40%);
@@ -141,7 +135,7 @@
 /* Kovovýroba: poloprůhledná modrá pod textem (~do 30 %) — světlé zábradlí
    ve fotce pod ní prosvítá jako světle modrý pruh. Pak plynulý (ease-out)
    přechod, od ~70 % je fotka bez modré a zůstává světlá. */
-.division-page--modern .division-page-hero__overlay--steel {
+.division-page .division-page-hero__overlay--steel {
   background-image:
     linear-gradient(90deg,
       rgba(9, 44, 92, 0.86) 0,
@@ -158,7 +152,7 @@
 
 /* Jemný světle modrý diagonální odlesk u levého okraje — skoro neviditelný,
    jen lehce oživí plochou modrou */
-.division-page--modern .division-page-hero__overlay--steel::before {
+.division-page .division-page-hero__overlay--steel::before {
   content: '';
   position: absolute;
   left: 5%;
@@ -180,19 +174,13 @@
 
 /* Na mobilu jde text přes celou šířku — modrá musí krýt celou fotku */
 @media (max-width: 640px) {
-  .division-page--modern .division-page-hero__overlay--steel {
+  .division-page .division-page-hero__overlay--steel {
     background-image: linear-gradient(180deg, rgba(9, 44, 92, 0.78) 0%, rgba(9, 44, 92, 0.7) 100%);
   }
 
-  .division-page--modern .division-page-hero__overlay--steel::before {
+  .division-page .division-page-hero__overlay--steel::before {
     display: none;
   }
-}
-
-.division-page-hero__overlay--brick {
-  background-image:
-    linear-gradient(180deg, rgba(44, 27, 18, 0.6) 0%, rgba(69, 43, 28, 0.68) 100%);
-  background-size: cover;
 }
 
 .division-page-hero--brick .hex-outline,
@@ -200,6 +188,7 @@
   stroke: #d47532;
 }
 
+/* Stránka O nás */
 .division-page-hero__overlay--neutral {
   background-image:
     linear-gradient(180deg, rgba(7, 20, 38, 0.6) 0%, rgba(15, 42, 74, 0.68) 100%);
@@ -211,10 +200,15 @@
   z-index: 2;
 }
 
+/* Mezera pod hlavičkou webu — jen stránka O nás, divize ji mají v paddingu */
 .division-page-hero__inner::before {
   content: '';
   display: block;
   height: calc(1.23rem + 32px);
+}
+
+.division-page .division-page-hero__inner::before {
+  display: none;
 }
 
 .division-page-hero__head {
@@ -273,10 +267,6 @@
   padding: 28px 0 56px;
 }
 
-.division-cta--steel {
-  background: color-mix(in srgb, var(--blue-400) 4%, var(--paper-50));
-}
-
 .division-cta__inner {
   display: flex;
   align-items: center;
@@ -330,20 +320,16 @@
   }
 }
 
-/* Moderní hero (divize s "modern: true"): menší mezera pod logem,
-   modrá linka za ikonou, tlačítko poptávky. Rodičovská třída
-   .division-page--modern kvůli přebití pravidel v responsive.css. */
-.division-page--modern .division-page-hero__inner::before {
-  display: none;
-}
-
+/* Hero divize: menší mezera pod logem, modrá linka za ikonou, tlačítko
+   poptávky. Rodičovská třída .division-page odliší divize od stránky O nás
+   (sdílí stejné třídy) a přebije pravidla v responsive.css. */
 @media (max-width: 640px) {
-  .division-page--modern .division-page-hero {
+  .division-page .division-page-hero {
     padding-top: 118px;
   }
 }
 
-.division-page--modern .division-page-hero__head {
+.division-page .division-page-hero__head {
   gap: 20px;
 }
 
@@ -351,34 +337,34 @@
    menší ikona a těsnější rozestupy, aby fotka byla dole oříznutá jako
    v mockupu. Mobil má vlastní rozvržení (výše, padding-top 118 px). */
 @media (min-width: 641px) {
-  .division-page--modern .division-page-hero {
+  .division-page .division-page-hero {
     padding: 117px 0 30px;
   }
 
-  .division-page--modern .division-page-hero__head {
+  .division-page .division-page-hero__head {
     margin-bottom: 10px;
   }
 
-  .division-page--modern .division-page-hero__head .hex-icon {
+  .division-page .division-page-hero__head .hex-icon {
     width: 68px;
     height: 68px;
   }
 
-  .division-page--modern .division-page-hero__subtitle {
+  .division-page .division-page-hero__subtitle {
     margin-bottom: 8px;
     line-height: 1.35;
   }
 
-  .division-page--modern .division-page-hero .hero__lede {
+  .division-page .division-page-hero .hero__lede {
     line-height: 1.5;
   }
 
-  .division-page--modern .division-page-hero__cta {
+  .division-page .division-page-hero__cta {
     margin-top: 16px;
   }
 }
 
-.division-page--modern .division-page-hero__title {
+.division-page .division-page-hero__title {
   align-self: stretch;
   display: flex;
   align-items: center;
@@ -386,7 +372,7 @@
   border-left: 2px solid var(--blue-400);
 }
 
-.division-page--modern .hero__lede {
+.division-page .hero__lede {
   margin-bottom: 0;
 }
 
@@ -446,8 +432,10 @@
   background: var(--accent, var(--blue-400));
 }
 
-/* Division page: overview with media */
-.division-page--bright-canvas {
+/* Pozadí všech divizních stránek: teplé světlé plátno s jemnou texturou
+   (původně jen Elektrotechnika, klient ho chtěl všude). Sekce ho přebírají
+   přes --paper-50 / --paper-100 / --texture-light. */
+.division-page {
   --paper-50: #fffefa;
   --paper-100: #fff7e9;
   --texture-light:
@@ -459,12 +447,6 @@
 .division-overview {
   padding: 0 0 88px;
   border-bottom: 1px solid var(--paper-100);
-}
-
-.division-overview--steel {
-  background:
-    radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--blue-400) 12%, transparent), transparent 34%),
-    var(--paper-50);
 }
 
 .division-overview--steel .division-overview__media img {
@@ -497,9 +479,15 @@
   padding-top: 32px;
 }
 
-.why-heading {
-  max-width: 34ch;
-  white-space: nowrap;
+/* Homepage "Proč Tri-Grid?": širší sloupec textu, aby se nadpis vešel
+   na jeden řádek; na užších oknech se zalomí (nikdy nezajede pod fotku). */
+.division-overview--tight .division-overview__inner {
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 48px;
+}
+
+.division-overview__text .why-heading {
+  max-width: none;
 }
 
 .division-overview__media img {
@@ -528,28 +516,15 @@
   gap: 24px;
 }
 
-.service-section--steel {
-  --accent: var(--blue-400);
-  background:
-    var(--texture-light),
-    linear-gradient(135deg, color-mix(in srgb, var(--blue-400) 9%, var(--paper-50)), var(--paper-100));
-}
-.service-section--brick { --accent: var(--brick-500); }
-.process-section--steel {
-  --accent: var(--blue-400);
-  background: color-mix(in srgb, var(--blue-400) 3%, var(--paper-50));
-}
+.service-section--steel,
+.process-section--steel { --accent: var(--blue-400); }
+.service-section--brick,
 .process-section--brick { --accent: var(--brick-500); }
 
 .service-card {
   background: var(--paper-50);
   border-radius: 8px;
   padding: 32px 28px;
-}
-
-.service-section--steel .service-card {
-  border: 1px solid color-mix(in srgb, var(--blue-400) 18%, transparent);
-  box-shadow: 0 12px 28px rgba(15, 42, 74, 0.07);
 }
 
 .service-card__icon {
@@ -630,79 +605,74 @@
 }
 
 /* ------------------------------------------------------------------
-   Moderní vzhled: přehled, karty služeb s fotkou, kroky s ikonami, užší
-   rozestupy. Zapíná se "modern: true" v src/data/divisions.js (+ serviceImages
-   a stepIcons); barvy sekcí zůstávají podle divize. Platí pro všechny
-   divize se zapnutým přepínačem — nic tu není vázané na konkrétní divizi.
+   Rozvržení sekcí (stejné pro všechny divize): přehled, karty služeb,
+   kroky, užší rozestupy. Karty s fotkou zapne serviceImages, kroky
+   s ikonami stepIcons v src/data/divisions.js.
    ------------------------------------------------------------------ */
 
 /* Přehled: nadpis na jeden řádek, text a fotka zarovnané nahoře */
-.division-page--modern .division-overview {
+.division-page .division-overview {
   padding: 28px 0 44px;
 }
 
-.division-page--modern .division-overview .division-overview__inner {
+.division-page .division-overview .division-overview__inner {
   grid-template-columns: 1fr 0.95fr;
   gap: 48px;
 }
 
 /* tři třídy kvůli přebití .division-overview:not(--tight) výše */
-.division-page--modern .division-overview .division-overview__text,
-.division-page--modern .division-overview .division-overview__media {
+.division-page .division-overview .division-overview__text,
+.division-page .division-overview .division-overview__media {
   align-self: start;
   padding-top: 0;
 }
 
-.division-page--modern .division-overview .division-overview__text h2 {
+.division-page .division-overview .division-overview__text h2 {
   margin-bottom: 12px;
 }
 
-.division-page--modern .division-overview .division-overview__text p:last-child {
+.division-page .division-overview .division-overview__text p:last-child {
   margin-bottom: 0;
 }
 
-.division-page--modern .division-overview .division-overview__media img {
+.division-page .division-overview .division-overview__media img {
   height: 230px;
   border-radius: 12px;
 }
 
 /* Užší rytmus sekcí: menší odsazení nahoře/dole i pod nadpisy */
-.division-page--modern .service-section {
+.division-page .service-section {
   padding: 28px 0 48px;
 }
 
-.division-page--modern .process-section {
+.division-page .process-section {
   padding: 28px 0 52px;
 }
 
-.division-page--modern .gallery-section {
-  padding: 28px 0 56px;
-}
-
-.division-page--modern .division-overview .eyebrow,
-.division-page--modern .service-section .eyebrow,
-.division-page--modern .process-section .eyebrow,
-.division-page--modern .gallery-section .eyebrow {
+.division-page .division-overview .eyebrow,
+.division-page .service-section .eyebrow,
+.division-page .process-section .eyebrow,
+.gallery-section .eyebrow {
   margin-bottom: 6px;
 }
 
-.division-page--modern .division-overview .division-overview__text h2,
-.division-page--modern .service-section h2,
-.division-page--modern .process-section h2 {
+.division-page .division-overview .division-overview__text h2,
+.division-page .service-section h2,
+.division-page .process-section h2 {
   max-width: none;
   font-size: clamp(1.5rem, 2.6vw, 1.9rem);
 }
 
-.division-page--modern .service-section h2 {
+.division-page .service-section h2 {
   margin-bottom: 18px;
 }
 
-.division-page--modern .process-section h2 {
+.division-page .process-section h2 {
   margin-bottom: 24px;
 }
 
 /* Karty služeb s fotkou nahoře */
-.division-page--modern .service-section .service-cards {
+.division-page .service-section .service-cards {
   gap: 18px;
 }
 
@@ -715,7 +685,7 @@
   background: #fff;
 }
 
-.division-page--modern .service-section .service-card--media {
+.division-page .service-section .service-card--media {
   border: 0;
   box-shadow: 0 10px 30px rgba(15, 42, 74, 0.1);
 }
@@ -811,50 +781,13 @@
   visibility: hidden;
 }
 
-/* Division page: gallery */
+/* Division page: gallery (carousel na všech divizích). Pás fotek začíná
+   zarovnaný s obsahem a vpravo přetéká až k okraji okna. */
 .gallery-section {
-  padding: 88px 0;
+  padding: 28px 0 56px;
   background: var(--texture-light), var(--paper-100);
 }
 
-.gallery-section--steel {
-  background:
-    var(--texture-light),
-    linear-gradient(180deg, color-mix(in srgb, var(--blue-400) 7%, var(--paper-50)), var(--paper-100));
-}
-
-.gallery-section h2 {
-  max-width: 22ch;
-  margin-bottom: 40px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.gallery-item {
-  margin: 0;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 4px;
-  display: block;
-}
-
-.gallery-item figcaption {
-  margin-top: 10px;
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  color: var(--ink-600);
-}
-
-/* Galerie jako carousel (moderní stránky). Pás fotek začíná zarovnaný
-   s obsahem a vpravo přetéká až k okraji okna. */
 .gallery-carousel {
   --carousel-gap: 18px;
   /* levý okraj obsahu; přesnou hodnotu dopočítá GalleryCarousel.jsx */
@@ -869,7 +802,7 @@
   margin-bottom: 24px;
 }
 
-.division-page--modern .gallery-carousel__header h2 {
+.gallery-carousel__header h2 {
   max-width: none;
   margin-bottom: 0;
   font-size: clamp(1.5rem, 2.6vw, 1.9rem);
@@ -1238,17 +1171,13 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Moderní vzhled na tabletu a mobilu */
-  .division-page--modern .division-overview .division-overview__inner {
+  /* Divize na tabletu a mobilu */
+  .division-page .division-overview .division-overview__inner {
     grid-template-columns: 1fr;
     gap: 28px;
   }
 
-  .division-page--modern .division-overview .division-overview__media img {
+  .division-page .division-overview .division-overview__media img {
     height: 240px;
   }
 

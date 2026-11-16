@@ -1,5 +1,5 @@
 // Tenké obrysové ikony (24×24, barva podle currentColor) pro karty služeb
-// a kroky spolupráce v "moderním" vzhledu divizní stránky.
+// a kroky spolupráce na stránkách divizí.
 const paths = {
   // vrstvené desky — stavební a architektonická kovovýroba
   layers: (
