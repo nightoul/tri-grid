@@ -22,7 +22,10 @@
     "ourServicesEyebrow": "Naše služby",
     "howWeWorkEyebrow": "Jak probíhá spolupráce",
     "howWeWorkHeading": "Čtyři kroky od poptávky k předání",
-    "workSamplesEyebrow": "Ukázky prací"
+    "workSamplesEyebrow": "Ukázky prací",
+    "galleryPrev": "Předchozí fotka",
+    "galleryNext": "Další fotka",
+    "gallerySlide": "Fotka {{n}} z {{total}}"
   },
   "home": {
     "tileMore": "Více",

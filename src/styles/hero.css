@@ -101,10 +101,6 @@
   fill: #fff2cf;
 }
 
-.hero .eyebrow {
-  color: var(--blue-400);
-}
-
 .hero h1 {
   color: var(--paper-50);
   font-size: clamp(2rem, 4.4vw, 3.4rem);
@@ -259,10 +255,6 @@
   stroke: var(--paper-50);
 }
 
-.division-card:where(:not(.division-card--steel, .division-card--brick)) .hex-icon .hex-glyph-ring {
-  stroke: var(--paper-50);
-}
-
 .division-card .hex-icon .hex-glyph {
   fill: var(--paper-50);
   stroke: none;
@@ -300,7 +292,6 @@
   stroke-width: 7;
 }
 
-.division-card .hex-icon .hex-roof,
 .division-card .hex-icon .hex-gear__outline,
 .division-card .hex-icon .hex-gear__hub {
   stroke-width: 10;
@@ -334,30 +325,17 @@
   stroke-width: 8;
 }
 
-.brick-block {
-  stroke: none;
-}
-
 .hex-icon--blue .hex-outline,
-.hex-icon--blue .hex-glyph,
-.hex-icon--blue .hex-glyph-ring,
-.hex-icon--blue .brick-block {
+.hex-icon--blue .hex-glyph {
   stroke: var(--blue-400);
 }
-.hex-icon--blue .hex-glyph,
-.hex-icon--blue .brick-block {
+.hex-icon--blue .hex-glyph {
   fill: var(--blue-400);
 }
 
 .hex-icon--steel .hex-outline,
-.hex-icon--steel .hex-glyph,
-.hex-icon--steel .hex-glyph-ring,
-.hex-icon--steel .brick-block {
+.hex-icon--steel .hex-glyph-ring {
   stroke: #c3d0da;
-}
-.hex-icon--steel .hex-glyph,
-.hex-icon--steel .brick-block {
-  fill: #c3d0da;
 }
 
 .hex-icon--steel {
@@ -393,14 +371,8 @@
 }
 
 .hex-icon--brick .hex-outline,
-.hex-icon--brick .hex-glyph,
-.hex-icon--brick .hex-glyph-ring,
-.hex-icon--brick .brick-block {
+.hex-icon--brick .hex-glyph-ring {
   stroke: var(--brick-500);
-}
-.hex-icon--brick .hex-glyph,
-.hex-icon--brick .brick-block {
-  fill: var(--brick-500);
 }
 
 .division-card--blue { --card-accent: var(--blue-400); }
@@ -411,13 +383,6 @@
 .division-card--brick { --card-accent: var(--construction-highlight); }
 
 .division-card--brick .hex-outline,
-.division-card--brick .hex-glyph,
-.division-card--brick .hex-glyph-ring,
-.division-card--brick .brick-block {
+.division-card--brick .hex-glyph-ring {
   stroke: #a85832;
-}
-
-.division-card--brick .hex-glyph,
-.division-card--brick .brick-block {
-  fill: #a85832;
 }

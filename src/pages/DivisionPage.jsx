@@ -3,6 +3,10 @@ import { useTranslation } from 'react-i18next'
 import HexIcon from '../components/HexIcon.jsx'
 import ServiceIcon from '../components/ServiceIcon.jsx'
 import LineIcon from '../components/LineIcon.jsx'
+import GalleryCarousel from '../components/GalleryCarousel.jsx'
+import GalleryShowcase from '../components/GalleryShowcase.jsx'
+import GalleryVariantSwitch from '../components/GalleryVariantSwitch.jsx'
+import { useGalleryVariant } from '../hooks/useGalleryVariant.js'
 import usePageTitle from '../hooks/usePageTitle.js'
 
 // Společná šablona pro všechny divize. Vizuální data (barva, ikony, obrázky)
@@ -41,9 +45,20 @@ function DivisionPage({ division }) {
   const ctaButton = optional('ctaButton')
 
   usePageTitle(t(key('label')))
+  // DOČASNÉ: výběr varianty galerie pro klienta (viz GalleryVariantSwitch.jsx).
+  const [galleryVariant, setGalleryVariant] = useGalleryVariant()
+  // DOČASNÉ: popisky fotek (nadpis i popis) se na webu nezobrazují, zůstávají
+  // jen jako alt text. Pro vrácení smazat "hideCaption: true".
+  const galleryItems = gallery.map((item, i) => ({
+    ...item,
+    image: galleryImages[i],
+    hideCaption: true,
+  }))
+  const GalleryComponent = ['thumbs', 'cinema'].includes(galleryVariant) ? GalleryShowcase : GalleryCarousel
 
   return (
     <div className={`division-page${brightCanvas ? ' division-page--bright-canvas' : ''}${modern ? ' division-page--modern' : ''}`}>
+      {modern && <GalleryVariantSwitch value={galleryVariant} onChange={setGalleryVariant} />}
       <section className={`division-page-hero division-page-hero--${accent}`}>
         <div className={`division-page-hero__bg division-page-hero__bg--${accent}`} style={{ '--hero-img': `url(${heroImage})` }} />
         <div className={`division-page-hero__overlay division-page-hero__overlay--${accent}`} aria-hidden="true" />
@@ -137,28 +152,28 @@ function DivisionPage({ division }) {
       </section>
 
       <section className={`gallery-section gallery-section--${accent}`}>
-        <div className="container">
-          <p className="eyebrow">{t('common.workSamplesEyebrow')}</p>
-          <h2>{t(key('galleryHeading'))}</h2>
-          <div className="gallery-grid">
-            {gallery.map((item, i) => (
-              <figure className="gallery-item" key={item.title}>
-                {/* Když je fotek míň než položek, použijí se znovu od začátku. */}
-                <img src={galleryImages[i % galleryImages.length]} alt={item.title} loading="lazy" />
-                {!item.hideCaption && (
-                  <figcaption>
-                    {item.desc ? (
-                      <>
-                        <strong className="gallery-item__title">{item.title}</strong>
-                        <span className="gallery-item__desc">{item.desc}</span>
-                      </>
-                    ) : item.title}
-                  </figcaption>
-                )}
-              </figure>
-            ))}
+        {modern ? (
+          <GalleryComponent
+            key={galleryVariant}
+            variant={galleryVariant}
+            eyebrow={t('common.workSamplesEyebrow')}
+            heading={t(key('galleryHeading'))}
+            items={galleryItems}
+          />
+        ) : (
+          <div className="container">
+            <p className="eyebrow">{t('common.workSamplesEyebrow')}</p>
+            <h2>{t(key('galleryHeading'))}</h2>
+            <div className="gallery-grid">
+              {galleryItems.map((item) => (
+                <figure className="gallery-item" key={item.title}>
+                  <img src={item.image} alt={item.title} loading="lazy" />
+                  {!item.hideCaption && <figcaption>{item.title}</figcaption>}
+                </figure>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </section>
 
       <section className={`division-page-body division-page-body--${accent}`}>

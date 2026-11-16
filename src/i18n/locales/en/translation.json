@@ -22,7 +22,10 @@
     "ourServicesEyebrow": "Our services",
     "howWeWorkEyebrow": "How we work together",
     "howWeWorkHeading": "Four steps from inquiry to handover",
-    "workSamplesEyebrow": "Work samples"
+    "workSamplesEyebrow": "Work samples",
+    "galleryPrev": "Previous photo",
+    "galleryNext": "Next photo",
+    "gallerySlide": "Photo {{n}} of {{total}}"
   },
   "home": {
     "tileMore": "More",

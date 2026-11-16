@@ -1,27 +1,5 @@
 /* This file is auto-split from the original App.css — see src/App.css for the import order. */
 
-/* About */
-.about {
-  padding: 88px 0;
-}
-
-.about__inner {
-  max-width: 680px;
-}
-
-.about__more {
-  display: inline-block;
-  margin-top: 8px;
-  font-family: var(--font-body);
-  font-weight: 600;
-  color: var(--navy-800);
-  text-decoration: none;
-}
-
-.about__more:hover {
-  color: var(--blue-400);
-}
-
 /* Stats strip */
 .stats-strip {
   background: var(--navy-900, var(--navy-800));

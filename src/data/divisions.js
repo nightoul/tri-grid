@@ -1,8 +1,13 @@
-import elektrotechnikaBg from '../assets/images/Elektrotechnika_bg.jpg'
-import smartHome from '../assets/images/elektrotechnika-smart-home.jpg'
-import rozvadec from '../assets/images/elektrotechnika-rozvadec.jpg'
-import rozvodyNovostavba from '../assets/images/elektrotechnika-rozvody-novostavba.jpg'
-import revizeMereni from '../assets/images/elektrotechnika-revize-mereni.jpg'
+import elektrotechnikaBg from '../assets/images/Elektrotechnika_bg.webp'
+import elektroPrehled from '../assets/images/elektrotechnika-prehled-rozvadec.webp'
+import elektroSluzbaKabely from '../assets/images/elektrotechnika-sluzba-kabelove-trasy.webp'
+import elektroSluzbaRevize from '../assets/images/elektrotechnika-sluzba-revize-mereni.webp'
+import elektroSluzbaKamery from '../assets/images/elektrotechnika-sluzba-kamerovy-system.webp'
+import elektroGalerieNizkonapetovy from '../assets/images/elektrotechnika-galerie-nizkonapetovy-rozvadec.webp'
+import elektroGalerieDomovni from '../assets/images/elektrotechnika-galerie-domovni-rozvadec.webp'
+import elektroGalerieLoxone from '../assets/images/elektrotechnika-galerie-loxone.webp'
+import elektroGalerieDatovy from '../assets/images/elektrotechnika-galerie-datovy-rozvadec.webp'
+import elektroGalerieTelefon from '../assets/images/elektrotechnika-galerie-domovni-telefon.webp'
 
 import kovovyrobaBg from '../assets/images/kovovyroba-hero-zabradli.webp'
 import kovoPrehled from '../assets/images/kovovyroba-prehled-fasada-balkon.webp'
@@ -42,13 +47,19 @@ const divisions = [
     accent: 'blue',
     type: 'bolt',
     heroImage: elektrotechnikaBg,
-    overviewImage: smartHome,
+    overviewImage: elektroPrehled,
     modern: true,
     serviceIcons: ['bolt', 'clipboard', 'network'],
-    // Zatím testovací fotky z galerie — nahradit reálnými.
-    serviceImages: [rozvodyNovostavba, revizeMereni, rozvadec],
+    serviceImages: [elektroSluzbaKabely, elektroSluzbaRevize, elektroSluzbaKamery],
     stepIcons: ['chat', 'document', 'gear', 'check'],
-    galleryImages: [rozvadec, rozvodyNovostavba, revizeMereni],
+    // Pořadí musí sedět s polem "galleryAlts" v JSON.
+    galleryImages: [
+      elektroGalerieNizkonapetovy, // Nízkonapěťový rozvaděč
+      elektroGalerieDomovni, // Domovní elektrický rozvaděč
+      elektroGalerieLoxone, // Řídicí jednotka Loxone v rozvaděči
+      elektroGalerieDatovy, // Datový a serverový rozvaděč
+      elektroGalerieTelefon, // Domovní videotelefon
+    ],
     brightCanvas: true,
   },
   {

@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/tri-grid/',
+  // Testy (npm test): kontrola překladů, dat divizí a vykreslení stránek.
+  test: {
+    environment: 'jsdom',
+    setupFiles: ['./tests/setup.js'],
+  },
 })
