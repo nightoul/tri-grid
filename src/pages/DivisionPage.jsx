@@ -4,9 +4,6 @@ import HexIcon from '../components/HexIcon.jsx'
 import ServiceIcon from '../components/ServiceIcon.jsx'
 import LineIcon from '../components/LineIcon.jsx'
 import GalleryCarousel from '../components/GalleryCarousel.jsx'
-import GalleryShowcase from '../components/GalleryShowcase.jsx'
-import GalleryVariantSwitch from '../components/GalleryVariantSwitch.jsx'
-import { useGalleryVariant } from '../hooks/useGalleryVariant.js'
 import usePageTitle from '../hooks/usePageTitle.js'
 
 // Společná šablona pro všechny divize. Vizuální data (barva, ikony, obrázky)
@@ -39,14 +36,8 @@ function DivisionPage({ division }) {
   const heroSubtitle = optional('heroSubtitle')
   const heroCta = optional('heroCta')
   const stepsHeading = optional('stepsHeading') ?? t('common.howWeWorkHeading')
-  const ctaHeading = optional('ctaHeading')
-  const ctaEyebrow = optional('ctaEyebrow')
-  const ctaText = optional('ctaText')
-  const ctaButton = optional('ctaButton')
 
   usePageTitle(t(key('label')))
-  // DOČASNÉ: výběr varianty galerie pro klienta (viz GalleryVariantSwitch.jsx).
-  const [galleryVariant, setGalleryVariant] = useGalleryVariant()
   // DOČASNÉ: popisky fotek (nadpis i popis) se na webu nezobrazují, zůstávají
   // jen jako alt text. Pro vrácení smazat "hideCaption: true".
   const galleryItems = gallery.map((item, i) => ({
@@ -54,11 +45,9 @@ function DivisionPage({ division }) {
     image: galleryImages[i],
     hideCaption: true,
   }))
-  const GalleryComponent = ['thumbs', 'cinema'].includes(galleryVariant) ? GalleryShowcase : GalleryCarousel
 
   return (
     <div className={`division-page${brightCanvas ? ' division-page--bright-canvas' : ''}${modern ? ' division-page--modern' : ''}`}>
-      {modern && <GalleryVariantSwitch value={galleryVariant} onChange={setGalleryVariant} />}
       <section className={`division-page-hero division-page-hero--${accent}`}>
         <div className={`division-page-hero__bg division-page-hero__bg--${accent}`} style={{ '--hero-img': `url(${heroImage})` }} />
         <div className={`division-page-hero__overlay division-page-hero__overlay--${accent}`} aria-hidden="true" />
@@ -153,9 +142,7 @@ function DivisionPage({ division }) {
 
       <section className={`gallery-section gallery-section--${accent}`}>
         {modern ? (
-          <GalleryComponent
-            key={galleryVariant}
-            variant={galleryVariant}
+          <GalleryCarousel
             eyebrow={t('common.workSamplesEyebrow')}
             heading={t(key('galleryHeading'))}
             items={galleryItems}
@@ -176,25 +163,14 @@ function DivisionPage({ division }) {
         )}
       </section>
 
-      <section className={`division-page-body division-page-body--${accent}`}>
-        {ctaHeading ? (
-          <div className="container division-page-cta division-page-cta--rich">
-            <div className="division-page-cta__text">
-              {ctaEyebrow && <p className="eyebrow">{ctaEyebrow}</p>}
-              <h2>{ctaHeading}</h2>
-              <p>{t(key('ctaQuestion'))}</p>
-              {ctaText && <p>{ctaText}</p>}
-            </div>
-            <Link to={`/${lang}#kontakt`} className="division-page-cta__button">
-              {ctaButton ?? t('common.ctaContact')}
-            </Link>
+      <section className={`division-cta division-cta--${accent}`}>
+        <div className="container division-cta__inner">
+          <div>
+            <h2>{t('common.ctaHeading')}</h2>
+            <p>{t(key('ctaText'))}</p>
           </div>
-        ) : (
-          <div className="container division-page-cta">
-            <p>{t(key('ctaQuestion'))}</p>
-            <Link to={`/${lang}#kontakt`} className="division-page-cta__link">{t('common.ctaContact')}</Link>
-          </div>
-        )}
+          <Link to={`/${lang}#kontakt`} className="division-cta__button">{t('common.ctaButton')}</Link>
+        </div>
       </section>
     </div>
   )

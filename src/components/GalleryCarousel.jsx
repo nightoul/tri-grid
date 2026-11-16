@@ -1,18 +1,21 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import GalleryLightbox from './GalleryLightbox.jsx'
 
 // Posuvná galerie (carousel) pro "moderní" divizní stránky.
 // Pás fotek používá nativní scroll se scroll-snap, takže funguje swipe na
 // mobilu i trackpad. Navíc šipky, tažení myší a ukazatel průběhu.
-// variant: 'strip' = pás fotek zarovnaný vlevo,
-//          'spotlight' = jedna velká fotka uprostřed, sousední ztlumené.
-function GalleryCarousel({ eyebrow, heading, items, variant = 'strip' }) {
+// Kliknutím na fotku se otevře zvětšená (GalleryLightbox).
+function GalleryCarousel({ eyebrow, heading, items }) {
   const { t } = useTranslation()
   const rootRef = useRef(null)
   const headerRef = useRef(null)
   const trackRef = useRef(null)
   const drag = useRef(null)
+  // Po tažení myší prohlížeč pošle ještě click; ten fotku nesmí otevřít.
+  const dragged = useRef(false)
   const [state, setState] = useState({ index: 0, progress: 0, atStart: true, atEnd: false })
+  const [enlarged, setEnlarged] = useState(null)
 
   // Vzdálenost mezi začátky dvou sousedních slidů (šířka + mezera).
   const step = () => {
@@ -62,25 +65,35 @@ function GalleryCarousel({ eyebrow, heading, items, variant = 'strip' }) {
     trackRef.current.scrollBy({ left: dir * step(), behavior: reduce ? 'auto' : 'smooth' })
   }
 
-  // Tažení myší (dotyk a trackpad řeší prohlížeč sám).
+  // Tažení myší (dotyk a trackpad řeší prohlížeč sám). Tažení začne až po
+  // posunu o pár pixelů, jinak jde o obyčejné kliknutí na fotku.
   const onPointerDown = (e) => {
     if (e.pointerType !== 'mouse' || e.button !== 0) return
-    const track = trackRef.current
-    drag.current = { x: e.clientX, left: track.scrollLeft }
-    track.classList.add('is-dragging')
-    track.setPointerCapture(e.pointerId)
+    drag.current = { x: e.clientX, left: trackRef.current.scrollLeft, active: false }
   }
 
   const onPointerMove = (e) => {
-    if (!drag.current) return
-    trackRef.current.scrollLeft = drag.current.left - (e.clientX - drag.current.x)
+    const d = drag.current
+    if (!d) return
+    const track = trackRef.current
+    if (!d.active) {
+      if (Math.abs(e.clientX - d.x) < 6) return
+      d.active = true
+      track.classList.add('is-dragging')
+      track.setPointerCapture(e.pointerId)
+    }
+    track.scrollLeft = d.left - (e.clientX - d.x)
   }
 
   const endDrag = (e) => {
-    if (!drag.current) return
-    const track = trackRef.current
-    const { left } = drag.current
+    const d = drag.current
     drag.current = null
+    if (!d?.active) return
+    // click přijde hned po pointerup, timeout pojistku uvolní až po něm
+    dragged.current = true
+    setTimeout(() => { dragged.current = false })
+    const track = trackRef.current
+    const { left } = d
     track.releasePointerCapture?.(e.pointerId)
     track.classList.remove('is-dragging')
     // Po puštění dojede na nejbližší fotku ve směru tažení.
@@ -91,11 +104,17 @@ function GalleryCarousel({ eyebrow, heading, items, variant = 'strip' }) {
     track.scrollTo({ left: target, behavior: 'smooth' })
   }
 
+  // Po zavření zvětšené fotky posune pás na fotku, kde uživatel skončil.
+  const closeEnlarged = (i) => {
+    setEnlarged(null)
+    trackRef.current.scrollTo({ left: i * step() })
+  }
+
   const total = items.length
   const pad = (n) => String(n).padStart(2, '0')
 
   return (
-    <div className={`gallery-carousel gallery-carousel--${variant}`} ref={rootRef}>
+    <div className="gallery-carousel" ref={rootRef}>
       <div className="container gallery-carousel__header" ref={headerRef}>
         <div>
           <p className="eyebrow">{eyebrow}</p>
@@ -144,7 +163,14 @@ function GalleryCarousel({ eyebrow, heading, items, variant = 'strip' }) {
             aria-label={t('common.gallerySlide', { n: i + 1, total })}
           >
             <figure>
-              <img src={item.image} alt={item.title} loading="lazy" draggable="false" />
+              <button
+                type="button"
+                className="gallery-carousel__zoom"
+                onClick={() => !dragged.current && setEnlarged(i)}
+                aria-label={`${t('common.galleryEnlarge')}: ${item.title}`}
+              >
+                <img src={item.image} alt={item.title} loading="lazy" draggable="false" />
+              </button>
               {!item.hideCaption && (
                 <figcaption>
                   <strong>{item.title}</strong>
@@ -161,6 +187,10 @@ function GalleryCarousel({ eyebrow, heading, items, variant = 'strip' }) {
           <span style={{ transform: `scaleX(${state.progress})` }} />
         </div>
       </div>
+
+      {enlarged !== null && (
+        <GalleryLightbox items={items} start={enlarged} onClose={closeEnlarged} />
+      )}
     </div>
   )
 }

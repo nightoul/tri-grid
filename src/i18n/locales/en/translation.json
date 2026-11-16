@@ -15,9 +15,9 @@
     "divisions": "Electrical · Metalworking · Construction"
   },
   "common": {
-    "backToDivisions": "← Back",
     "ctaContact": "Contact us →",
-    "divisionsEyebrow": "Division",
+    "ctaHeading": "Have a project?",
+    "ctaButton": "Contact us",
     "whatWeDoEyebrow": "What we'll do for you",
     "ourServicesEyebrow": "Our services",
     "howWeWorkEyebrow": "How we work together",
@@ -25,22 +25,25 @@
     "workSamplesEyebrow": "Work samples",
     "galleryPrev": "Previous photo",
     "galleryNext": "Next photo",
-    "gallerySlide": "Photo {{n}} of {{total}}"
+    "gallerySlide": "Photo {{n}} of {{total}}",
+    "galleryEnlarge": "Enlarge photo",
+    "galleryClose": "Close"
   },
   "home": {
     "tileMore": "More",
-    "eyebrow": "Tri-Grid s.r.o. · Where trades meet",
     "title": "Three trades. One partner.",
-    "lede": "Tri-Grid s.r.o. brings electrical, metalworking, and construction work together under one roof — from design to delivery.",
+    "lede": "Complete solutions in electrical engineering, metalworking, and construction under one roof — from design to delivery.",
+    "ctaInquiry": "Request a quote",
+    "ctaWork": "Our work",
     "stats": {
       "founders": "founders with hands-on industry experience",
       "contact": "point of contact for the whole project",
       "orders": "completed jobs"
     },
     "why": {
-      "eyebrow": "Why Tri-Grid",
-      "heading": "Why work with us",
-      "intro": "We're a new company, but not new to the trade — the founders each bring years of hands-on experience. We joined forces so the client doesn't have to coordinate three different contractors alone.",
+      "eyebrow": "Why Tri-Grid?",
+      "heading": "Professional delivery from a single partner",
+      "intro": "We are a Czech company that brings together three key fields — electrical engineering, metalworking, and construction. We offer comprehensive services, an expert approach, and reliable delivery of projects of all sizes.",
       "list": [
         {
           "title": "Personal approach",
@@ -59,11 +62,6 @@
           "desc": "clear pricing with no hidden items."
         }
       ]
-    },
-    "about": {
-      "eyebrow": "About us",
-      "text": "Tri-Grid is being founded by three colleagues who decided to bring their trades together under one name. Instead of chasing down three separate contractors for electrical, machinery, and construction, clients get a single point of contact and a coordinated team.",
-      "learnMore": "Learn more about us →"
     },
     "contact": {
       "eyebrow": "Contact",
@@ -146,9 +144,7 @@
         "Data and server rack",
         "Video door phone"
       ],
-      "ctaHeading": "Have a project?",
-      "ctaQuestion": "We'll find a suitable, reliable technical solution for your electrical installation.",
-      "ctaButton": "Contact us"
+      "ctaText": "We'll find a suitable, reliable technical solution for your electrical installation."
     },
     "kovovyroba": {
       "label": "Metalworking",
@@ -191,7 +187,6 @@
         }
       ],
       "galleryHeading": "Metalwork up close",
-      "ctaQuestion": "Looking for a reliable partner for metal structures, stainless steel railings, or professional metal surface finishing?",
       "heroSubtitle": "Custom metalwork, structural steelwork,\nand professional metal surface finishing.",
       "gallery": [
         {
@@ -219,10 +214,7 @@
           "desc": "Grinding, satin finishing, and polishing of brass, copper, aluminium, and other metals for interior and architectural use."
         }
       ],
-      "ctaEyebrow": "Have a project? Let's make it happen.",
-      "ctaHeading": "Quality metalwork starts with the details.",
-      "ctaText": "Get in touch. We'll be glad to go through your technical requirements with you and put together a tailored solution.",
-      "ctaButton": "Request a free quote"
+      "ctaText": "Looking for a reliable partner for metal structures, stainless steel railings, or professional metal surface finishing?"
     },
     "stavebnictvi": {
       "label": "Construction",
@@ -269,7 +261,7 @@
         "Masonry work",
         "Finishing work"
       ],
-      "ctaQuestion": "Have a construction project in mind?"
+      "ctaText": "We'll find a suitable, reliable technical solution for your construction project."
     }
   },
   "aboutPage": {

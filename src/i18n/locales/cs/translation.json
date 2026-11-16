@@ -15,9 +15,9 @@
     "divisions": "Elektrotechnika · Kovovýroba · Stavebnictví"
   },
   "common": {
-    "backToDivisions": "← Zpět",
     "ctaContact": "Kontaktujte nás →",
-    "divisionsEyebrow": "Divize",
+    "ctaHeading": "Máte projekt?",
+    "ctaButton": "Kontaktujte nás",
     "whatWeDoEyebrow": "Co pro vás uděláme",
     "ourServicesEyebrow": "Naše služby",
     "howWeWorkEyebrow": "Jak probíhá spolupráce",
@@ -25,22 +25,25 @@
     "workSamplesEyebrow": "Ukázky prací",
     "galleryPrev": "Předchozí fotka",
     "galleryNext": "Další fotka",
-    "gallerySlide": "Fotka {{n}} z {{total}}"
+    "gallerySlide": "Fotka {{n}} z {{total}}",
+    "galleryEnlarge": "Zvětšit fotku",
+    "galleryClose": "Zavřít"
   },
   "home": {
     "tileMore": "Více",
-    "eyebrow": "Tri-Grid s.r.o. · Když se řemesla potkají",
     "title": "Tři obory. Jeden partner.",
-    "lede": "Tri-Grid s.r.o. spojuje elektrotechniku, kovovýrobu a stavebnictví pod jednu střechu — od návrhu po realizaci.",
+    "lede": "Komplexní řešení v oblasti elektrotechniky, kovovýroby a stavebnictví pod jednou střechou — od návrhu po realizaci.",
+    "ctaInquiry": "Nezávazná poptávka",
+    "ctaWork": "Naše realizace",
     "stats": {
       "founders": "zakladatelé s praxí v oboru",
       "contact": "kontakt pro celý projekt",
       "orders": "zakázek"
     },
     "why": {
-      "eyebrow": "Proč Tri-Grid",
-      "heading": "Proč spolupracovat s námi",
-      "intro": "Jsme nová firma, ale ne noví v oboru — zakladatelé mají za sebou roky praxe každý ve svém řemesle. Spojili jsme se, aby klient nemusel koordinovat tři různé dodavatele sám.",
+      "eyebrow": "Proč Tri-Grid?",
+      "heading": "Profesionální realizace od jednoho partnera",
+      "intro": "Jsme česká společnost, která propojuje tři klíčové oblasti — elektrotechniku, kovovýrobu a stavebnictví. Nabízíme komplexní služby, odborný přístup a spolehlivou realizaci projektů různých rozsahů.",
       "list": [
         {
           "title": "Osobní přístup",
@@ -59,11 +62,6 @@
           "desc": "jasné nacenění bez skrytých položek."
         }
       ]
-    },
-    "about": {
-      "eyebrow": "O nás",
-      "text": "Tri-Grid zakládají tři kolegové, kteří se rozhodli spojit své obory pod jednu značku. Místo shánění tří různých dodavatelů na elektřinu, stroje a stavbu dostane klient jeden kontakt a koordinovaný tým.",
-      "learnMore": "Zjistit více o nás →"
     },
     "contact": {
       "eyebrow": "Kontakt",
@@ -146,9 +144,7 @@
         "Datový a serverový rozvaděč",
         "Domovní videotelefon"
       ],
-      "ctaHeading": "Máte projekt?",
-      "ctaQuestion": "Najdeme pro vás vhodné technické a spolehlivé řešení v oblasti elektroinstalací.",
-      "ctaButton": "Kontaktujte nás"
+      "ctaText": "Najdeme pro vás vhodné technické a spolehlivé řešení v oblasti elektroinstalací."
     },
     "kovovyroba": {
       "label": "Kovovýroba",
@@ -191,7 +187,6 @@
         }
       ],
       "galleryHeading": "Kovovýroba v detailu",
-      "ctaQuestion": "Hledáte spolehlivého partnera pro výrobu kovových konstrukcí, nerezových zábradlí nebo profesionální povrchové úpravy kovů?",
       "heroSubtitle": "Zakázková kovovýroba, stavební kovové konstrukce\na profesionální povrchové úpravy kovů.",
       "gallery": [
         {
@@ -219,10 +214,7 @@
           "desc": "Broušení, satinování a leštění mosazi, mědi, hliníku a dalších kovů pro interiérové a architektonické aplikace."
         }
       ],
-      "ctaEyebrow": "Máte projekt? Pojďme ho realizovat.",
-      "ctaHeading": "Kvalitní kovovýroba začíná u detailu.",
-      "ctaText": "Kontaktujte nás. Rádi s vámi projdeme technické požadavky a připravíme individuální řešení.",
-      "ctaButton": "Nezávazně poptat zakázku"
+      "ctaText": "Hledáte spolehlivého partnera pro výrobu kovových konstrukcí, nerezových zábradlí nebo profesionální povrchové úpravy kovů?"
     },
     "stavebnictvi": {
       "label": "Stavebnictví",
@@ -269,7 +261,7 @@
         "Zednické práce",
         "Dokončovací práce"
       ],
-      "ctaQuestion": "Máte poptávku v oboru stavebnictví?"
+      "ctaText": "Najdeme pro vás vhodné technické a spolehlivé řešení v oblasti stavebnictví."
     }
   },
   "aboutPage": {

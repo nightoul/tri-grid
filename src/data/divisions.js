@@ -39,8 +39,8 @@ import dokoncovaciPrace from '../assets/images/stavebnictvi-dokoncovaci-prace.jp
 //   serviceImages     — karty služeb s fotkou nahoře
 //   stepIcons         — kroky spolupráce s ikonami v kroužku
 //   serviceIcons      — názvy ikon z LineIcon.jsx (bez modern: ServiceIcon.jsx)
-// Volitelné texty v JSON: heroSubtitle, heroCta, stepsHeading, ctaHeading,
-// ctaEyebrow, ctaText, ctaButton; služba může mít místo "desc" seznam "items".
+// Volitelné texty v JSON: heroSubtitle, heroCta, stepsHeading.
+// Služba může mít místo "desc" seznam "items".
 const divisions = [
   {
     id: 'elektrotechnika',

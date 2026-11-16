@@ -113,6 +113,62 @@
   font-size: 1.05rem;
 }
 
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero__button:hover {
+  transform: translateY(-1px);
+}
+
+.hero__button:focus-visible {
+  outline: 3px solid var(--blue-400);
+  outline-offset: 3px;
+}
+
+.hero__button--primary {
+  background: var(--blue-400);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(7, 20, 38, 0.3);
+}
+
+.hero__button--primary:hover {
+  background: color-mix(in srgb, var(--blue-400) 82%, #fff);
+}
+
+.hero__button--secondary {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.hero__button--secondary:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.hero__button .line-icon {
+  width: 18px;
+  height: 18px;
+}
+
 .division-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

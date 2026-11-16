@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import HexIcon from '../components/HexIcon.jsx'
+import LineIcon from '../components/LineIcon.jsx'
 import divisions from '../data/divisions.js'
 import logoIcon from '../assets/logo-emblem.svg'
 import usePageTitle from '../hooks/usePageTitle.js'
@@ -45,6 +46,16 @@ function Homepage() {
             ))}
           </h1>
           <p className="hero__lede">{t('home.lede')}</p>
+          <div className="hero__actions">
+            <Link to={`/${lang}#kontakt`} className="hero__button hero__button--primary">
+              <LineIcon name="send" />
+              {t('home.ctaInquiry')}
+            </Link>
+            {/* Realizace jsou v galeriích na stránkách divizí, tlačítko vede na jejich dlaždice. */}
+            <Link to={`/${lang}#divize`} className="hero__button hero__button--secondary">
+              {t('home.ctaWork')}
+            </Link>
+          </div>
 
           <div className="division-grid" id="divize">
             {divisions.map((d) => (
