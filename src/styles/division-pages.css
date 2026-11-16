@@ -27,11 +27,14 @@
    --photo-w      čistá část fotky = 65 % šířky okna (oddálení o 35 %);
                   fotka ale nikdy není nižší než hero
    --fade-w       o kolik fotka sahá dál doleva a plynule (S-křivka) mizne
-                  do tmavé výplně; čistá fotka končí na hranici --photo-w */
+                  do tmavé výplně; čistá fotka končí na hranici --photo-w
+   --photo-shift  posun celé fotky doprava (bez zoomu); pravý okraj fotky
+                  se o tolik ořízne */
 .division-page-hero__bg--steel {
   --photo-ratio: 1.6862; /* 892 / 529 px */
   --photo-w: 65vw;
   --fade-w: 240px;
+  --photo-shift: 50px;
   background-image: none;
   background-color: #071426;
   filter: contrast(1.04) brightness(1.08) saturate(1.05);
@@ -42,7 +45,7 @@
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
+  right: calc(var(--photo-shift) * -1);
   height: calc(max(100%, var(--photo-w) / var(--photo-ratio)) + var(--fade-w) / var(--photo-ratio));
   aspect-ratio: var(--photo-ratio);
   background: var(--hero-img) center / cover no-repeat;
