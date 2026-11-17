@@ -108,9 +108,11 @@
   clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
 }
 
-/* Jak probíhá spolupráce — 4 kroky s ikonou, mezi nimi šipka */
+/* Jak probíhá spolupráce — 4 kroky s ikonou, mezi nimi šipka.
+   Béžový pruh jako sekce na stránkách divizí (barvy viz .division-page). */
 .how {
-  padding: 12px 0 64px;
+  padding: 40px 0 56px;
+  background: var(--texture-light), var(--paper-100);
 }
 
 .how h2 {

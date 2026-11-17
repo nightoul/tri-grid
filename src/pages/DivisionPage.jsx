@@ -1,7 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import HexIcon from '../components/HexIcon.jsx'
-import ServiceIcon from '../components/ServiceIcon.jsx'
 import LineIcon from '../components/LineIcon.jsx'
 import GalleryCarousel from '../components/GalleryCarousel.jsx'
 import usePageTitle from '../hooks/usePageTitle.js'
@@ -20,18 +19,12 @@ function DivisionPage({ division }) {
 
   const services = t(key('services'), { returnObjects: true })
   const steps = t(key('steps'), { returnObjects: true })
-  // Galerie, tři varianty textů v JSON:
+  // Galerie, dvě varianty textů v JSON:
   //  - "gallery": nadpis + popis u každé fotky,
-  //  - "galleryCaptions": jen krátký popisek,
-  //  - "galleryAlts": bez popisků na webu, názvy jen jako alt text fotek.
-  let gallery
-  if (i18n.exists(key('gallery'))) {
-    gallery = t(key('gallery'), { returnObjects: true })
-  } else if (i18n.exists(key('galleryAlts'))) {
-    gallery = t(key('galleryAlts'), { returnObjects: true }).map((alt) => ({ title: alt, hideCaption: true }))
-  } else {
-    gallery = t(key('galleryCaptions'), { returnObjects: true }).map((caption) => ({ title: caption }))
-  }
+  //  - "galleryAlts": jen názvy fotek (alt text).
+  const gallery = i18n.exists(key('gallery'))
+    ? t(key('gallery'), { returnObjects: true })
+    : t(key('galleryAlts'), { returnObjects: true }).map((alt) => ({ title: alt }))
 
   const heroSubtitle = optional('heroSubtitle')
   const heroCta = optional('heroCta')
@@ -82,14 +75,14 @@ function DivisionPage({ division }) {
         </div>
       </section>
 
-      <section className={`service-section service-section--${accent}`}>
+      <section className="service-section">
         <div className="container">
           <p className="eyebrow">{t('common.ourServicesEyebrow')}</p>
           <h2>{t(key('servicesHeading'))}</h2>
           <div className="service-cards">
-            {services.map((s, i) => (serviceImages ? (
-              <div className="service-card service-card--media" key={s.title}>
-                <img className="service-card__image" src={serviceImages[i % serviceImages.length]} alt="" loading="lazy" />
+            {services.map((s, i) => (
+              <div className="service-card" key={s.title}>
+                <img className="service-card__image" src={serviceImages[i]} alt="" loading="lazy" />
                 <div className="service-card__body">
                   <div className="service-card__head">
                     <LineIcon name={serviceIcons[i]} className="service-card__line-icon" />
@@ -103,18 +96,12 @@ function DivisionPage({ division }) {
                   )}
                 </div>
               </div>
-            ) : (
-              <div className="service-card" key={s.title}>
-                <ServiceIcon variant={serviceIcons[i]} />
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
-              </div>
-            )))}
+            ))}
           </div>
         </div>
       </section>
 
-      <section className={`process-section process-section--${accent}`}>
+      <section className="process-section">
         <div className="container">
           <p className="eyebrow">{t('common.howWeWorkEyebrow')}</p>
           <h2>{stepsHeading}</h2>
@@ -148,7 +135,7 @@ function DivisionPage({ division }) {
         />
       </section>
 
-      <section className={`division-cta division-cta--${accent}`}>
+      <section className="division-cta">
         <div className="container division-cta__inner">
           <div>
             <h2>{t('common.ctaHeading')}</h2>

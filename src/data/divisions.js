@@ -20,8 +20,9 @@ import kovoGalerieLesteni from '../assets/images/kovovyroba-galerie-lesteni-nere
 import kovoGalerieZakazkove from '../assets/images/kovovyroba-galerie-zakazkove-vyrobky.webp'
 import kovoGalerieInterier from '../assets/images/kovovyroba-galerie-interier.webp'
 import kovoGalerieDesign from '../assets/images/kovovyroba-galerie-designove-kovy.webp'
+import kovoGalerieBalkon from '../assets/images/kovovyroba-galerie-balkonove-zabradli.webp'
+import kovoGalerieSchodiste from '../assets/images/kovovyroba-galerie-schodistove-zabradli.webp'
 
-import stavebnictviBg from '../assets/images/Stavebnictvi_bg.jpg'
 import stavebnictvi1 from '../assets/images/stavebnictvi1.jpg'
 import stavbaGalerieSadrokarton from '../assets/images/stavebnictvi-galerie-sadrokarton.webp'
 import stavbaGalerieTechnicka from '../assets/images/stavebnictvi-galerie-technicka-mistnost.webp'
@@ -31,14 +32,14 @@ import stavbaGalerieZpevnene from '../assets/images/stavebnictvi-galerie-zpevnen
 // Texty (label, tagline, služby...) žijí v překladových slovnících pod klíčem
 // divisionsData.<id> — tady zůstává jen strukturální/vizuální informace.
 // Pořadí serviceIcons/serviceImages a galleryImages musí sedět s poli
-// services a gallery (galleryCaptions / galleryAlts) v JSON. Nová divize =
+// services a gallery / galleryAlts v JSON. Nová divize =
 // nový záznam tady + texty v JSON; stránka i trasa /divize/<id> se vytvoří
 // automaticky.
 //
-// Všechny divize mají stejné rozvržení. Volitelně:
-//   serviceImages     — karty služeb s fotkou nahoře
-//   stepIcons         — kroky spolupráce s ikonami v kroužku
-//   serviceIcons      — názvy ikon z LineIcon.jsx (bez serviceImages: ServiceIcon.jsx)
+// Všechny divize mají stejné rozvržení. Každá potřebuje:
+//   serviceImages     — fotky karet služeb (pořadí = services v JSON)
+//   serviceIcons      — názvy ikon z LineIcon.jsx ke kartám služeb
+//   stepIcons         — ikony kroků spolupráce (z LineIcon.jsx)
 // Volitelné texty v JSON: heroSubtitle, heroCta, stepsHeading.
 // Služba může mít místo "desc" seznam "items".
 const divisions = [
@@ -71,11 +72,13 @@ const divisions = [
     stepIcons: ['chat', 'document', 'gear', 'check'],
     // Pořadí musí sedět s polem "gallery" v JSON.
     galleryImages: [
-      kovoGalerieZabradli, // Nerezová zábradlí a schodiště
       kovoGalerieSklo, // Skleněná zábradlí a zastřešení
-      kovoGalerieLesteni, // Broušení a leštění nerezu
       kovoGalerieZakazkove, // Zakázkové nerezové výrobky
+      kovoGalerieBalkon, // Nerezové balkonové zábradlí
+      kovoGalerieLesteni, // Broušení a leštění nerezu
+      kovoGalerieSchodiste, // Nerezové schodišťové zábradlí
       kovoGalerieInterier, // Interiérové kovové konstrukce
+      kovoGalerieZabradli, // Nerezová zábradlí a schodiště
       kovoGalerieDesign, // Povrchové úpravy designových kovů
     ],
   },
@@ -83,9 +86,11 @@ const divisions = [
     id: 'stavebnictvi',
     accent: 'brick',
     type: 'roof',
-    heroImage: stavebnictviBg,
+    heroImage: stavbaGalerieObjekt,
     overviewImage: stavebnictvi1,
-    serviceIcons: ['build', 'finish', 'pipes'],
+    serviceIcons: ['building', 'roller', 'pipes'],
+    // DOČASNÉ: fotky z galerie, než klient pošle vlastní fotky ke službám
+    serviceImages: [stavbaGalerieObjekt, stavbaGalerieSadrokarton, stavbaGalerieTechnicka],
     stepIcons: ['chat', 'document', 'gear', 'check'],
     // Pořadí musí sedět s polem "galleryAlts" v JSON.
     galleryImages: [

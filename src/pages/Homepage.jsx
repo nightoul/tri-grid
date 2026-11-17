@@ -11,7 +11,7 @@ import CircuitAnimation from '../components/CircuitAnimation.jsx'
 // Ikony k bodům "Proč Tri-Grid?" a ke krokům spolupráce
 // (pořadí = home.why.list a home.process.steps v JSON)
 const WHY_ICONS = ['bolt', 'shield', 'layers', 'handshake']
-const PROCESS_ICONS = ['chat', 'document', 'helmet', 'checkbox']
+const PROCESS_ICONS = ['chat', 'document', 'gear', 'checkbox']
 
 function Homepage() {
   const { t } = useTranslation()

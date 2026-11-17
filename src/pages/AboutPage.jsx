@@ -40,7 +40,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="service-section service-section--blue">
+      <section className="service-section">
         <div className="container">
           <p className="eyebrow">{t('aboutPage.why.eyebrow')}</p>
           <h2>{t('aboutPage.why.heading')}</h2>

@@ -73,6 +73,31 @@ const paths = {
       <path d="M21 3 L10 13.5" />
     </>
   ),
+  // budova — kompletní stavební realizace
+  building: (
+    <>
+      <path d="M3 21 H21" />
+      <path d="M5 21 V5 L13 3 V21" />
+      <path d="M13 9 H19 V21" />
+      <path d="M8 8 H10 M8 12 H10 M8 16 H10 M16 13 H16.01 M16 17 H16.01" />
+    </>
+  ),
+  // malířský váleček — rekonstrukce a modernizace
+  roller: (
+    <>
+      <rect x="4" y="3.5" width="13" height="5" rx="1.2" />
+      <path d="M17 6 H19.5 V11 H11.5 V14" />
+      <rect x="10" y="14" width="3" height="7" rx="1" />
+    </>
+  ),
+  // koleno potrubí s přírubami — rozvody a infrastruktura
+  pipes: (
+    <>
+      <path d="M4 9 H12 A3.5 3.5 0 0 1 15.5 12.5 V20" />
+      <path d="M7 6.5 V11.5" />
+      <path d="M13 16.5 H18" />
+    </>
+  ),
   // štít — odbornost a bezpečnost
   shield: (
     <path d="M12 3 L19 5.8 V11.5 C19 15.9 16.2 19.2 12 21 C7.8 19.2 5 15.9 5 11.5 V5.8 Z" />
@@ -85,14 +110,6 @@ const paths = {
       <path d="M21 3 L22 14 H20" />
       <path d="M3 3 L2 14 L8.5 20.5 A1 1 0 0 0 11.5 17.5" />
       <path d="M3 4 H11" />
-    </>
-  ),
-  // přilba — realizace na stavbě
-  helmet: (
-    <>
-      <path d="M4.5 16.5 A7.5 7.5 0 0 1 19.5 16.5" />
-      <path d="M10 9.5 V13.5 M14 9.5 V13.5" />
-      <path d="M2.5 16.5 H21.5 V19 H2.5 Z" />
     </>
   ),
   // fajfka ve čtverci — předání

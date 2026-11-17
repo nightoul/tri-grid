@@ -144,13 +144,14 @@
 }
 
 .hero__button--primary {
-  background: var(--blue-400);
+  /* o kousek tmavší než značková modrá, aby na tmavém hero tolik nesvítila */
+  background: color-mix(in srgb, var(--blue-400) 82%, var(--navy-800));
   color: #fff;
   box-shadow: 0 8px 22px rgba(7, 20, 38, 0.3);
 }
 
 .hero__button--primary:hover {
-  background: color-mix(in srgb, var(--blue-400) 82%, #fff);
+  background: var(--blue-400);
 }
 
 .hero__button .line-icon {

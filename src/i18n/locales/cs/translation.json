@@ -205,24 +205,32 @@
       "heroSubtitle": "Zakázková kovovýroba, stavební kovové konstrukce\na profesionální povrchové úpravy kovů.",
       "gallery": [
         {
-          "title": "Nerezová zábradlí a schodiště",
-          "desc": "Výroba a montáž nerezových zábradlí, madel a schodišťových konstrukcí s důrazem na přesnost, bezpečnost a estetické provedení."
-        },
-        {
           "title": "Skleněná zábradlí a zastřešení",
           "desc": "Nerezové konstrukce v kombinaci se sklem pro balkony, terasy a moderní architekturu."
-        },
-        {
-          "title": "Broušení a leštění nerezu",
-          "desc": "Precizní opracování nerezových povrchů, sjednocení struktury, začištění svarů a dosažení požadovaného stupně lesku."
         },
         {
           "title": "Zakázkové nerezové výrobky",
           "desc": "Výroba atypických nerezových prvků, držáků, rámů, technických dílů a konstrukcí podle individuálních požadavků."
         },
         {
+          "title": "Nerezové balkonové zábradlí",
+          "desc": "Venkovní zábradlí z nerezu s vodorovnou výplní, kotvené do čela balkonu."
+        },
+        {
+          "title": "Broušení a leštění nerezu",
+          "desc": "Precizní opracování nerezových povrchů, sjednocení struktury, začištění svarů a dosažení požadovaného stupně lesku."
+        },
+        {
+          "title": "Nerezové schodišťové zábradlí",
+          "desc": "Interiérové zábradlí schodiště z nerezu s vodorovnou výplní, doplněné skleněnou výplní galerie."
+        },
+        {
           "title": "Interiérové kovové konstrukce",
           "desc": "Nerezová zábradlí, madla a architektonické prvky pro obytné, administrativní a komerční prostory."
+        },
+        {
+          "title": "Nerezová zábradlí a schodiště",
+          "desc": "Výroba a montáž nerezových zábradlí, madel a schodišťových konstrukcí s důrazem na přesnost, bezpečnost a estetické provedení."
         },
         {
           "title": "Povrchové úpravy designových kovů",
@@ -291,7 +299,7 @@
     },
     "story": {
       "eyebrow": "Jak Tri-Grid vznikl",
-      "heading": "Tři obory, jeden společný problém",
+      "heading": "Tři obory, jeden tým",
       "text": "Tri-Grid zakládají tři kolegové, kteří se dlouhodobě pohybují každý ve svém oboru — elektrotechnice, kovovýrobě a stavebnictví. Na společných zakázkách si všimli stejného problému: koordinace mezi řemeslníky často zabere víc času a energie než práce samotná. Rozhodli se to změnit a spojit své obory pod jednu značku, aby klient řešil jeden kontakt místo tří."
     },
     "why": {

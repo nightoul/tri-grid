@@ -205,24 +205,32 @@
       "heroSubtitle": "Custom metalwork, structural steelwork,\nand professional metal surface finishing.",
       "gallery": [
         {
-          "title": "Stainless steel railings and staircases",
-          "desc": "Fabrication and installation of stainless steel railings, handrails, and staircase structures with a focus on precision, safety, and appearance."
-        },
-        {
           "title": "Glass railings and canopies",
           "desc": "Stainless steel structures combined with glass for balconies, terraces, and modern architecture."
-        },
-        {
-          "title": "Stainless steel grinding and polishing",
-          "desc": "Precise finishing of stainless steel surfaces: evening out the grain, cleaning up welds, and reaching the required level of shine."
         },
         {
           "title": "Custom stainless steel products",
           "desc": "Fabrication of bespoke stainless steel elements, brackets, frames, technical parts, and structures to your individual requirements."
         },
         {
+          "title": "Stainless steel balcony railing",
+          "desc": "Outdoor stainless steel railing with horizontal infill, fixed to the face of the balcony."
+        },
+        {
+          "title": "Stainless steel grinding and polishing",
+          "desc": "Precise finishing of stainless steel surfaces: evening out the grain, cleaning up welds, and reaching the required level of shine."
+        },
+        {
+          "title": "Stainless steel staircase railing",
+          "desc": "Interior stainless steel staircase railing with horizontal infill, complemented by a glass gallery panel."
+        },
+        {
           "title": "Interior metal structures",
           "desc": "Stainless steel railings, handrails, and architectural features for residential, office, and commercial spaces."
+        },
+        {
+          "title": "Stainless steel railings and staircases",
+          "desc": "Fabrication and installation of stainless steel railings, handrails, and staircase structures with a focus on precision, safety, and appearance."
         },
         {
           "title": "Finishing of designer metals",
@@ -291,7 +299,7 @@
     },
     "story": {
       "eyebrow": "How Tri-Grid came to be",
-      "heading": "Three trades, one shared problem",
+      "heading": "Three trades, one team",
       "text": "Tri-Grid is being founded by three colleagues who each have long-standing experience in their own trade — electrical, machinery, and construction. Working on shared projects, they noticed the same problem again and again: coordinating between trades often takes more time and energy than the work itself. They decided to change that and bring their trades together under one name, so the client deals with one point of contact instead of three."
     },
     "why": {

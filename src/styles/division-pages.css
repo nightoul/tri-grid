@@ -150,9 +150,9 @@
     linear-gradient(180deg, rgba(7, 20, 38, 0.5) 0%, rgba(7, 20, 38, 0.2) 12%, rgba(7, 20, 38, 0) 24%);
 }
 
-/* Jemný světle modrý diagonální odlesk u levého okraje — skoro neviditelný,
-   jen lehce oživí plochou modrou */
-.division-page .division-page-hero__overlay--steel::before {
+/* Jemný světle modrý diagonální odlesk u levého okraje (všechny divize) —
+   skoro neviditelný, jen lehce oživí tmavou plochu pod textem */
+.division-page .division-page-hero__overlay::before {
   content: '';
   position: absolute;
   left: 5%;
@@ -178,7 +178,7 @@
     background-image: linear-gradient(180deg, rgba(9, 44, 92, 0.78) 0%, rgba(9, 44, 92, 0.7) 100%);
   }
 
-  .division-page .division-page-hero__overlay--steel::before {
+  .division-page .division-page-hero__overlay::before {
     display: none;
   }
 }
@@ -325,7 +325,7 @@
    (sdílí stejné třídy) a přebije pravidla v responsive.css. */
 @media (max-width: 640px) {
   .division-page .division-page-hero {
-    padding-top: 118px;
+    padding-top: 148px;
   }
 }
 
@@ -333,12 +333,12 @@
   gap: 20px;
 }
 
-/* Nízké hero na počítači: malá mezera pod logem v hlavičce (~21 px),
-   menší ikona a těsnější rozestupy, aby fotka byla dole oříznutá jako
-   v mockupu. Mobil má vlastní rozvržení (výše, padding-top 118 px). */
+/* Nízké hero na počítači: ~50 px mezera pod logem v hlavičce, menší ikona
+   a těsnější rozestupy; spodní padding 25 px drží všechny divize na 436 px.
+   Mobil má vlastní rozvržení (výše, padding-top 148 px). */
 @media (min-width: 641px) {
   .division-page .division-page-hero {
-    padding: 117px 0 30px;
+    padding: 147px 0 25px;
   }
 
   .division-page .division-page-hero__head {
@@ -403,6 +403,46 @@
   height: 18px;
 }
 
+/* Text v hero divizí je o 10 % menší než výchozí (nadpis, podtitulek,
+   odstavec i tlačítko). Jen .division-page — úvodní stránka a O nás
+   sdílí část tříd a zůstávají beze změny. */
+.division-page .division-page-hero__head h1 {
+  font-size: clamp(1.53rem, 5.4vw, 2.34rem);
+}
+
+.division-page .division-page-hero__subtitle {
+  font-size: clamp(0.945rem, 1.44vw, 1.125rem);
+}
+
+.division-page .division-page-hero .hero__lede {
+  font-size: 0.945rem;
+}
+
+.division-page .division-page-hero__cta {
+  gap: 9px;
+  min-height: 41px;
+  padding: 0 20px;
+  font-size: 0.9rem;
+}
+
+.division-page .division-page-hero__cta .line-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* odstavec má na telefonu a velkých monitorech vlastní velikost (responsive.css) */
+@media (max-width: 640px) {
+  .division-page .division-page-hero .hero__lede {
+    font-size: 0.882rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .division-page .division-page-hero .hero__lede {
+    font-size: 1.035rem;
+  }
+}
+
 /* Odrážky v kartě služby (místo popisu) */
 .service-card__list {
   margin: 0;
@@ -429,18 +469,23 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--accent, var(--blue-400));
+  background: var(--blue-400);
 }
 
 /* Pozadí všech divizních stránek: teplé světlé plátno s jemnou texturou
    (původně jen Elektrotechnika, klient ho chtěl všude). Sekce ho přebírají
-   přes --paper-50 / --paper-100 / --texture-light. */
-.division-page {
+   přes --paper-50 / --paper-100 / --texture-light. Stejné barvy používá
+   i sekce "Jak probíhá spolupráce" na úvodní stránce (.how). */
+.division-page,
+.how {
   --paper-50: #fffefa;
   --paper-100: #fff7e9;
   --texture-light:
     repeating-linear-gradient(115deg, rgba(168, 88, 50, 0.045) 0, rgba(168, 88, 50, 0.045) 1px, transparent 1px, transparent 4px),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+.division-page {
   background: var(--texture-light), var(--paper-50);
 }
 
@@ -449,9 +494,9 @@
   border-bottom: 1px solid var(--paper-100);
 }
 
+/* Kovovýroba: fotky jsou trochu matné, lehce je rozjasníme */
 .division-overview--steel .division-overview__media img {
   filter: brightness(1.08) saturate(1.12);
-  box-shadow: 0 18px 42px rgba(15, 42, 74, 0.12);
 }
 
 .division-overview__inner {
@@ -501,49 +546,6 @@
   gap: 24px;
 }
 
-.service-section--steel,
-.process-section--steel { --accent: var(--blue-400); }
-.service-section--brick,
-.process-section--brick { --accent: var(--brick-500); }
-
-.service-card {
-  background: var(--paper-50);
-  border-radius: 8px;
-  padding: 32px 28px;
-}
-
-.service-card__icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 20px;
-}
-
-.service-card__icon-ring {
-  fill: none;
-  stroke: var(--accent, var(--blue-400));
-  stroke-width: 2;
-  opacity: 0.35;
-}
-
-.service-card__icon-glyph {
-  fill: var(--accent, var(--blue-400));
-}
-
-.service-card__icon-glyph--stroke {
-  stroke: var(--accent, var(--blue-400));
-  fill: none;
-}
-
-.service-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 8px;
-}
-
-.service-card p {
-  font-size: 0.92rem;
-  margin: 0;
-}
-
 /* Division page: process steps */
 .process-section {
   padding: 88px 0;
@@ -568,7 +570,7 @@
 }
 
 .process-step {
-  border-top: 2px solid var(--accent, var(--blue-400));
+  border-top: 2px solid var(--blue-400);
   padding-top: 16px;
 }
 
@@ -576,7 +578,7 @@
   display: block;
   font-family: var(--font-body);
   font-size: 0.8rem;
-  color: var(--accent, var(--blue-400));
+  color: var(--blue-400);
 }
 
 .process-step h3 {
@@ -661,7 +663,7 @@
   gap: 18px;
 }
 
-.service-card--media {
+.service-card {
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -670,7 +672,7 @@
   background: #fff;
 }
 
-.division-page .service-section .service-card--media {
+.division-page .service-section .service-card {
   border: 0;
   box-shadow: 0 10px 30px rgba(15, 42, 74, 0.1);
 }
@@ -698,16 +700,17 @@
   width: 26px;
   height: 26px;
   margin-top: 1px;
-  color: var(--accent, var(--blue-400));
+  color: var(--blue-400);
 }
 
-.service-card--media h3 {
+.service-card h3 {
   margin: 0;
   font-size: 1rem;
   line-height: 1.3;
 }
 
-.service-card--media p {
+.service-card p {
+  margin: 0;
   font-size: 0.86rem;
   line-height: 1.55;
 }
@@ -739,10 +742,10 @@
   place-items: center;
   width: 48px;
   height: 48px;
-  border: 1.5px solid color-mix(in srgb, var(--accent, var(--blue-400)) 45%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--blue-400) 45%, transparent);
   border-radius: 50%;
   background: #fff;
-  color: var(--accent, var(--blue-400));
+  color: var(--blue-400);
 }
 
 .process-step__icon .line-icon {
@@ -759,7 +762,7 @@
 .process-step__line {
   flex: 1;
   height: 1.5px;
-  background: color-mix(in srgb, var(--accent, var(--blue-400)) 40%, transparent);
+  background: color-mix(in srgb, var(--blue-400) 40%, transparent);
 }
 
 .process-steps--icons .process-step:last-child .process-step__line {
