@@ -57,6 +57,27 @@
         }
       ]
     },
+    "process": {
+      "heading": "From inquiry to delivery",
+      "steps": [
+        {
+          "title": "Inquiry and consultation",
+          "desc": "We discuss your requirements, the scope of work, and possible solutions."
+        },
+        {
+          "title": "Design and quote",
+          "desc": "We prepare a technical solution and a tailored quote."
+        },
+        {
+          "title": "Delivery",
+          "desc": "We handle professional installation and commissioning."
+        },
+        {
+          "title": "Handover and service",
+          "desc": "We carry out inspections, hand over the documentation, and provide follow-up service."
+        }
+      ]
+    },
     "contact": {
       "eyebrow": "Contact",
       "heading": "Let's talk about your project",
@@ -233,29 +254,31 @@
           "desc": "Water supply, sewerage, gas, and heating distribution systems. Construction of utility networks and service connections."
         }
       ],
+      "stepsHeading": "Four steps from inquiry to delivery",
       "steps": [
         {
           "title": "Inquiry and consultation",
-          "desc": "We go over the scope of the build, your vision, and a rough budget."
+          "desc": "We discuss your requirements, the scope of work, and possible solutions."
         },
         {
-          "title": "Project and quote",
-          "desc": "We prepare or review the project documentation and price quote."
+          "title": "Design and quote",
+          "desc": "We prepare a technical solution, a schedule, and a tailored quote."
         },
         {
-          "title": "Construction",
-          "desc": "We carry out the construction work on schedule, with ongoing quality control."
+          "title": "Construction and delivery",
+          "desc": "We coordinate the work, ensure professional execution, and check quality throughout."
         },
         {
-          "title": "Handover and documentation",
-          "desc": "We hand over the finished work along with full documentation and inspections."
+          "title": "Handover and service",
+          "desc": "We hand over the finished work and documentation and provide follow-up service if needed."
         }
       ],
       "galleryHeading": "Construction work in practice",
-      "galleryCaptions": [
-        "Shell construction",
-        "Masonry work",
-        "Finishing work"
+      "galleryAlts": [
+        "Drywall ceiling",
+        "Plant room with heating distribution",
+        "New commercial building",
+        "Paved areas and landscaping"
       ],
       "ctaText": "We'll find a suitable, reliable technical solution for your construction project."
     }

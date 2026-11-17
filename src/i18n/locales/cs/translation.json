@@ -57,6 +57,27 @@
         }
       ]
     },
+    "process": {
+      "heading": "Od poptávky k realizaci",
+      "steps": [
+        {
+          "title": "Poptávka a konzultace",
+          "desc": "Probereme vaše požadavky, rozsah prací a možnosti řešení."
+        },
+        {
+          "title": "Návrh a nabídka",
+          "desc": "Připravíme technické řešení a cenovou nabídku na míru."
+        },
+        {
+          "title": "Realizace",
+          "desc": "Zajistíme odbornou montáž a uvedení do provozu."
+        },
+        {
+          "title": "Předání a servis",
+          "desc": "Provedeme revize, předáme dokumentaci a zajistíme následný servis."
+        }
+      ]
+    },
     "contact": {
       "eyebrow": "Kontakt",
       "heading": "Pojďme probrat váš projekt",
@@ -233,29 +254,31 @@
           "desc": "Realizace vodovodních, kanalizačních, plynových a vytápěcích rozvodů. Výstavba inženýrských sítí a přípojek."
         }
       ],
+      "stepsHeading": "Čtyři kroky od poptávky k realizaci",
       "steps": [
         {
           "title": "Poptávka a konzultace",
-          "desc": "Probereme rozsah stavby, představy a orientační rozpočet."
+          "desc": "Probereme vaše požadavky, rozsah prací a možnosti řešení."
         },
         {
-          "title": "Projekt a nacenění",
-          "desc": "Připravíme nebo zkontrolujeme projektovou dokumentaci a cenovou nabídku."
+          "title": "Návrh a nabídka",
+          "desc": "Připravíme technické řešení, harmonogram a cenovou nabídku na míru."
         },
         {
-          "title": "Realizace",
-          "desc": "Provedeme stavební práce podle harmonogramu, s průběžnou kontrolou kvality."
+          "title": "Realizace a výstavba",
+          "desc": "Zajistíme koordinaci prací, odborné provedení a průběžnou kontrolu kvality."
         },
         {
-          "title": "Předání a dokumentace",
-          "desc": "Předáme dokončené dílo včetně veškeré dokumentace a revizí."
+          "title": "Předání a servis",
+          "desc": "Předáme hotové dílo, dokumentaci a zajistíme případný následný servis."
         }
       ],
       "galleryHeading": "Stavebnictví v praxi",
-      "galleryCaptions": [
-        "Hrubá stavba",
-        "Zednické práce",
-        "Dokončovací práce"
+      "galleryAlts": [
+        "Sádrokartonový podhled",
+        "Technická místnost a rozvody vytápění",
+        "Novostavba komerčního objektu",
+        "Zpevněné plochy a sadové úpravy"
       ],
       "ctaText": "Najdeme pro vás vhodné technické a spolehlivé řešení v oblasti stavebnictví."
     }

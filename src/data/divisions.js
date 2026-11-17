@@ -23,9 +23,10 @@ import kovoGalerieDesign from '../assets/images/kovovyroba-galerie-designove-kov
 
 import stavebnictviBg from '../assets/images/Stavebnictvi_bg.jpg'
 import stavebnictvi1 from '../assets/images/stavebnictvi1.jpg'
-import hrubaStavba from '../assets/images/stavebnictvi-hruba-stavba.jpg'
-import zednickePrace from '../assets/images/stavebnictvi-zednicke-prace.jpg'
-import dokoncovaciPrace from '../assets/images/stavebnictvi-dokoncovaci-prace.jpg'
+import stavbaGalerieSadrokarton from '../assets/images/stavebnictvi-galerie-sadrokarton.webp'
+import stavbaGalerieTechnicka from '../assets/images/stavebnictvi-galerie-technicka-mistnost.webp'
+import stavbaGalerieObjekt from '../assets/images/stavebnictvi-galerie-komercni-objekt.webp'
+import stavbaGalerieZpevnene from '../assets/images/stavebnictvi-galerie-zpevnene-plochy.webp'
 
 // Texty (label, tagline, služby...) žijí v překladových slovnících pod klíčem
 // divisionsData.<id> — tady zůstává jen strukturální/vizuální informace.
@@ -86,7 +87,13 @@ const divisions = [
     overviewImage: stavebnictvi1,
     serviceIcons: ['build', 'finish', 'pipes'],
     stepIcons: ['chat', 'document', 'gear', 'check'],
-    galleryImages: [hrubaStavba, zednickePrace, dokoncovaciPrace],
+    // Pořadí musí sedět s polem "galleryAlts" v JSON.
+    galleryImages: [
+      stavbaGalerieSadrokarton, // Sádrokartonový podhled
+      stavbaGalerieTechnicka, // Technická místnost a rozvody vytápění
+      stavbaGalerieObjekt, // Novostavba komerčního objektu
+      stavbaGalerieZpevnene, // Zpevněné plochy a sadové úpravy
+    ],
   },
 ]
 

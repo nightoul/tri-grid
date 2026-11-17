@@ -8,14 +8,17 @@ import heroBg from '../assets/images/hero-bg.jpg'
 import whyUsImage from '../assets/images/why-us-handshake.jpg'
 import CircuitAnimation from '../components/CircuitAnimation.jsx'
 
-// Ikony k bodům "Proč Tri-Grid?" (pořadí = home.why.list v JSON)
+// Ikony k bodům "Proč Tri-Grid?" a ke krokům spolupráce
+// (pořadí = home.why.list a home.process.steps v JSON)
 const WHY_ICONS = ['bolt', 'shield', 'layers', 'handshake']
+const PROCESS_ICONS = ['chat', 'document', 'helmet', 'checkbox']
 
 function Homepage() {
   const { t } = useTranslation()
   usePageTitle()
   const { lang } = useParams()
   const whyList = t('home.why.list', { returnObjects: true })
+  const processSteps = t('home.process.steps', { returnObjects: true })
 
   function handleInquirySubmit(event) {
     event.preventDefault()
@@ -76,7 +79,7 @@ function Homepage() {
       <section className="why">
         <div className="container why__inner">
           <div className="why__text">
-            <p className="eyebrow why__eyebrow">{t('home.why.eyebrow')}</p>
+            <p className="eyebrow eyebrow--line">{t('home.why.eyebrow')}</p>
             <h2>{t('home.why.heading')}</h2>
             <p>{t('home.why.intro')}</p>
           </div>
@@ -96,6 +99,23 @@ function Homepage() {
         </div>
         <div className="why__media">
           <img src={whyUsImage} alt="" loading="lazy" />
+        </div>
+      </section>
+
+      <section className="how">
+        <div className="container">
+          <p className="eyebrow eyebrow--line">{t('common.howWeWorkEyebrow')}</p>
+          <h2>{t('home.process.heading')}</h2>
+          <ol className="how-steps">
+            {processSteps.map((step, i) => (
+              <li className="how-step" key={step.title}>
+                <LineIcon name={PROCESS_ICONS[i]} className="how-step__icon" />
+                <span className="how-step__num">{String(i + 1).padStart(2, '0')}</span>
+                <h3>{step.title}</h3>
+                <p>{step.desc}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
