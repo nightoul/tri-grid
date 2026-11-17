@@ -6,7 +6,7 @@
   overflow: hidden;
   background: var(--navy-950);
   color: var(--paper-50);
-  padding: 191px 0 60px;
+  padding: 161px 0 60px;
 }
 
 .hero__bg {
@@ -151,17 +151,6 @@
 
 .hero__button--primary:hover {
   background: color-mix(in srgb, var(--blue-400) 82%, #fff);
-}
-
-.hero__button--secondary {
-  border-color: rgba(255, 255, 255, 0.45);
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
-}
-
-.hero__button--secondary:hover {
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.14);
 }
 
 .hero__button .line-icon {

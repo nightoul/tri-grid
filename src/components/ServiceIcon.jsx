@@ -21,15 +21,18 @@ function ServiceIcon({ variant }) {
         </g>
       )}
 
-      {variant === 'supervise' && (
+      {/* koleno potrubí s přírubami — rozvody a infrastruktura */}
+      {variant === 'pipes' && (
         <g
           className="service-card__icon-glyph service-card__icon-glyph--stroke"
           strokeWidth="3.2"
           strokeLinecap="round"
+          strokeLinejoin="round"
           fill="none"
         >
-          <path d="M12 27 A12 12 0 0 1 36 27" />
-          <path d="M8 27 H40" />
+          <path d="M10 18 H24 A7 7 0 0 1 31 25 V38" />
+          <path d="M15 13.5 V22.5" />
+          <path d="M26.5 32 H35.5" />
         </g>
       )}
     </svg>

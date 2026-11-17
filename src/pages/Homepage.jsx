@@ -3,11 +3,13 @@ import { useTranslation } from 'react-i18next'
 import HexIcon from '../components/HexIcon.jsx'
 import LineIcon from '../components/LineIcon.jsx'
 import divisions from '../data/divisions.js'
-import logoIcon from '../assets/logo-emblem.svg'
 import usePageTitle from '../hooks/usePageTitle.js'
 import heroBg from '../assets/images/hero-bg.jpg'
 import whyUsImage from '../assets/images/why-us-handshake.jpg'
 import CircuitAnimation from '../components/CircuitAnimation.jsx'
+
+// Ikony k bodům "Proč Tri-Grid?" (pořadí = home.why.list v JSON)
+const WHY_ICONS = ['bolt', 'shield', 'layers', 'handshake']
 
 function Homepage() {
   const { t } = useTranslation()
@@ -51,10 +53,6 @@ function Homepage() {
               <LineIcon name="send" />
               {t('home.ctaInquiry')}
             </Link>
-            {/* Realizace jsou v galeriích na stránkách divizí, tlačítko vede na jejich dlaždice. */}
-            <Link to={`/${lang}#divize`} className="hero__button hero__button--secondary">
-              {t('home.ctaWork')}
-            </Link>
           </div>
 
           <div className="division-grid" id="divize">
@@ -75,50 +73,31 @@ function Homepage() {
         </div>
       </section>
 
-      <section className="stats-strip">
-        <div className="container stats-strip__inner">
-          <div className="stat stat--logo">
-            <img src={logoIcon} alt="Tri-Grid s.r.o." className="stat__logo" />
+      <section className="why">
+        <div className="container why__inner">
+          <div className="why__text">
+            <p className="eyebrow why__eyebrow">{t('home.why.eyebrow')}</p>
+            <h2>{t('home.why.heading')}</h2>
+            <p>{t('home.why.intro')}</p>
           </div>
-          <div className="stat">
-            <span className="stat__value">3</span>
-            <span className="stat__label">{t('home.stats.founders')}</span>
-          </div>
-          <div className="stat">
-            <span className="stat__value">1</span>
-            <span className="stat__label">{t('home.stats.contact')}</span>
-          </div>
-          {/* PLACEHOLDER — upřesnit s klientem před spuštěním webu */}
-          <div className="stat">
-            <span className="stat__value">10 000+</span>
-            <span className="stat__label">{t('home.stats.orders')}</span>
-          </div>
+          <ul className="why-list">
+            {whyList.map((item, i) => (
+              <li key={item.title}>
+                <span className="why-list__icon">
+                  <LineIcon name={WHY_ICONS[i]} />
+                </span>
+                <span>
+                  <strong>{item.title}</strong>
+                  {item.desc}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="why__media">
+          <img src={whyUsImage} alt="" loading="lazy" />
         </div>
       </section>
-
-      <div className="division-overview division-overview--tight">
-        <div className="container division-overview__inner">
-          <div className="division-overview__text">
-            <p className="eyebrow">{t('home.why.eyebrow')}</p>
-            <h2 className="why-heading">{t('home.why.heading')}</h2>
-            <p>{t('home.why.intro')}</p>
-            <ul className="why-list">
-              {whyList.map((item) => (
-                <li key={item.title}>
-                  <strong>{item.title}</strong> — {item.desc}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="division-overview__media">
-            <img
-              src={whyUsImage}
-              alt=""
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
 
       <section className="contact" id="kontakt">
         <div className="container contact__inner">

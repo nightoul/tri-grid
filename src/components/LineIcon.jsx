@@ -1,5 +1,5 @@
 // Tenké obrysové ikony (24×24, barva podle currentColor) pro karty služeb
-// a kroky spolupráce na stránkách divizí.
+// a kroky spolupráce na stránkách divizí a pro sekci "Proč Tri-Grid?".
 const paths = {
   // vrstvené desky — stavební a architektonická kovovýroba
   layers: (
@@ -71,6 +71,20 @@ const paths = {
     <>
       <path d="M21 3 L3 10.5 L10 13.5 L13.5 21 Z" />
       <path d="M21 3 L10 13.5" />
+    </>
+  ),
+  // štít — odbornost a bezpečnost
+  shield: (
+    <path d="M12 3 L19 5.8 V11.5 C19 15.9 16.2 19.2 12 21 C7.8 19.2 5 15.9 5 11.5 V5.8 Z" />
+  ),
+  // podání rukou — individuální přístup
+  handshake: (
+    <>
+      <path d="M11 17 L13 19 A1 1 0 0 0 16 16" />
+      <path d="M14 14 L16.5 16.5 A1 1 0 0 0 19.5 13.5 L15.6 9.6 A3 3 0 0 0 11.4 9.6 L10.5 10.5 A1 1 0 0 1 7.5 7.5 L10.3 4.7 A5.8 5.8 0 0 1 17.4 3.8 L17.9 4.1 A2 2 0 0 0 19.3 4.4 L21 4" />
+      <path d="M21 3 L22 14 H20" />
+      <path d="M3 3 L2 14 L8.5 20.5 A1 1 0 0 0 11.5 17.5" />
+      <path d="M3 4 H11" />
     </>
   ),
   // fajfka v kruhu — kontrola a předání

@@ -46,8 +46,14 @@ a {
   color: inherit;
 }
 
+/* Šířka obsahu; na velkých monitorech ji zvětšuje responsive.css.
+   Jako proměnná, aby ji mohly použít i sekce přesahující .container. */
+:root {
+  --container-max: 1120px;
+}
+
 .container {
-  max-width: 1120px;
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 24px;
 }

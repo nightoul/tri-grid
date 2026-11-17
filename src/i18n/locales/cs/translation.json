@@ -34,32 +34,26 @@
     "title": "Tři obory. Jeden partner.",
     "lede": "Komplexní řešení v oblasti elektrotechniky, kovovýroby a stavebnictví pod jednou střechou — od návrhu po realizaci.",
     "ctaInquiry": "Nezávazná poptávka",
-    "ctaWork": "Naše realizace",
-    "stats": {
-      "founders": "zakladatelé s praxí v oboru",
-      "contact": "kontakt pro celý projekt",
-      "orders": "zakázek"
-    },
     "why": {
       "eyebrow": "Proč Tri-Grid?",
       "heading": "Profesionální realizace od jednoho partnera",
       "intro": "Jsme česká společnost, která propojuje tři klíčové oblasti — elektrotechniku, kovovýrobu a stavebnictví. Nabízíme komplexní služby, odborný přístup a spolehlivou realizaci projektů různých rozsahů.",
       "list": [
         {
-          "title": "Osobní přístup",
-          "desc": "každou zakázku řešíme individuálně, přímo s někým z týmu, ne přes vrstvu obchodníků."
+          "title": "Komplexní služby",
+          "desc": "Elektro, kov, stavba – vše na jednom místě"
         },
         {
-          "title": "Zkušenost napříč obory",
-          "desc": "elektro, stroje i stavby máme pokryté lidmi s dlouholetou praxí."
+          "title": "Odbornost a zkušenosti",
+          "desc": "Zkušený tým a prověřené postupy"
         },
         {
-          "title": "Koordinace bez ztrát",
-          "desc": "divize spolu komunikují napřímo, takže se nic neztratí mezi řemesly."
+          "title": "Spolehlivost a kvalita",
+          "desc": "Důraz na bezpečnost, funkčnost a dlouhou životnost"
         },
         {
-          "title": "Transparentní nabídky",
-          "desc": "jasné nacenění bez skrytých položek."
+          "title": "Individuální přístup",
+          "desc": "Řešení na míru vašim požadavkům"
         }
       ]
     },
@@ -219,23 +213,24 @@
     "stavebnictvi": {
       "label": "Stavebnictví",
       "tagline": "Od základů po dokončení",
-      "heroLede": "Novostavby, rekonstrukce a dokončovací práce s důrazem na kvalitu, harmonogram a jasnou komunikaci od základů po předání klíčů.",
+      "heroSubtitle": "Kompletní stavební realizace. Rekonstrukce. Infrastruktura.",
+      "heroLede": "Realizujeme novostavby, rekonstrukce a modernizace objektů včetně technických zařízení a infrastruktury budov. Zajišťujeme kvalitní provedení, efektivní organizaci a spolehlivou realizaci.",
       "heroCta": "Nezávazná poptávka",
-      "overviewHeading": "Od základové desky po předání klíčů",
-      "overviewText": "Realizujeme novostavby i rekonstrukce — hrubou stavbu, zednické a dokončovací práce i stavební dozor. Díky propojení s divizemi kovovýroby a elektrotechniky zvládneme koordinovat i technicky náročnější zakázky bez zbytečných prodlev mezi řemesly.",
+      "overviewHeading": "Spolehlivá stavební realizace od návrhu po předání",
+      "overviewText": "Zajistíme kompletní výstavbu, rekonstrukce i modernizace objektů, včetně technických zařízení a napojení na infrastrukturu. Dbáme na kvalitu provedení, dodržení termínů a bezpečný průběh realizace.",
       "servicesHeading": "Tři pilíře divize Stavebnictví",
       "services": [
         {
-          "title": "Novostavby a rekonstrukce",
-          "desc": "Kompletní realizace staveb od základů po hrubou stavbu, včetně rekonstrukcí stávajících objektů."
+          "title": "Kompletní stavební realizace",
+          "desc": "Výstavba komerčních, průmyslových a bytových objektů. Zemní práce, nosné konstrukce, fasády, izolace a dokončovací práce."
         },
         {
-          "title": "Zednické a dokončovací práce",
-          "desc": "Omítky, obklady, podlahy a další dokončovací práce provedené s důrazem na detail."
+          "title": "Rekonstrukce a modernizace",
+          "desc": "Úpravy interiérů i exteriérů, změny dispozic, podlahy, obklady, sádrokarton, výměny oken a dveří, sanace a zateplení."
         },
         {
-          "title": "Stavební dozor a příprava projektů",
-          "desc": "Kontrola kvality a postupu prací, koordinace řemesel a příprava projektové dokumentace."
+          "title": "Technická zařízení a infrastruktura",
+          "desc": "Realizace vodovodních, kanalizačních, plynových a vytápěcích rozvodů. Výstavba inženýrských sítí a přípojek."
         }
       ],
       "steps": [

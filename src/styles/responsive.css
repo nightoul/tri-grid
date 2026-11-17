@@ -21,20 +21,6 @@
 }
 
 @media (max-width: 640px) {
-  .division-overview__text .why-heading {
-    max-width: 16ch;
-  }
-
-  .stats-strip__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .stat {
-    min-width: 0;
-  }
-
   .site-header__inner {
     justify-content: space-between;
     min-height: 82px;
@@ -81,7 +67,7 @@
   }
 
   .hero {
-    padding: 143px 0 44px;
+    padding: 113px 0 44px;
   }
 
   .division-page-hero {
@@ -96,7 +82,7 @@
     margin-bottom: 10px;
   }
 
-  .division-overview:not(.division-overview--tight) {
+  .division-overview {
     padding-top: 28px;
   }
 
@@ -178,12 +164,12 @@
 
 /* XL monitors */
 @media (min-width: 1440px) {
-  .container {
-    max-width: 1320px;
+  :root {
+    --container-max: 1320px;
   }
 
   .hero {
-    padding: 179px 0 84px;
+    padding: 149px 0 84px;
   }
 
   .hero h1 {
@@ -211,8 +197,8 @@
 }
 
 @media (min-width: 1800px) {
-  .container {
-    max-width: 1440px;
+  :root {
+    --container-max: 1440px;
   }
 
   .hero h1 {

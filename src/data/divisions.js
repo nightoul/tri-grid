@@ -84,7 +84,7 @@ const divisions = [
     type: 'roof',
     heroImage: stavebnictviBg,
     overviewImage: stavebnictvi1,
-    serviceIcons: ['build', 'finish', 'supervise'],
+    serviceIcons: ['build', 'finish', 'pipes'],
     stepIcons: ['chat', 'document', 'gear', 'check'],
     galleryImages: [hrubaStavba, zednickePrace, dokoncovaciPrace],
   },

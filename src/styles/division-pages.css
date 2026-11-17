@@ -454,10 +454,6 @@
   box-shadow: 0 18px 42px rgba(15, 42, 74, 0.12);
 }
 
-.division-overview--tight {
-  padding-top: 20px;
-}
-
 .division-overview__inner {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -470,24 +466,13 @@
   max-width: 16ch;
 }
 
-.division-overview:not(.division-overview--tight) .division-overview__text {
+.division-overview .division-overview__text {
   align-self: start;
   padding-top: 44px;
 }
 
-.division-overview:not(.division-overview--tight) .division-overview__media {
+.division-overview .division-overview__media {
   padding-top: 32px;
-}
-
-/* Homepage "Proč Tri-Grid?": širší sloupec textu, aby se nadpis vešel
-   na jeden řádek; na užších oknech se zalomí (nikdy nezajede pod fotku). */
-.division-overview--tight .division-overview__inner {
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 48px;
-}
-
-.division-overview__text .why-heading {
-  max-width: none;
 }
 
 .division-overview__media img {
@@ -620,7 +605,7 @@
   gap: 48px;
 }
 
-/* tři třídy kvůli přebití .division-overview:not(--tight) výše */
+/* tři třídy, aby to přebilo obecná pravidla .division-overview výše */
 .division-page .division-overview .division-overview__text,
 .division-page .division-overview .division-overview__media {
   align-self: start;
@@ -781,8 +766,8 @@
   visibility: hidden;
 }
 
-/* Division page: gallery (carousel na všech divizích). Pás fotek začíná
-   zarovnaný s obsahem a vpravo přetéká až k okraji okna. */
+/* Division page: gallery (carousel na všech divizích). Pás fotek je
+   v šířce obsahu stránky, fotky se ořezávají na jejím okraji. */
 .gallery-section {
   padding: 28px 0 56px;
   background: var(--texture-light), var(--paper-100);
@@ -790,8 +775,6 @@
 
 .gallery-carousel {
   --carousel-gap: 18px;
-  /* levý okraj obsahu; přesnou hodnotu dopočítá GalleryCarousel.jsx */
-  --carousel-inset: 24px;
 }
 
 .gallery-carousel__header {
@@ -872,11 +855,10 @@
   display: flex;
   gap: var(--carousel-gap);
   margin: 0;
-  padding: 4px var(--carousel-inset) 18px;
+  padding: 4px 0 18px;
   list-style: none;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-padding-inline: var(--carousel-inset);
   overscroll-behavior-x: contain;
   scrollbar-width: none;
   cursor: grab;
@@ -900,6 +882,11 @@
 .gallery-carousel__slide {
   flex: 0 0 clamp(280px, 34vw, 440px);
   scroll-snap-align: start;
+}
+
+/* poslední fotka se zarovná k pravému okraji, jinak by k ní pás nedojel */
+.gallery-carousel__slide:last-child {
+  scroll-snap-align: end;
 }
 
 .gallery-carousel__slide figure {
@@ -1151,11 +1138,11 @@
     height: 280px;
   }
 
-  .division-overview:not(.division-overview--tight) .division-overview__text {
+  .division-overview .division-overview__text {
     padding-top: 0;
   }
 
-  .division-overview:not(.division-overview--tight) .division-overview__media {
+  .division-overview .division-overview__media {
     padding-top: 0;
   }
 

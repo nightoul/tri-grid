@@ -34,32 +34,26 @@
     "title": "Three trades. One partner.",
     "lede": "Complete solutions in electrical engineering, metalworking, and construction under one roof — from design to delivery.",
     "ctaInquiry": "Request a quote",
-    "ctaWork": "Our work",
-    "stats": {
-      "founders": "founders with hands-on industry experience",
-      "contact": "point of contact for the whole project",
-      "orders": "completed jobs"
-    },
     "why": {
       "eyebrow": "Why Tri-Grid?",
       "heading": "Professional delivery from a single partner",
       "intro": "We are a Czech company that brings together three key fields — electrical engineering, metalworking, and construction. We offer comprehensive services, an expert approach, and reliable delivery of projects of all sizes.",
       "list": [
         {
-          "title": "Personal approach",
-          "desc": "we handle every project individually, working directly with someone from the team — not through a layer of salespeople."
+          "title": "Comprehensive services",
+          "desc": "Electrical, metal, construction – all in one place"
         },
         {
-          "title": "Experience across trades",
-          "desc": "electrical, machinery, and construction are all covered by people with years of hands-on experience."
+          "title": "Expertise and experience",
+          "desc": "An experienced team and proven methods"
         },
         {
-          "title": "Coordination without gaps",
-          "desc": "our divisions communicate directly with each other, so nothing gets lost between trades."
+          "title": "Reliability and quality",
+          "desc": "Focus on safety, functionality, and long service life"
         },
         {
-          "title": "Transparent quotes",
-          "desc": "clear pricing with no hidden items."
+          "title": "Individual approach",
+          "desc": "Solutions tailored to your requirements"
         }
       ]
     },
@@ -219,23 +213,24 @@
     "stavebnictvi": {
       "label": "Construction",
       "tagline": "From foundation to finish",
-      "heroLede": "New builds, renovations, and finishing work with a focus on quality, schedule, and clear communication — from foundation to the keys in your hand.",
+      "heroSubtitle": "Complete construction. Renovations. Infrastructure.",
+      "heroLede": "We deliver new builds, renovations, and modernisation of buildings, including technical installations and building infrastructure. We ensure quality workmanship, efficient organisation, and reliable delivery.",
       "heroCta": "Request a quote",
-      "overviewHeading": "From the foundation slab to the keys in your hand",
-      "overviewText": "We handle new builds and renovations — shell construction, masonry and finishing work, and site supervision. Thanks to the connection with our Machinery and Electrical divisions, we can coordinate even technically demanding projects without delays between trades.",
+      "overviewHeading": "Reliable construction from design to handover",
+      "overviewText": "We deliver complete construction, renovation, and modernisation of buildings, including technical installations and utility connections. We focus on quality workmanship, meeting deadlines, and safe project execution.",
       "servicesHeading": "The three pillars of the Construction division",
       "services": [
         {
-          "title": "New builds and renovations",
-          "desc": "Full construction from the foundation through the shell, including renovations of existing buildings."
+          "title": "Complete construction",
+          "desc": "Construction of commercial, industrial, and residential buildings. Earthworks, load-bearing structures, facades, insulation, and finishing work."
         },
         {
-          "title": "Masonry and finishing work",
-          "desc": "Plastering, tiling, flooring, and other finishing work carried out with attention to detail."
+          "title": "Renovation and modernisation",
+          "desc": "Interior and exterior alterations, layout changes, flooring, tiling, drywall, window and door replacement, remediation, and thermal insulation."
         },
         {
-          "title": "Site supervision and project preparation",
-          "desc": "Quality and progress control, coordinating trades, and preparing project documentation."
+          "title": "Technical installations and infrastructure",
+          "desc": "Water supply, sewerage, gas, and heating distribution systems. Construction of utility networks and service connections."
         }
       ],
       "steps": [
