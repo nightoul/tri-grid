@@ -116,11 +116,21 @@
       "services": [
         {
           "title": "Complete electrical installations",
-          "desc": "Power and low-voltage wiring, switchboards, electrical connections, power supply and process circuits. Installation, renovation, and upgrades."
+          "items": [
+            "Power and low-voltage wiring.",
+            "Switchboards and electrical connections.",
+            "Power supply and process circuits.",
+            "Installation, renovation, and upgrades."
+          ]
         },
         {
           "title": "Inspections, servicing, and maintenance",
-          "desc": "Initial and periodic inspections of electrical installations, equipment, appliances, connections, and switchboards up to 1,000 V AC and 1,500 V DC. Servicing, diagnostics, and regular maintenance."
+          "items": [
+            "Initial and periodic inspections of electrical installations, equipment, and appliances.",
+            "Inspections of connections and switchboards up to 1,000 V AC and 1,500 V DC.",
+            "Servicing and diagnostics.",
+            "Regular maintenance."
+          ]
         },
         {
           "title": "Low-voltage systems",
@@ -172,15 +182,28 @@
       "services": [
         {
           "title": "Structural and architectural metalwork",
-          "desc": "Fabrication and installation of stainless steel and steel railings, staircases, handrails, canopies, gates, fencing, substructures, and bespoke metal features for interiors and exteriors."
+          "items": [
+            "Fabrication and installation of stainless steel and steel railings, staircases, and handrails.",
+            "Canopies, gates, and fencing.",
+            "Substructures and bespoke metal features for interiors and exteriors."
+          ]
         },
         {
           "title": "Metal grinding and polishing",
-          "desc": "Professional grinding, brushing, satin finishing, and polishing of stainless steel, brass, copper, aluminium, and other metals. Finishes from matte to high gloss and mirror polish."
+          "items": [
+            "Professional grinding and brushing.",
+            "Satin finishing and polishing of stainless steel, brass, copper, aluminium, and other metals.",
+            "Finishes from matte to high gloss and mirror polish."
+          ]
         },
         {
           "title": "Custom fabrication and welding",
-          "desc": "One-off and small-batch production to technical drawings or your own brief. TIG and MIG/MAG welding, assembly of structures, and final finishing of products."
+          "items": [
+            "One-off and small-batch production to technical drawings or your own brief.",
+            "TIG and MIG/MAG welding.",
+            "Assembly of structures.",
+            "Final finishing of products."
+          ]
         }
       ],
       "steps": [
@@ -251,15 +274,29 @@
       "services": [
         {
           "title": "Complete construction",
-          "desc": "Construction of commercial, industrial, and residential buildings. Earthworks, load-bearing structures, facades, insulation, and finishing work."
+          "items": [
+            "Construction of commercial, industrial, and residential buildings.",
+            "Earthworks and load-bearing structures.",
+            "Facades and insulation.",
+            "Finishing work."
+          ]
         },
         {
           "title": "Renovation and modernisation",
-          "desc": "Interior and exterior alterations, layout changes, flooring, tiling, drywall, window and door replacement, remediation, and thermal insulation."
+          "items": [
+            "Interior and exterior alterations and layout changes.",
+            "Flooring, tiling, and drywall.",
+            "Window and door replacement.",
+            "Remediation and thermal insulation."
+          ]
         },
         {
           "title": "Technical installations and infrastructure",
-          "desc": "Water supply, sewerage, gas, and heating distribution systems. Construction of utility networks and service connections."
+          "items": [
+            "Water supply and sewerage systems.",
+            "Gas and heating distribution.",
+            "Construction of utility networks and service connections."
+          ]
         }
       ],
       "stepsHeading": "Four steps from inquiry to delivery",

@@ -116,11 +116,21 @@
       "services": [
         {
           "title": "Kompletní elektroinstalace",
-          "desc": "Silnoproudé a slaboproudé rozvody, rozvaděče, elektrické přípojky, napájecí a technologické okruhy. Instalace, rekonstrukce a modernizace."
+          "items": [
+            "Silnoproudé a slaboproudé rozvody.",
+            "Rozvaděče a elektrické přípojky.",
+            "Napájecí a technologické okruhy.",
+            "Instalace, rekonstrukce a modernizace."
+          ]
         },
         {
           "title": "Revize, servis a údržba",
-          "desc": "Výchozí a pravidelné revize elektroinstalací, zařízení, spotřebičů, přípojek a rozvaděčů do 1 000 V AC a 1 500 V DC. Servis, diagnostika a pravidelná údržba."
+          "items": [
+            "Výchozí a pravidelné revize elektroinstalací, zařízení a spotřebičů.",
+            "Revize přípojek a rozvaděčů do 1 000 V AC a 1 500 V DC.",
+            "Servis a diagnostika.",
+            "Pravidelná údržba."
+          ]
         },
         {
           "title": "Slaboproudé systémy",
@@ -172,15 +182,28 @@
       "services": [
         {
           "title": "Stavební a architektonická kovovýroba",
-          "desc": "Výroba a montáž nerezových a ocelových zábradlí, schodišť, madel, přístřešků, bran, oplocení, podkonstrukcí a atypických kovových prvků pro interiéry i exteriéry."
+          "items": [
+            "Výroba a montáž nerezových a ocelových zábradlí, schodišť a madel.",
+            "Přístřešky, brány a oplocení.",
+            "Podkonstrukce a atypické kovové prvky pro interiéry i exteriéry."
+          ]
         },
         {
           "title": "Broušení a leštění kovů",
-          "desc": "Profesionální broušení, kartáčování, satinování a leštění nerezu, mosazi, mědi, hliníku a dalších kovů. Povrchové úpravy od matného provedení až po vysoký a zrcadlový lesk."
+          "items": [
+            "Profesionální broušení a kartáčování.",
+            "Satinování a leštění nerezu, mosazi, mědi, hliníku a dalších kovů.",
+            "Povrchové úpravy od matného provedení až po vysoký a zrcadlový lesk."
+          ]
         },
         {
           "title": "Zakázková výroba a svařování",
-          "desc": "Kusová a malosériová výroba podle technické dokumentace nebo individuálního zadání. Svařování metodami TIG a MIG/MAG, kompletace konstrukcí a finální opracování výrobků."
+          "items": [
+            "Kusová a malosériová výroba podle technické dokumentace nebo individuálního zadání.",
+            "Svařování metodami TIG a MIG/MAG.",
+            "Kompletace konstrukcí.",
+            "Finální opracování výrobků."
+          ]
         }
       ],
       "steps": [
@@ -251,15 +274,29 @@
       "services": [
         {
           "title": "Kompletní stavební realizace",
-          "desc": "Výstavba komerčních, průmyslových a bytových objektů. Zemní práce, nosné konstrukce, fasády, izolace a dokončovací práce."
+          "items": [
+            "Výstavba komerčních, průmyslových a bytových objektů.",
+            "Zemní práce a nosné konstrukce.",
+            "Fasády a izolace.",
+            "Dokončovací práce."
+          ]
         },
         {
           "title": "Rekonstrukce a modernizace",
-          "desc": "Úpravy interiérů i exteriérů, změny dispozic, podlahy, obklady, sádrokarton, výměny oken a dveří, sanace a zateplení."
+          "items": [
+            "Úpravy interiérů i exteriérů a změny dispozic.",
+            "Podlahy, obklady a sádrokarton.",
+            "Výměny oken a dveří.",
+            "Sanace a zateplení."
+          ]
         },
         {
           "title": "Technická zařízení a infrastruktura",
-          "desc": "Realizace vodovodních, kanalizačních, plynových a vytápěcích rozvodů. Výstavba inženýrských sítí a přípojek."
+          "items": [
+            "Vodovodní a kanalizační rozvody.",
+            "Plynové a vytápěcí rozvody.",
+            "Výstavba inženýrských sítí a přípojek."
+          ]
         }
       ],
       "stepsHeading": "Čtyři kroky od poptávky k realizaci",
