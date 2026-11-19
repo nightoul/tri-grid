@@ -1,0 +1,235 @@
+/* Stránka O nás: hero, Náš příběh, Jednatelé společnosti, Co nás spojuje */
+
+/* Hero: tmavě modrá vlevo pod textem, vpravo fotka konstrukce
+   (Unsplash, volná licence — viz src/assets/images/o-nas-hero.webp) */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 147px 0 56px;
+  background: var(--navy-900, #0b1d33);
+  color: var(--paper-50);
+}
+
+.about-hero__bg {
+  position: absolute;
+  inset: 0 0 0 30%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* plynulý přechod z modré plochy do fotky */
+.about-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #0f264a 0%, #0f264a 30%, rgba(15, 38, 74, 0.82) 45%, rgba(15, 38, 74, 0.35) 70%, rgba(15, 38, 74, 0.15) 100%),
+    linear-gradient(180deg, rgba(7, 20, 38, 0.55) 0%, rgba(7, 20, 38, 0) 30%);
+  pointer-events: none;
+}
+
+.about-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero h1 {
+  max-width: 17ch;
+  margin: 0;
+  color: var(--paper-50);
+  font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+  line-height: 1.15;
+}
+
+/* eyebrow s linkou za textem (hero a jednatelé) */
+.eyebrow--line-after {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-weight: 700;
+}
+
+.eyebrow--line-after::after {
+  content: '';
+  width: 52px;
+  height: 2px;
+  background: currentColor;
+}
+
+/* Nadpis s krátkou modrou linkou pod ním */
+.about-heading {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+}
+
+.about-heading::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 2px;
+  background: var(--blue-400);
+}
+
+/* Náš příběh: nadpis vlevo, text vpravo za tenkou dělicí čarou */
+.about-story {
+  padding: 56px 0;
+}
+
+.about-story__inner {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.55fr) 1.45fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-story__inner p {
+  max-width: 62ch;
+  margin: 0;
+  padding-left: 40px;
+  border-left: 1px solid color-mix(in srgb, var(--navy-800) 15%, transparent);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink-600);
+}
+
+/* Jednatelé: béžový pruh jako sekce na stránkách divizí (barvy viz .division-page) */
+.about-team {
+  padding: 40px 0 52px;
+  background: var(--texture-light), var(--paper-100);
+}
+
+.about-team__eyebrow {
+  margin-bottom: 20px;
+}
+
+.about-team__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-team__card {
+  padding: 28px 40px 26px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(15, 42, 74, 0.08);
+}
+
+.about-team__card h3 {
+  margin: 0 0 6px;
+  font-size: clamp(1.35rem, 1.9vw, 1.7rem);
+  color: var(--navy-800);
+}
+
+.about-team__card p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-600);
+}
+
+.about-team__card p::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  margin-top: 16px;
+  border-radius: 2px;
+  background: var(--blue-400);
+}
+
+/* Co nás spojuje: tři hodnoty s ikonou, mezi nimi tenká svislá čára */
+.about-values {
+  padding: 52px 0 32px;
+}
+
+.about-values__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-values__list li {
+  padding: 4px 40px;
+  border-left: 1px solid color-mix(in srgb, var(--navy-800) 12%, transparent);
+}
+
+.about-values__list li:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.about-values__icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 14px;
+  color: var(--blue-400);
+}
+
+.about-values__list h3 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+}
+
+.about-values__list p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink-600);
+}
+
+@media (max-width: 860px) {
+  .about-hero {
+    padding: 128px 0 44px;
+  }
+
+  .about-hero__bg {
+    left: 0;
+  }
+
+  .about-hero::after {
+    background: linear-gradient(180deg, rgba(15, 38, 74, 0.75) 0%, rgba(15, 38, 74, 0.88) 100%);
+  }
+
+  .about-story__inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-story__inner p {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .about-team__cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-values__list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values__list li,
+  .about-values__list li:first-child {
+    padding: 22px 0;
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, var(--navy-800) 12%, transparent);
+  }
+
+  .about-values__list li:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+}

@@ -74,10 +74,6 @@
     padding: 122px 0 40px;
   }
 
-  .division-page-hero__inner::before {
-    height: calc(1.23rem + 18px);
-  }
-
   .division-page-hero__head {
     margin-bottom: 10px;
   }

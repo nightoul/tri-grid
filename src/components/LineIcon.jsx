@@ -1,5 +1,5 @@
 // Tenké obrysové ikony (24×24, barva podle currentColor) pro karty služeb
-// a kroky spolupráce na stránkách divizí a pro sekce na úvodní stránce.
+// a kroky spolupráce na stránkách divizí, pro sekce na úvodní stránce a O nás.
 const paths = {
   // vrstvené desky — stavební a architektonická kovovýroba
   layers: (
@@ -96,6 +96,26 @@ const paths = {
       <path d="M4 9 H12 A3.5 3.5 0 0 1 15.5 12.5 V20" />
       <path d="M7 6.5 V11.5" />
       <path d="M13 16.5 H18" />
+    </>
+  ),
+  // klíč — vztah k řemeslu
+  wrench: (
+    <path d="M14.7 6.3 A1 1 0 0 0 14.7 7.7 L16.3 9.3 A1 1 0 0 0 17.7 9.3 L21.47 5.53 A6 6 0 0 1 13.53 13.47 L6.62 20.38 A2.12 2.12 0 0 1 3.62 17.38 L10.53 10.47 A6 6 0 0 1 18.47 2.53 L14.71 6.29 Z" />
+  ),
+  // štít s fajfkou — odpovědnost
+  shieldCheck: (
+    <>
+      <path d="M12 3 L19 5.8 V11.5 C19 15.9 16.2 19.2 12 21 C7.8 19.2 5 15.9 5 11.5 V5.8 Z" />
+      <path d="M9 12 L11 14 L15 9.8" />
+    </>
+  ),
+  // skupina lidí — spolupráce
+  users: (
+    <>
+      <path d="M16 21 V19 A4 4 0 0 0 12 15 H6 A4 4 0 0 0 2 19 V21" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M22 21 V19 A4 4 0 0 0 19 15.13" />
+      <path d="M16 3.13 A4 4 0 0 1 16 10.88" />
     </>
   ),
   // štít — odbornost a bezpečnost

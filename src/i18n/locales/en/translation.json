@@ -294,32 +294,38 @@
   "aboutPage": {
     "hero": {
       "eyebrow": "About us",
-      "title": "Who we are",
-      "lede": "Tri-Grid brings three colleagues and three trades together under one name — from electrical through machinery to construction."
+      "title": "Tri-Grid is backed by people who share a passion for their craft."
     },
     "story": {
-      "eyebrow": "How Tri-Grid came to be",
-      "heading": "Three trades, one team",
-      "text": "Tri-Grid is being founded by three colleagues who each have long-standing experience in their own trade — electrical, machinery, and construction. Working on shared projects, they noticed the same problem again and again: coordinating between trades often takes more time and energy than the work itself. They decided to change that and bring their trades together under one name, so the client deals with one point of contact instead of three."
+      "heading": "Our story",
+      "text": "Tri-Grid was formed by bringing together three people and three trades. We combined our experience in electrical engineering, construction, and metalworking. Each of us brings our own expertise, and together we share a commitment to quality work and a fair approach."
     },
-    "why": {
-      "eyebrow": "Why Tri-Grid",
-      "heading": "What you can expect from us"
+    "team": {
+      "eyebrow": "Company directors",
+      "role": "Managing director",
+      "members": [
+        "Pavel Čejka",
+        "Miroslav Landa",
+        "Roman Scháněl"
+      ]
     },
-    "values": [
-      {
-        "title": "One point of contact for three trades",
-        "desc": "No need to find an electrician, machinist, and builder separately — one phone call is enough."
-      },
-      {
-        "title": "Coordination without gaps",
-        "desc": "Our divisions communicate directly with each other, so nothing gets lost between trades."
-      },
-      {
-        "title": "Direct contact with the founders",
-        "desc": "On every project you deal directly with someone from the team, not through a layer of salespeople."
-      }
-    ],
+    "values": {
+      "heading": "What unites us",
+      "items": [
+        {
+          "title": "Passion for the craft",
+          "desc": "We enjoy our work and find it meaningful."
+        },
+        {
+          "title": "Responsibility",
+          "desc": "We personally stand behind our work."
+        },
+        {
+          "title": "Collaboration",
+          "desc": "We believe in open communication and fair dealing."
+        }
+      ]
+    },
     "cta": {
       "text": "Want to talk about your project?"
     }

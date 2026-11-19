@@ -294,32 +294,38 @@
   "aboutPage": {
     "hero": {
       "eyebrow": "O nás",
-      "title": "Kdo jsme",
-      "lede": "Tri-Grid spojuje tři kolegy a tři řemesla pod jednou značkou — od elektřiny přes stroje až po stavby."
+      "title": "Za Tri-Grid stojí lidé, které spojuje vztah k řemeslu."
     },
     "story": {
-      "eyebrow": "Jak Tri-Grid vznikl",
-      "heading": "Tři obory, jeden tým",
-      "text": "Tri-Grid zakládají tři kolegové, kteří se dlouhodobě pohybují každý ve svém oboru — elektrotechnice, kovovýrobě a stavebnictví. Na společných zakázkách si všimli stejného problému: koordinace mezi řemeslníky často zabere víc času a energie než práce samotná. Rozhodli se to změnit a spojit své obory pod jednu značku, aby klient řešil jeden kontakt místo tří."
+      "heading": "Náš příběh",
+      "text": "Tri-Grid vznikl spojením tří lidí a tří řemesel. Spojili jsme zkušenosti z elektrotechniky, stavebnictví a kovovýroby. Každý přináší vlastní odbornost, společně sdílíme důraz na kvalitní práci a férový přístup."
     },
-    "why": {
-      "eyebrow": "Proč Tri-Grid",
-      "heading": "Co od nás můžete čekat"
+    "team": {
+      "eyebrow": "Jednatelé společnosti",
+      "role": "Jednatel",
+      "members": [
+        "Pavel Čejka",
+        "Miroslav Landa",
+        "Roman Scháněl"
+      ]
     },
-    "values": [
-      {
-        "title": "Jeden kontakt pro tři obory",
-        "desc": "Nemusíte shánět zvlášť elektrikáře, strojaře a stavaře — stačí jeden telefon."
-      },
-      {
-        "title": "Koordinace bez ztrát",
-        "desc": "Divize spolu komunikují napřímo, takže se nic neztratí mezi řemesly."
-      },
-      {
-        "title": "Přímý kontakt se zakladateli",
-        "desc": "Na každé zakázce jednáte přímo s někým z týmu, ne přes vrstvu obchodníků."
-      }
-    ],
+    "values": {
+      "heading": "Co nás spojuje",
+      "items": [
+        {
+          "title": "Vztah k řemeslu",
+          "desc": "Naše práce nás baví a dává nám smysl."
+        },
+        {
+          "title": "Odpovědnost",
+          "desc": "Za svou práci si stojíme osobně."
+        },
+        {
+          "title": "Spolupráce",
+          "desc": "Věříme v otevřenou komunikaci a férové jednání."
+        }
+      ]
+    },
     "cta": {
       "text": "Chcete probrat svůj projekt?"
     }
