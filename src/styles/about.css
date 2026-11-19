@@ -1,7 +1,7 @@
 /* Stránka O nás: hero, Náš příběh, Jednatelé společnosti, Co nás spojuje */
 
 /* Hero: tmavě modrá vlevo pod textem, vpravo fotka konstrukce
-   (Unsplash, volná licence — viz src/assets/images/o-nas-hero.webp) */
+   (Unsplash, volná licence — viz src/assets/images/o-nas-hero-ocelova-konstrukce.webp) */
 .about-hero {
   position: relative;
   overflow: hidden;

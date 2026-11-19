@@ -4,8 +4,8 @@ import HexIcon from '../components/HexIcon.jsx'
 import LineIcon from '../components/LineIcon.jsx'
 import divisions from '../data/divisions.js'
 import usePageTitle from '../hooks/usePageTitle.js'
-import heroBg from '../assets/images/hero-bg.jpg'
-import whyUsImage from '../assets/images/why-us-handshake.jpg'
+import heroBg from '../assets/images/uvodni-stranka-hero-stavba.jpg'
+import whyUsImage from '../assets/images/uvodni-stranka-proc-tri-grid-podani-ruky.jpg'
 import CircuitAnimation from '../components/CircuitAnimation.jsx'
 
 // Ikony k bodům "Proč Tri-Grid?" a ke krokům spolupráce

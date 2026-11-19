@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import LineIcon from '../components/LineIcon.jsx'
 import usePageTitle from '../hooks/usePageTitle.js'
-import heroImage from '../assets/images/o-nas-hero.webp'
+import heroImage from '../assets/images/o-nas-hero-ocelova-konstrukce.webp'
 
 // Ikony k hodnotám "Co nás spojuje" (pořadí = aboutPage.values.items v JSON)
 const VALUE_ICONS = ['wrench', 'shieldCheck', 'users']

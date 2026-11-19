@@ -16,6 +16,7 @@ npm run build    # produkční build do dist/
 
 - `src/i18n/locales/{cs,en}/translation.json` — všechny texty webu
 - `src/data/divisions.js` — divize: fotky, ikony, barvy
+- `src/assets/images/` — fotky, název = `stránka-sekce-popis` (např. `kovovyroba-ukazky-praci-balkonove-zabradli.webp`; sekce: `hero`, `co-pro-vas-udelame`, `nase-sluzby`, `ukazky-praci`, `proc-tri-grid`)
 - `src/pages/DivisionPage.jsx` — společná stránka pro všechny divize
 - `src/styles/` — styly (pořadí importů v `src/App.css`)
 - `tests/` — testy
