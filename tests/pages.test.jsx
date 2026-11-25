@@ -10,7 +10,7 @@ import cs from '../src/i18n/locales/cs/translation.json'
 
 // Každá stránka v každém jazyce se musí vykreslit bez chyby, mít nadpis
 // a nesmí na ní být vidět nepřeložený klíč (např. "divisionsData.kovovyroba.label").
-const pages = ['', 'o-nas', ...divisions.map((d) => `divize/${d.id}`)]
+const pages = ['', 'o-nas', 'reference', ...divisions.map((d) => `divize/${d.id}`)]
 const rawKey = new RegExp(`\\b(${Object.keys(cs).join('|')})\\.[\\w.]+`)
 
 let root

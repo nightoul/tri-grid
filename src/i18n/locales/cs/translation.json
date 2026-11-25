@@ -7,6 +7,7 @@
   "nav": {
     "divisions": "Divize",
     "about": "O nás",
+    "references": "Reference",
     "contact": "Kontakt",
     "openMenu": "Otevřít menu",
     "closeMenu": "Zavřít menu"
@@ -326,6 +327,61 @@
         "Zpevněné plochy a sadové úpravy"
       ],
       "ctaText": "Najdeme pro vás vhodné technické a spolehlivé řešení v oblasti stavebnictví."
+    }
+  },
+  "referencesPage": {
+    "hero": {
+      "eyebrow": "Reference",
+      "title": "Naše práce mluví za nás.",
+      "text": "Vybrané projekty z oblasti elektrotechniky, kovovýroby a stavebnictví, které jsme úspěšně realizovali."
+    },
+    "table": {
+      "name": "Název projektu",
+      "client": "Objednatel",
+      "scope": "Rozsah dodávky",
+      "year": "Rok realizace",
+      "value": "Hodnota zakázky",
+      "caption": "Přehled realizovaných projektů"
+    },
+    "projects": [
+      {
+        "name": "Postupná rekonstrukce průmyslového areálu pro tváření a úpravy plastů",
+        "client": "Pajr, s.r.o., Vlkava",
+        "scope": "Komplexní rekonstrukce objektu",
+        "year": 2026,
+        "value": 5000000
+      },
+      {
+        "name": "Výstavba areálu pro přestavby auto a moto veteránů a zem. techniky",
+        "client": "Na vyžádání",
+        "scope": "Komplexní rekonstrukce objektu",
+        "year": 2025,
+        "value": 3200000
+      },
+      {
+        "name": "Výstavba a rekonstrukce objektu celého krematoria vč. technologické části a obřadních prostor",
+        "client": "Likrem s.r.o., Ralsko",
+        "scope": "Komplexní rekonstrukce objektu",
+        "year": 2025,
+        "value": 2800000
+      },
+      {
+        "name": "Výstavba a rekonstrukce výrobních a skladovacích hal",
+        "client": "Mirland s.r.o., Bělá p. B.",
+        "scope": "Komplexní rekonstrukce objektu",
+        "year": 2024,
+        "value": 4500000
+      },
+      {
+        "name": "Provedení stavebních úprav výrobní haly pro technologii průmyslových lisů",
+        "client": "Emerge. a.s., Ml. Boleslav",
+        "scope": "Komplexní rekonstrukce objektu",
+        "year": 2023,
+        "value": 3900000
+      }
+    ],
+    "cta": {
+      "text": "Chcete být naší další referencí?"
     }
   },
   "aboutPage": {

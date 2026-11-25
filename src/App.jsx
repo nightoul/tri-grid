@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import Homepage from './pages/Homepage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
+import ReferencesPage from './pages/ReferencesPage.jsx'
 import DivisionPage from './pages/DivisionPage.jsx'
 import languages from './data/languages.js'
 import divisions from './data/divisions.js'
@@ -17,6 +18,7 @@ function App() {
       <Route path=":lang" element={<Layout />}>
         <Route index element={<Homepage />} />
         <Route path="o-nas" element={<AboutPage />} />
+        <Route path="reference" element={<ReferencesPage />} />
         {divisions.map((d) => (
           <Route key={d.id} path={`divize/${d.id}`} element={<DivisionPage division={d} />} />
         ))}

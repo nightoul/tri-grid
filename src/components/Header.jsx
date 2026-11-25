@@ -62,6 +62,7 @@ function Header() {
         <nav className="nav">
           <DivisionsDropdown />
           <Link to={langPath('/o-nas')}>{t('nav.about')}</Link>
+          <Link to={langPath('/reference')}>{t('nav.references')}</Link>
           <Link to={langPath('#kontakt')}>{t('nav.contact')}</Link>
           <LanguageSwitcher />
         </nav>
@@ -86,6 +87,7 @@ function Header() {
           </Link>
         ))}
         <Link to={langPath('/o-nas')}>{t('nav.about')}</Link>
+        <Link to={langPath('/reference')}>{t('nav.references')}</Link>
         <Link to={langPath('#kontakt')}>{t('nav.contact')}</Link>
         <LanguageSwitcher mobile />
       </nav>

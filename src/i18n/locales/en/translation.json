@@ -7,6 +7,7 @@
   "nav": {
     "divisions": "Divisions",
     "about": "About",
+    "references": "References",
     "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
@@ -326,6 +327,61 @@
         "Paved areas and landscaping"
       ],
       "ctaText": "We'll find a suitable, reliable technical solution for your construction project."
+    }
+  },
+  "referencesPage": {
+    "hero": {
+      "eyebrow": "References",
+      "title": "Our work speaks for us.",
+      "text": "Selected electrical, metalworking and construction projects we have successfully delivered."
+    },
+    "table": {
+      "name": "Project",
+      "client": "Client",
+      "scope": "Scope of work",
+      "year": "Year",
+      "value": "Contract value",
+      "caption": "Overview of completed projects"
+    },
+    "projects": [
+      {
+        "name": "Phased renovation of an industrial site for plastics forming and processing",
+        "client": "Pajr, s.r.o., Vlkava",
+        "scope": "Complete building renovation",
+        "year": 2026,
+        "value": 5000000
+      },
+      {
+        "name": "Construction of a site for restoring vintage cars, motorcycles and agricultural machinery",
+        "client": "On request",
+        "scope": "Complete building renovation",
+        "year": 2025,
+        "value": 3200000
+      },
+      {
+        "name": "Construction and renovation of an entire crematorium, including the technology section and ceremonial halls",
+        "client": "Likrem s.r.o., Ralsko",
+        "scope": "Complete building renovation",
+        "year": 2025,
+        "value": 2800000
+      },
+      {
+        "name": "Construction and renovation of production and storage halls",
+        "client": "Mirland s.r.o., Bělá p. B.",
+        "scope": "Complete building renovation",
+        "year": 2024,
+        "value": 4500000
+      },
+      {
+        "name": "Building modifications of a production hall for industrial press technology",
+        "client": "Emerge. a.s., Ml. Boleslav",
+        "scope": "Complete building renovation",
+        "year": 2023,
+        "value": 3900000
+      }
+    ],
+    "cta": {
+      "text": "Want to be our next reference?"
     }
   },
   "aboutPage": {
