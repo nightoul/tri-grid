@@ -142,39 +142,7 @@
   font-size: clamp(1.7rem, 6vw, 2.6rem);
 }
 
-.division-page-body {
-  padding: 72px 0 96px;
-}
-
-.division-page-body--blue { --body-accent: var(--blue-400); }
-
-.division-page-cta {
-  border-top: 1px solid var(--paper-100);
-  padding-top: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.division-page-cta p {
-  margin: 0;
-}
-
-.division-page-cta__link {
-  font-family: var(--font-body);
-  font-weight: 600;
-  color: var(--navy-800);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.division-page-cta__link:hover {
-  color: var(--body-accent, var(--blue-400));
-}
-
-/* Závěrečná výzva ke kontaktu (všechny divize stejně) */
+/* Závěrečná výzva ke kontaktu (ContactCta: divize, O nás, Reference) */
 .division-cta {
   padding: 28px 0 56px;
 }
@@ -413,8 +381,11 @@
    (původně jen Elektrotechnika, klient ho chtěl všude). Sekce ho přebírají
    přes --paper-50 / --paper-100 / --texture-light. Stejné barvy používá
    i sekce "Jak probíhá spolupráce" na úvodní stránce (.how) a jednatelé
-   na stránce O nás (.about-team). */
+   na stránce O nás (.about-team); celé stránky O nás a Reference mají
+   stejné pozadí jako divize. */
 .division-page,
+.about-page,
+.references-page,
 .how,
 .about-team {
   --paper-50: #fffefa;
@@ -424,7 +395,9 @@
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
 }
 
-.division-page {
+.division-page,
+.about-page,
+.references-page {
   background: var(--texture-light), var(--paper-50);
 }
 

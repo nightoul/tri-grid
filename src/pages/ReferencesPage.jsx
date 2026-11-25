@@ -1,5 +1,6 @@
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import ContactCta from '../components/ContactCta.jsx'
 import usePageTitle from '../hooks/usePageTitle.js'
 // stejná fotka jako hero na stránce Stavebnictví
 import heroImage from '../assets/images/stavebnictvi-hero-ukazky-praci-komercni-objekt.webp'
@@ -26,7 +27,7 @@ function ReferencesPage() {
     column === 'value' ? money.format(project.value) : project[column]
 
   return (
-    <>
+    <div className="references-page">
       <section className="about-hero references-hero">
         <div className="about-hero__bg references-hero__bg" style={{ backgroundImage: `url(${heroImage})` }} aria-hidden="true" />
         <div className="container about-hero__inner">
@@ -64,13 +65,8 @@ function ReferencesPage() {
         </div>
       </section>
 
-      <section className="division-page-body division-page-body--blue">
-        <div className="container division-page-cta">
-          <p>{t('referencesPage.cta.text')}</p>
-          <Link to={`/${lang}#kontakt`} className="division-page-cta__link">{t('common.ctaContact')}</Link>
-        </div>
-      </section>
-    </>
+      <ContactCta text={t('referencesPage.cta.text')} />
+    </div>
   )
 }
 

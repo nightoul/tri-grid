@@ -1,5 +1,5 @@
-import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import ContactCta from '../components/ContactCta.jsx'
 import LineIcon from '../components/LineIcon.jsx'
 import usePageTitle from '../hooks/usePageTitle.js'
 import heroImage from '../assets/images/o-nas-hero-ocelova-konstrukce.webp'
@@ -10,12 +10,11 @@ const VALUE_ICONS = ['wrench', 'shieldCheck', 'users']
 function AboutPage() {
   const { t } = useTranslation()
   usePageTitle(t('nav.about'))
-  const { lang } = useParams()
   const members = t('aboutPage.team.members', { returnObjects: true })
   const values = t('aboutPage.values.items', { returnObjects: true })
 
   return (
-    <>
+    <div className="about-page">
       <section className="about-hero">
         <div className="about-hero__bg" style={{ backgroundImage: `url(${heroImage})` }} aria-hidden="true" />
         <div className="container about-hero__inner">
@@ -60,13 +59,8 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="division-page-body division-page-body--blue">
-        <div className="container division-page-cta">
-          <p>{t('aboutPage.cta.text')}</p>
-          <Link to={`/${lang}#kontakt`} className="division-page-cta__link">{t('common.ctaContact')}</Link>
-        </div>
-      </section>
-    </>
+      <ContactCta text={t('aboutPage.cta.text')} />
+    </div>
   )
 }
 

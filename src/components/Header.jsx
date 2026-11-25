@@ -14,10 +14,6 @@ function Header() {
   const [scrolled, setScrolled] = useState(() => window.scrollY > 24)
   const location = useLocation()
   const { lang } = useParams()
-  const isHomepage = location.pathname.replace(/\/$/, '') === `/${lang}`
-  const isDivisionPage = divisions.some(
-    ({ id }) => location.pathname.replace(/\/$/, '') === `/${lang}/divize/${id}`
-  )
   const { t } = useTranslation()
   const logoFullWeb = lang === 'en' ? logoFullEn : logoFullCz
   // Na telefonu logo s divizemi pod sebou (čitelnější než jeden dlouhý řádek)
@@ -41,8 +37,10 @@ function Header() {
   // Poskládá odkaz s aktuálním jazykem vpředu, např. langPath('/o-nas') -> '/cs/o-nas'
   const langPath = (path = '') => `/${lang}${path}`
 
+  // Nahoře na stránce je lišta průhledná přes tmavé hero (všechny stránky ho mají),
+  // po odscrollování nebo s otevřeným menu dostane tmavé pozadí.
   return (
-    <header className={`site-header ${(isHomepage || isDivisionPage) && !scrolled && !menuOpen ? 'site-header--transparent' : ''} ${menuOpen ? 'is-menu-open' : ''}`}>
+    <header className={`site-header ${!scrolled && !menuOpen ? 'site-header--transparent' : ''} ${menuOpen ? 'is-menu-open' : ''}`}>
       <div className="site-header__strip" aria-hidden="true">
         {divisions.map((division) => (
           <span

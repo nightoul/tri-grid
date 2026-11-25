@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import ContactCta from '../components/ContactCta.jsx'
 import HexIcon from '../components/HexIcon.jsx'
 import LineIcon from '../components/LineIcon.jsx'
 import GalleryCarousel from '../components/GalleryCarousel.jsx'
@@ -135,15 +136,7 @@ function DivisionPage({ division }) {
         />
       </section>
 
-      <section className="division-cta">
-        <div className="container division-cta__inner">
-          <div>
-            <h2>{t('common.ctaHeading')}</h2>
-            <p>{t(key('ctaText'))}</p>
-          </div>
-          <Link to={`/${lang}#kontakt`} className="division-cta__button">{t('common.ctaButton')}</Link>
-        </div>
-      </section>
+      <ContactCta text={t(key('ctaText'))} />
     </div>
   )
 }
