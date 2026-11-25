@@ -14,9 +14,11 @@ npm run build    # produkční build do dist/
 
 ## Kde co je
 
-- `src/i18n/locales/{cs,en}/translation.json` — všechny texty webu
+- `src/i18n/locales/{cs,en}/translation.json` — všechny texty webu (projekty na stránce Reference jsou v `referencesPage.projects`, hodnota zakázky je číslo v Kč)
+- `src/i18n/i18n.js` — nastavení jazyků; v češtině automaticky drží jednopísmenná slova (k, s, v, z, o, u, a, i) na řádku s dalším slovem
 - `src/data/divisions.js` — divize: fotky, ikony, barvy
-- `src/assets/images/` — fotky, název = `stránka-sekce-popis` (např. `kovovyroba-ukazky-praci-balkonove-zabradli.webp`; sekce: `hero`, `co-pro-vas-udelame`, `nase-sluzby`, `ukazky-praci`, `proc-tri-grid`)
-- `src/pages/DivisionPage.jsx` — společná stránka pro všechny divize
+- `src/assets/images/` — fotky, název = `stránka-sekce-popis` (např. `kovovyroba-ukazky-praci-balkonove-zabradli.webp`; stránky `uvodni-stranka`, `elektrotechnika`, `kovovyroba`, `stavebnictvi`, `o-nas`, `reference`; sekce: `hero`, `co-pro-vas-udelame`, `nase-sluzby`, `ukazky-praci`, `proc-tri-grid`)
+- `src/pages/` — stránky: úvodní, divize (`DivisionPage.jsx`, společná pro všechny divize), O nás, Reference
+- `src/components/ContactCta.jsx` — závěrečná výzva „Máte projekt?“ na konci stránek
 - `src/styles/` — styly (pořadí importů v `src/App.css`)
 - `tests/` — testy

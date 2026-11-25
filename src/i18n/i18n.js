@@ -7,7 +7,7 @@ import en from './locales/en/translation.json'
 // a, i) nesmí zůstat na konci řádku. Za ni se vloží nezlomitelná mezera,
 // takže se zalomí spolu s následujícím slovem. Platí pro všechny české texty.
 const ONE_LETTER = /(^|[\s(„"])([kKsSvVzZoOuUaAiI]) /g
-function keepOneLetterWords(value) {
+export function keepOneLetterWords(value) {
   if (typeof value === 'string') {
     // dvakrát kvůli sousedním případům ("a v lese")
     return value.replace(ONE_LETTER, '$1$2\u00a0').replace(ONE_LETTER, '$1$2\u00a0')

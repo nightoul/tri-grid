@@ -41,43 +41,6 @@
   line-height: 1.15;
 }
 
-/* Reference: nadpis na jeden řádek (jako v návrhu), popisek pod ním */
-/* Fotka ze Stavebnictví přes celou šířku, stejná výška hero jako divize */
-.references-hero .references-hero__bg {
-  inset: 0;
-  background-color: #0f264a;
-  filter: grayscale(0.25) contrast(1.05);
-}
-
-@media (min-width: 641px) {
-  .references-hero {
-    min-height: 436px;
-  }
-}
-
-/* Na počítači o 10 % oddálená: 90 % šířky, přichycená vpravo; pruh vlevo
-   je pod plně modrou částí přechodu (.about-hero::after). */
-@media (min-width: 900px) {
-  .references-hero .references-hero__bg {
-    background-size: 90% auto;
-    background-position: right center;
-    background-repeat: no-repeat;
-  }
-}
-
-.references-hero h1 {
-  max-width: none;
-  text-wrap: balance;
-}
-
-.about-hero .references-hero__text {
-  max-width: 52ch;
-  margin: 16px 0 0;
-  color: rgba(246, 245, 241, 0.85);
-  font-size: clamp(1rem, 1.3vw, 1.15rem);
-  line-height: 1.5;
-}
-
 /* eyebrow s linkou za textem (hero a jednatelé) */
 .eyebrow--line-after {
   display: flex;

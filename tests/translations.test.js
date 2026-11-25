@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import cs from '../src/i18n/locales/cs/translation.json'
 import en from '../src/i18n/locales/en/translation.json'
+import { keepOneLetterWords } from '../src/i18n/i18n.js'
 
 // Projde oba slovníky a vrátí seznam rozdílů ve struktuře
 // (chybějící klíč, jiný typ, jiný počet položek v seznamu, prázdný text).
@@ -47,5 +48,13 @@ describe('překlady', () => {
     }
     walk(cs, en, '')
     expect(problems).toEqual([])
+  })
+
+  test('jednopísmenná slova v češtině zůstanou na řádku s dalším slovem', () => {
+    const nbsp = '\u00a0'
+    expect(keepOneLetterWords('vztah k řemeslu')).toBe(`vztah k${nbsp}řemeslu`)
+    expect(keepOneLetterWords('a v lese i s nimi')).toBe(`a${nbsp}v${nbsp}lese i${nbsp}s${nbsp}nimi`)
+    expect(keepOneLetterWords('Bělá pod Bezdězem')).toBe('Bělá pod Bezdězem')
+    expect(keepOneLetterWords({ list: ['o nás'] })).toEqual({ list: [`o${nbsp}nás`] })
   })
 })

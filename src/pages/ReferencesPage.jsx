@@ -2,8 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import ContactCta from '../components/ContactCta.jsx'
 import usePageTitle from '../hooks/usePageTitle.js'
-// stejná fotka jako hero na stránce Stavebnictví
-import heroImage from '../assets/images/stavebnictvi-hero-ukazky-praci-komercni-objekt.webp'
+import heroImage from '../assets/images/reference-hero-prumyslova-hala.webp'
 
 // Sloupce tabulky (pořadí = pořadí sloupců, texty v referencesPage.table)
 const COLUMNS = ['name', 'client', 'scope', 'year', 'value']
@@ -11,7 +10,7 @@ const COLUMNS = ['name', 'client', 'scope', 'year', 'value']
 // Stránka Reference — hero a tabulka realizovaných projektů.
 // Projekty jsou v JSON (referencesPage.projects), hodnota zakázky je číslo
 // v Kč a formátuje se podle jazyka (cs: 5 000 000 Kč, en: CZK 5,000,000).
-// Hero používá stejné styly jako stránka O nás (about.css), fotka je ze Stavebnictví.
+// Hero používá stejné styly jako stránka O nás (about.css).
 function ReferencesPage() {
   const { t } = useTranslation()
   usePageTitle(t('nav.references'))
