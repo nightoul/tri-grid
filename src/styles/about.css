@@ -10,6 +10,14 @@
   color: var(--paper-50);
 }
 
+/* Na počítači stejně vysoké jako hero divizí (division-pages.css);
+   platí i pro stránku Reference, která hero sdílí. */
+@media (min-width: 641px) {
+  .about-hero {
+    min-height: 436px;
+  }
+}
+
 .about-hero__bg {
   position: absolute;
   inset: 0 0 0 30%;

@@ -1,17 +1,11 @@
 /* Stránka Reference */
 
 /* Hero: základ sdílí se stránkou O nás (.about-hero v about.css).
-   Široká fotka haly přes celou šířku, hala vpravo; stejná výška jako divize. */
+   Široká fotka haly přes celou šířku, hala vpravo. */
 .references-hero .references-hero__bg {
   inset: 0;
   background-position: right center;
   filter: grayscale(0.25) contrast(1.05);
-}
-
-@media (min-width: 641px) {
-  .references-hero {
-    min-height: 436px;
-  }
 }
 
 /* nadpis na jeden řádek (jako v návrhu), popisek pod ním */
