@@ -245,7 +245,7 @@
   }
 }
 
-@media (max-width: 439px) {
+@media (max-width: 459px) {
   .division-page .division-page-hero {
     min-height: 509px;
   }
@@ -254,6 +254,12 @@
 @media (max-width: 359px) {
   .division-page .division-page-hero {
     min-height: 530px;
+  }
+}
+
+@media (max-width: 339px) {
+  .division-page .division-page-hero {
+    min-height: 551px;
   }
 }
 
@@ -891,8 +897,16 @@
     --carousel-gap: 12px;
   }
 
+  /* úzký telefon: když se nadpis a šipky nevejdou vedle sebe,
+     šipky se zalomí pod nadpis (vpravo) místo přetečení */
   .gallery-carousel__header {
+    flex-wrap: wrap;
+    row-gap: 12px;
     margin-bottom: 18px;
+  }
+
+  .gallery-carousel__controls {
+    margin-left: auto;
   }
 
   .gallery-carousel__counter {
