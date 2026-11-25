@@ -3,6 +3,8 @@ import { Link, useLocation, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import logoFullCz from '../assets/logo-full-cz.svg'
 import logoFullEn from '../assets/logo-full-en.svg'
+import logoMobileCz from '../assets/logo-mobile-cz.svg'
+import logoMobileEn from '../assets/logo-mobile-en.svg'
 import divisions from '../data/divisions.js'
 import LanguageSwitcher from './LanguageSwitcher.jsx'
 import DivisionsDropdown from './DivisionsDropdown.jsx'
@@ -18,6 +20,8 @@ function Header() {
   )
   const { t } = useTranslation()
   const logoFullWeb = lang === 'en' ? logoFullEn : logoFullCz
+  // Na telefonu logo s divizemi pod sebou (čitelnější než jeden dlouhý řádek)
+  const logoMobile = lang === 'en' ? logoMobileEn : logoMobileCz
   const logoAlt = lang === 'en'
     ? 'Tri-Grid s.r.o. — Electrical, Metalworking, Construction'
     : 'Tri-Grid s.r.o. — Elektrotechnika, Kovovýroba, Stavebnictví'
@@ -49,7 +53,10 @@ function Header() {
       </div>
       <div className="container site-header__inner">
         <Link to={langPath()} className="logo-mark">
-          <img src={logoFullWeb} alt={logoAlt} className="logo-mark__image" />
+          <picture>
+            <source media="(max-width: 640px)" srcSet={logoMobile} />
+            <img src={logoFullWeb} alt={logoAlt} className="logo-mark__image" />
+          </picture>
         </Link>
 
         <nav className="nav">

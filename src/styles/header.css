@@ -83,6 +83,10 @@
   text-decoration: none;
 }
 
+.logo-mark picture {
+  display: block;
+}
+
 .logo-mark__image {
   width: 100%;
   height: auto;
