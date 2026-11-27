@@ -1,5 +1,6 @@
 // Tenké obrysové ikony (24×24, barva podle currentColor) pro karty služeb
-// a kroky spolupráce na stránkách divizí, pro sekce na úvodní stránce a O nás.
+// a kroky spolupráce na stránkách divizí, pro sekce na úvodní stránce, O nás
+// a pro projekty na stránce Reference.
 const paths = {
   // vrstvené desky — stavební a architektonická kovovýroba
   layers: (
@@ -137,6 +138,46 @@ const paths = {
     <>
       <rect x="4" y="4" width="16" height="16" rx="2.5" />
       <path d="M8.5 12.2 L11 14.7 L15.8 9.6" />
+    </>
+  ),
+  // továrna se zubatou střechou a komínem — průmyslové areály (Reference)
+  factory: (
+    <>
+      <path d="M3 21 V11 L8 8 V11 L13 8 V11 L18 8 V3.5 H21 V21 Z" />
+      <path d="M2 21 H22" />
+      <path d="M7 15 H8 M11.5 15 H12.5 M16 15 H17" />
+    </>
+  ),
+  // hala s vraty — výrobní a skladovací haly, garáže (Reference)
+  warehouse: (
+    <>
+      <path d="M2.5 9 L12 3.5 L21.5 9 V21 H2.5 Z" />
+      <path d="M6.5 21 V12 H17.5 V21" />
+      <path d="M6.5 15 H17.5 M6.5 18 H17.5" />
+    </>
+  ),
+  // budova se sloupy — veřejné stavby (Reference)
+  landmark: (
+    <>
+      <path d="M3 8.5 L12 3.5 L21 8.5 Z" />
+      <path d="M4 8.5 H20 M3 21 H21 M4 18.5 H20" />
+      <path d="M6 11 V16 M10 11 V16 M14 11 V16 M18 11 V16" />
+    </>
+  ),
+  // činžovní dům s okny — byty (Reference)
+  apartment: (
+    <>
+      <rect x="5" y="2.5" width="14" height="19" rx="1" />
+      <path d="M8.5 6.5 H9.5 M11.5 6.5 H12.5 M14.5 6.5 H15.5 M8.5 10 H9.5 M11.5 10 H12.5 M14.5 10 H15.5 M8.5 13.5 H9.5 M11.5 13.5 H12.5 M14.5 13.5 H15.5" />
+      <path d="M10.5 21.5 V17.5 H13.5 V21.5" />
+    </>
+  ),
+  // rodinný dům — RD (Reference)
+  house: (
+    <>
+      <path d="M3 10.5 L12 3 L21 10.5" />
+      <path d="M5 9 V21 H19 V9" />
+      <path d="M10 21 V15 H14 V21" />
     </>
   ),
   // fajfka v kruhu — kontrola a předání

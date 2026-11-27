@@ -334,49 +334,70 @@
       "title": "Our work speaks for us.",
       "text": "Selected electrical, metalworking and construction projects we have successfully delivered."
     },
-    "table": {
-      "name": "Project",
-      "client": "Client",
+    "listLabel": "Completed projects",
+    "columns": {
       "scope": "Scope of work",
       "year": "Year",
       "value": "Contract value",
-      "caption": "Overview of completed projects"
+      "name": "Project",
+      "client": "Client"
     },
     "projects": [
       {
-        "name": "Phased renovation of an industrial site for plastics forming and processing",
-        "client": "Pajr, s.r.o., Vlkava",
+        "name": "Phased renovation of an industrial site for plastics forming and processing.",
+        "client": "Pajr s.r.o., Vlkava",
         "scope": "Complete building renovation",
-        "year": 2026,
+        "year": 2024,
         "value": 5000000
       },
       {
-        "name": "Construction of a site for restoring vintage cars, motorcycles and agricultural machinery",
-        "client": "On request",
+        "name": "Construction of a site for restoring vintage cars, motorcycles and agricultural machinery.",
+        "client": "Bezděz Dvůr, M. Palounek",
         "scope": "Complete building renovation",
-        "year": 2025,
+        "year": 2023,
         "value": 3200000
       },
       {
-        "name": "Construction and renovation of an entire crematorium, including the technology section and ceremonial halls",
-        "client": "Likrem s.r.o., Ralsko",
+        "name": "Installation of power distribution for furnaces, including control systems and commissioning.",
+        "client": "Tesla, Nevada",
         "scope": "Complete building renovation",
         "year": 2025,
         "value": 2800000
       },
       {
-        "name": "Construction and renovation of production and storage halls",
-        "client": "Mirland s.r.o., Bělá pod Bezdězem",
+        "name": "Construction and renovation of an entire crematorium, including the technology section and ceremonial halls.",
+        "client": "Likrem s.r.o., Ralsko",
         "scope": "Complete building renovation",
-        "year": 2024,
+        "year": 2022,
         "value": 4500000
       },
       {
-        "name": "Building modifications of a production hall for industrial press technology",
-        "client": "Emerge. a.s., Mladá Boleslav",
+        "name": "Complete renovation of an apartment's electrical installation.",
+        "client": "Strašnice",
+        "scope": "Complete building renovation",
+        "year": 2026,
+        "value": 3900000
+      },
+      {
+        "name": "Construction and renovation of production and storage halls.",
+        "client": "Mirland s.r.o., Bělá pod Bezdězem",
+        "scope": "Complete building renovation",
+        "year": 2024,
+        "value": 2200000
+      },
+      {
+        "name": "Complete electrical installation of a family house.",
+        "client": "Hrušov",
+        "scope": "Complete building renovation",
+        "year": 2025,
+        "value": 6800000
+      },
+      {
+        "name": "Building modifications of a production hall for industrial press technology.",
+        "client": "Emerge, a.s., Mladá Boleslav",
         "scope": "Complete building renovation",
         "year": 2023,
-        "value": 3900000
+        "value": 3500000
       }
     ],
     "cta": {
