@@ -164,14 +164,6 @@ const paths = {
       <path d="M6 11 V16 M10 11 V16 M14 11 V16 M18 11 V16" />
     </>
   ),
-  // činžovní dům s okny — byty (Reference)
-  apartment: (
-    <>
-      <rect x="5" y="2.5" width="14" height="19" rx="1" />
-      <path d="M8.5 6.5 H9.5 M11.5 6.5 H12.5 M14.5 6.5 H15.5 M8.5 10 H9.5 M11.5 10 H12.5 M14.5 10 H15.5 M8.5 13.5 H9.5 M11.5 13.5 H12.5 M14.5 13.5 H15.5" />
-      <path d="M10.5 21.5 V17.5 H13.5 V21.5" />
-    </>
-  ),
   // rodinný dům — RD (Reference)
   house: (
     <>

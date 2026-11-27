@@ -6,7 +6,7 @@ import heroImage from '../assets/images/reference-hero-prumyslova-hala.webp'
 
 // Ikona ke každému projektu (pořadí = referencesPage.projects v JSON).
 // Při přidání projektu přidat i ikonu sem; chybějící ikona = továrna.
-const PROJECT_ICONS = ['factory', 'warehouse', 'bolt', 'landmark', 'apartment', 'warehouse', 'house', 'factory']
+const PROJECT_ICONS = ['factory', 'warehouse', 'bolt', 'landmark', 'bolt', 'warehouse', 'house', 'factory']
 
 // Stránka Reference — hero a seznam realizovaných projektů bez záhlaví:
 // ikona | název | objednatel. Na telefonu je každý projekt karta.
