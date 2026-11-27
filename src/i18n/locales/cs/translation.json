@@ -335,67 +335,38 @@
       "text": "Vybrané projekty z oblasti elektrotechniky, kovovýroby a stavebnictví, které jsme úspěšně realizovali."
     },
     "listLabel": "Realizované projekty",
-    "columns": {
-      "scope": "Rozsah dodávky",
-      "year": "Rok realizace",
-      "value": "Hodnota zakázky"
-    },
     "projects": [
       {
         "name": "Postupná rekonstrukce průmyslového areálu pro tváření a úpravy plastů.",
-        "client": "Pajr s.r.o., Vlkava",
-        "scope": "Komplexní rekonstrukce objektu",
-        "year": 2024,
-        "value": 5000000
+        "client": "Pajr s.r.o., Vlkava"
       },
       {
         "name": "Výstavba areálu pro přestavby auto a moto veteránů a zem. techniky.",
-        "client": "Bezděz Dvůr, M. Palounek",
-        "scope": "Komplexní rekonstrukce objektu",
-        "year": 2023,
-        "value": 3200000
+        "client": "Bezděz Dvůr, M. Palounek"
       },
       {
         "name": "Instalace silnoproudých rozvodů napájení pecí včetně řídicích systémů a oživení systému.",
-        "client": "Tesla, Nevada",
-        "scope": "Komplexní rekonstrukce objektu",
-        "year": 2025,
-        "value": 2800000
+        "client": "Tesla, Nevada"
       },
       {
         "name": "Výstavba a rekonstrukce objektu celého krematoria vč. technologické části a obřadních prostor.",
-        "client": "Likrem s.r.o., Ralsko",
-        "scope": "Komplexní rekonstrukce objektu",
-        "year": 2022,
-        "value": 4500000
+        "client": "Likrem s.r.o., Ralsko"
       },
       {
         "name": "Kompletní rekonstrukce elektroinstalace bytu.",
-        "client": "Strašnice",
-        "scope": "Komplexní rekonstrukce objektu",
-        "year": 2026,
-        "value": 3900000
+        "client": "Strašnice"
       },
       {
         "name": "Výstavba a rekonstrukce výrobních a skladovacích hal.",
-        "client": "Mirland s.r.o., Bělá pod Bezdězem",
-        "scope": "Komplexní rekonstrukce objektu",
-        "year": 2024,
-        "value": 2200000
+        "client": "Mirland s.r.o., Bělá pod Bezdězem"
       },
       {
         "name": "Kompletní elektroinstalace RD.",
-        "client": "Hrušov",
-        "scope": "Komplexní rekonstrukce objektu",
-        "year": 2025,
-        "value": 6800000
+        "client": "Hrušov"
       },
       {
         "name": "Provedení stavebních úprav výrobní haly pro technologii průmyslových lisů.",
-        "client": "Emerge, a.s., Mladá Boleslav",
-        "scope": "Komplexní rekonstrukce objektu",
-        "year": 2023,
-        "value": 3500000
+        "client": "Emerge, a.s., Mladá Boleslav"
       }
     ],
     "cta": {

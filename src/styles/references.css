@@ -22,8 +22,7 @@
   line-height: 1.5;
 }
 
-/* Seznam realizovaných projektů bez záhlaví:
-   ikona | název | (objednatel) | rozsah | rok | hodnota */
+/* Seznam realizovaných projektů bez záhlaví: ikona | název | objednatel */
 .references {
   padding: 48px 0 56px;
 }
@@ -41,7 +40,7 @@
 
 .references-list__row {
   display: grid;
-  grid-template-columns: 56px minmax(0, 2.3fr) minmax(0, 1.25fr) minmax(0, 1.15fr) 88px 128px;
+  grid-template-columns: 56px minmax(0, 2fr) minmax(0, 1fr);
   align-items: center;
   column-gap: 24px;
   padding: 14px 24px;
@@ -74,16 +73,6 @@
   stroke-width: 1.9;
 }
 
-/* popisek údaje: na počítači jen pro čtečky, na telefonu vidět */
-.references-list__label {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
 /* tenká svislá čárka mezi ikonou a názvem */
 .references-list__icon::after {
   content: '';
@@ -105,33 +94,16 @@
   text-wrap: pretty;
 }
 
-.references-list__row :is(.references-list__client, .references-list__scope, .references-list__year) {
+.references-list__row .references-list__client {
   font-size: 0.9rem;
   line-height: 1.4;
   color: var(--ink-600);
 }
 
-.references-list__year {
-  text-align: center;
-  white-space: nowrap;
-}
-
-.references-list__value {
-  text-align: right;
-  white-space: nowrap;
-}
-
-.references-list__row .references-list__value {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 700;
-  color: color-mix(in srgb, var(--blue-400) 55%, var(--navy-800));
-}
-
 /* Užší počítač / tablet: menší mezery a ikona */
 @media (max-width: 1100px) {
   .references-list__row {
-    grid-template-columns: 44px minmax(0, 2fr) minmax(0, 1.2fr) minmax(0, 1.1fr) 70px 118px;
+    grid-template-columns: 44px minmax(0, 2fr) minmax(0, 1fr);
     column-gap: 16px;
     padding: 12px 16px;
   }
@@ -152,7 +124,7 @@
 }
 
 /* Telefon a tablet na výšku: každý projekt jako karta —
-   ikona, název a objednatel, pod tím rozsah, rok a hodnota s popiskem. */
+   ikona vlevo, vedle ní název a pod ním objednatel. */
 @media (max-width: 860px) {
   .references {
     padding: 32px 0 40px;
@@ -192,45 +164,5 @@
   .references-list__name,
   .references-list__client {
     grid-column: 2;
-  }
-
-  /* rozsah, rok a hodnota přes celou šířku karty, popisek vlevo */
-  .references-list__row :is(.references-list__scope, .references-list__year, .references-list__value) {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 9.5rem minmax(0, 1fr);
-    gap: 12px;
-    margin-top: 6px;
-    padding-top: 10px;
-    border-top: 1px solid color-mix(in srgb, var(--navy-800) 7%, transparent);
-    text-align: left;
-    white-space: normal;
-  }
-
-  .references-list__row :is(.references-list__year, .references-list__value) {
-    margin-top: 0;
-  }
-
-  .references-list__label {
-    position: static;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    clip-path: none;
-    white-space: normal;
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--ink-600);
-    opacity: 0.8;
-  }
-}
-
-@media (max-width: 359px) {
-  .references-list__row :is(.references-list__scope, .references-list__year, .references-list__value) {
-    grid-template-columns: 1fr;
-    gap: 2px;
   }
 }

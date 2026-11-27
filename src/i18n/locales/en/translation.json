@@ -335,67 +335,38 @@
       "text": "Selected electrical, metalworking and construction projects we have successfully delivered."
     },
     "listLabel": "Completed projects",
-    "columns": {
-      "scope": "Scope of work",
-      "year": "Year",
-      "value": "Contract value"
-    },
     "projects": [
       {
         "name": "Phased renovation of an industrial site for plastics forming and processing.",
-        "client": "Pajr s.r.o., Vlkava",
-        "scope": "Complete building renovation",
-        "year": 2024,
-        "value": 5000000
+        "client": "Pajr s.r.o., Vlkava"
       },
       {
         "name": "Construction of a site for restoring vintage cars, motorcycles and agricultural machinery.",
-        "client": "Bezděz Dvůr, M. Palounek",
-        "scope": "Complete building renovation",
-        "year": 2023,
-        "value": 3200000
+        "client": "Bezděz Dvůr, M. Palounek"
       },
       {
         "name": "Installation of power distribution for furnaces, including control systems and commissioning.",
-        "client": "Tesla, Nevada",
-        "scope": "Complete building renovation",
-        "year": 2025,
-        "value": 2800000
+        "client": "Tesla, Nevada"
       },
       {
         "name": "Construction and renovation of an entire crematorium, including the technology section and ceremonial halls.",
-        "client": "Likrem s.r.o., Ralsko",
-        "scope": "Complete building renovation",
-        "year": 2022,
-        "value": 4500000
+        "client": "Likrem s.r.o., Ralsko"
       },
       {
         "name": "Complete renovation of an apartment's electrical installation.",
-        "client": "Strašnice",
-        "scope": "Complete building renovation",
-        "year": 2026,
-        "value": 3900000
+        "client": "Strašnice"
       },
       {
         "name": "Construction and renovation of production and storage halls.",
-        "client": "Mirland s.r.o., Bělá pod Bezdězem",
-        "scope": "Complete building renovation",
-        "year": 2024,
-        "value": 2200000
+        "client": "Mirland s.r.o., Bělá pod Bezdězem"
       },
       {
         "name": "Complete electrical installation of a family house.",
-        "client": "Hrušov",
-        "scope": "Complete building renovation",
-        "year": 2025,
-        "value": 6800000
+        "client": "Hrušov"
       },
       {
         "name": "Building modifications of a production hall for industrial press technology.",
-        "client": "Emerge, a.s., Mladá Boleslav",
-        "scope": "Complete building renovation",
-        "year": 2023,
-        "value": 3500000
+        "client": "Emerge, a.s., Mladá Boleslav"
       }
     ],
     "cta": {
