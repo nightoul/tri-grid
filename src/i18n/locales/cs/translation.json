@@ -338,9 +338,7 @@
     "columns": {
       "scope": "Rozsah dodávky",
       "year": "Rok realizace",
-      "value": "Hodnota zakázky",
-      "name": "Název projektu",
-      "client": "Objednatel"
+      "value": "Hodnota zakázky"
     },
     "projects": [
       {

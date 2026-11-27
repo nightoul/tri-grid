@@ -338,9 +338,7 @@
     "columns": {
       "scope": "Scope of work",
       "year": "Year",
-      "value": "Contract value",
-      "name": "Project",
-      "client": "Client"
+      "value": "Contract value"
     },
     "projects": [
       {

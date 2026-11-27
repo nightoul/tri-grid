@@ -9,14 +9,14 @@ import heroImage from '../assets/images/reference-hero-prumyslova-hala.webp'
 // Při přidání projektu přidat i ikonu sem; chybějící ikona = továrna.
 const PROJECT_ICONS = ['factory', 'warehouse', 'bolt', 'landmark', 'apartment', 'warehouse', 'house', 'factory']
 
-// Sloupce za ikonou (texty záhlaví v referencesPage.columns).
+// Údaje za názvem a objednatelem (popisky v referencesPage.columns).
 // DOČASNÉ: rozsah, rok a hodnota u projektů jsou zatím zástupná data,
 // než klient pošle skutečné údaje.
-const COLUMNS = ['name', 'client', 'scope', 'year', 'value']
+const DETAILS = ['scope', 'year', 'value']
 
-// Stránka Reference — hero a přehled realizovaných projektů jako tabulka
-// s ikonou na začátku řádku. Na telefonu je každý projekt karta, u údajů
-// se ukáže název sloupce. Hodnota zakázky je v JSON číslo v Kč a formátuje
+// Stránka Reference — hero a seznam realizovaných projektů bez záhlaví:
+// ikona | název | (objednatel) | rozsah | rok | hodnota. Na telefonu je každý
+// projekt karta a u rozsahu, roku a hodnoty se ukáže popisek. Hodnota zakázky je v JSON číslo v Kč a formátuje
 // se podle jazyka (cs: 5 000 000 Kč, en: CZK 5,000,000).
 // Hero používá stejné styly jako stránka O nás (about.css).
 function ReferencesPage() {
@@ -25,7 +25,6 @@ function ReferencesPage() {
   const { lang } = useParams()
   const projects = t('referencesPage.projects', { returnObjects: true })
   const money = new Intl.NumberFormat(lang, { style: 'currency', currency: 'CZK', maximumFractionDigits: 0 })
-  const cell = (project, column) => (column === 'value' ? money.format(project.value) : project[column])
 
   return (
     <div className="references-page">
@@ -40,31 +39,24 @@ function ReferencesPage() {
 
       <section className="references">
         <div className="container">
-          <div className="references-list" role="table" aria-label={t('referencesPage.listLabel')}>
-            <div className="references-list__row references-list__head" role="row">
-              <span className="references-list__icon-cell" aria-hidden="true" />
-              {COLUMNS.map((c) => (
-                <span key={c} className={`references-list__${c}`} role="columnheader">
-                  {t(`referencesPage.columns.${c}`)}
-                </span>
-              ))}
-            </div>
+          <ul className="references-list" aria-label={t('referencesPage.listLabel')}>
             {projects.map((project, i) => (
-              <div className="references-list__row" role="row" key={project.name}>
-                <span className="references-list__icon-cell" aria-hidden="true">
-                  <span className="references-list__icon">
-                    <LineIcon name={PROJECT_ICONS[i] ?? 'factory'} />
-                  </span>
+              <li className="references-list__row" key={project.name}>
+                <span className="references-list__icon" aria-hidden="true">
+                  <LineIcon name={PROJECT_ICONS[i] ?? 'factory'} />
                 </span>
-                {COLUMNS.map((c) => (
-                  // data-label = název sloupce, na telefonu se ukáže u údaje
-                  <span key={c} className={`references-list__${c}`} role="cell" data-label={t(`referencesPage.columns.${c}`)}>
-                    {cell(project, c)}
+                <strong className="references-list__name">{project.name}</strong>
+                <span className="references-list__client">({project.client})</span>
+                {DETAILS.map((c) => (
+                  <span key={c} className={`references-list__${c}`}>
+                    {/* popisek: na počítači skrytý (jen pro čtečky), na telefonu vidět */}
+                    <span className="references-list__label">{t(`referencesPage.columns.${c}`)}</span>
+                    {c === 'value' ? money.format(project.value) : project[c]}
                   </span>
                 ))}
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
