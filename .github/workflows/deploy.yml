@@ -47,8 +47,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # šifrované FTP (FTPS); kdyby ho server odmítl, změnit na "ftp"
-          protocol: ftps
+          # obyčejné FTP — přihlášení přes FTPS server Forpsi odmítal (530)
+          protocol: ftp
           local-dir: ./dist/
           # kořenová složka webu na Forpsi
           server-dir: ./www/
