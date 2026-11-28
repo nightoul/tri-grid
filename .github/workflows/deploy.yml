@@ -1,20 +1,23 @@
-name: Deploy to GitHub Pages
+# Po pushi do master: kontrola kódu, testy, build a nahrání na Forpsi (tri-grid.cz).
+# Přístup na FTP je v GitHub Secrets (Settings → Secrets and variables → Actions):
+#   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD — údaje z administrace Forpsi.
+# Nahrávají se jen změněné soubory; soubory, které z buildu zmizely, se na serveru smažou.
+name: Deploy to Forpsi
 
 on:
   push:
     branches: [master]
+  workflow_dispatch: # ruční spuštění z karty Actions
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  group: deploy
+  cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,21 +41,14 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload to Forpsi
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          path: ./dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # šifrované FTP (FTPS); kdyby ho server odmítl, změnit na "ftp"
+          protocol: ftps
+          local-dir: ./dist/
+          # kořenová složka webu na Forpsi
+          server-dir: ./www/

@@ -1,0 +1,29 @@
+# Nastavení pro hosting Forpsi (Apache). Soubor se při buildu zkopíruje
+# do dist/ a nahrává se na server spolu s ostatními soubory.
+
+Options -MultiViews
+RewriteEngine On
+
+# Vždy přes HTTPS (druhá podmínka brání smyčce, když HTTPS řeší proxy).
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Stránky webu (/cs/reference, /en/o-nas …) nejsou skutečné soubory —
+# vše, co na serveru neexistuje, dostane index.html a stránku vybere React.
+# Skutečné soubory (obrázky, skripty, později send.php) jdou napřímo.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+
+# Cache: soubory v assets/ mají v názvu otisk obsahu, takže se můžou
+# cachovat na rok; index.html se kontroluje pokaždé, aby byla vidět
+# nová verze hned po nahrání.
+<IfModule mod_headers.c>
+  <If "%{REQUEST_URI} =~ m#/assets/#">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </If>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

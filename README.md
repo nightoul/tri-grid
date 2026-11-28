@@ -1,6 +1,16 @@
 # Tri-Grid web
 
-Web firmy Tri-Grid s.r.o. (React + Vite, čeština a angličtina). Po pushi do `master` se automaticky otestuje a nasadí na GitHub Pages.
+Web firmy Tri-Grid s.r.o. (React + Vite, čeština a angličtina), běží na hostingu Forpsi na tri-grid.cz.
+
+## Nasazení
+
+Po pushi do `master` GitHub Actions (`.github/workflows/deploy.yml`) web zkontroluje, otestuje, sestaví a nahraje přes FTP na Forpsi do složky `www/`. Za minutu či dvě je změna na tri-grid.cz. Průběh je na kartě Actions v repozitáři; když lint nebo testy selžou, nic se nenahraje.
+
+Přístup na FTP je v Settings → Secrets and variables → Actions: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
+
+`public/.htaccess` (při buildu se zkopíruje do `dist/`) přesměruje web na HTTPS, zajistí, že fungují přímé odkazy na podstránky (např. `/cs/reference`), a nastaví cache.
+
+Ruční nahrání (jen v nouzi): `npm run build` a obsah složky `dist/` včetně skrytého `.htaccess` nahrát do `www/` na Forpsi.
 
 ## Příkazy
 
